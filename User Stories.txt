@@ -1,0 +1,1 @@
+1. A user launches the application, and is brought to a main menu with different puzzle options
