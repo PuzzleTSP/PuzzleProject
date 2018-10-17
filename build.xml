@@ -1,0 +1,89 @@
+<project name="buggy" basedir="." default="default">
+
+  <!--inputs-->
+  <property name="main.src.dir" value="src/main/java"/>
+  <property name="test.src.dir" value="src/test/java"/>
+
+  <!--class file outputs-->
+  <property name="build.dir" value="build"/>
+  <property name="main.classes.dir" value="build/main"/>
+  <property name="test.classes.dir" value="build/test"/>
+  
+  <!--jar outputs-->
+  <property name="main.jar.dir" value="build/jar" />
+  <property name="main.jar" value="${main.jar.dir}/${ant.project.name}.jar" />
+
+  <presetdef name="project.javac">
+    <javac debug="on" includeantruntime="false" />
+  </presetdef>
+  
+  <taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
+    <classpath path="lib/jacocoant.jar"/>
+  </taskdef>
+
+  <path id="classpath">
+    <pathelement location="lib/junit-4.12.jar"/>
+    <pathelement location="lib/hamcrest-core-1.3.jar"/>
+    <pathelement location="${main.classes.dir}"/>
+  </path>
+
+  <target name="clean">
+    <delete dir="${build.dir}" />
+  </target>
+
+  <target name="main-compile">
+    <mkdir dir="${main.classes.dir}"/>
+    <project.javac srcdir="${main.src.dir}" destdir="${main.classes.dir}">
+      <classpath refid="classpath"/>
+    </project.javac>
+  </target>
+
+  <target name="test-compile" depends="main-compile">
+    <mkdir dir="${test.classes.dir}"/>
+    <project.javac srcdir="${test.src.dir}" destdir="${test.classes.dir}">
+        <classpath refid="classpath"/>
+    </project.javac>
+  </target>
+
+  <target name="test" depends="test-compile">
+    <jacoco:coverage destfile="${test.classes.dir}/jacoco.exec" xmlns:jacoco="antlib:org.jacoco.ant" exclclassloader="sun.reflect.DelegatingClassLoader:javassist.Loader">
+      <junit printsummary="on" haltonfailure="yes" fork="true">
+          <classpath>
+            <path refid="classpath"/>
+            <pathelement location="${test.classes.dir}"/>
+          </classpath>
+          <formatter type="brief" usefile="false" />
+          <batchtest>
+              <fileset dir="${test.src.dir}" includes="**/*Test.java" />
+          </batchtest>
+      </junit>
+    </jacoco:coverage>
+    
+    <jacoco:report xmlns:jacoco="antlib:org.jacoco.ant">
+      <executiondata>
+        <file file="${test.classes.dir}/jacoco.exec" />
+      </executiondata>
+      <structure name="Jacoco">
+        <classfiles>
+          <fileset dir="${main.classes.dir}" />
+        </classfiles>
+        <sourcefiles encoding="UTF-8">
+         <fileset dir="${main.src.dir}" />
+        </sourcefiles>
+      </structure>
+      <html destdir="${test.classes.dir}/report" />
+    </jacoco:report>
+  </target>
+  
+  <target name="jar" depends="main-compile">
+    <mkdir dir="${main.jar.dir}" />
+    <jar destfile="${main.jar}" basedir="${main.classes.dir}">
+      <manifest>
+        <attribute name="Main-Class" value="${main-class}" />
+      </manifest>
+    </jar>
+  </target>
+  
+  <target name="default" depends="clean,test" />
+  
+</project>
