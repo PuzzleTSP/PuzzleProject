@@ -1,4 +1,4 @@
-<project name="buggy" basedir="." default="default">
+<project name="puzzle" basedir="." default="default">
 
   <!--inputs-->
   <property name="main.src.dir" value="src/main/java"/>
@@ -8,7 +8,7 @@
   <property name="build.dir" value="build"/>
   <property name="main.classes.dir" value="build/main"/>
   <property name="test.classes.dir" value="build/test"/>
-  
+
   <!--jar outputs-->
   <property name="main.jar.dir" value="build/jar" />
   <property name="main.jar" value="${main.jar.dir}/${ant.project.name}.jar" />
@@ -16,7 +16,7 @@
   <presetdef name="project.javac">
     <javac debug="on" includeantruntime="false" />
   </presetdef>
-  
+
   <taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
     <classpath path="lib/jacocoant.jar"/>
   </taskdef>
@@ -58,7 +58,7 @@
           </batchtest>
       </junit>
     </jacoco:coverage>
-    
+
     <jacoco:report xmlns:jacoco="antlib:org.jacoco.ant">
       <executiondata>
         <file file="${test.classes.dir}/jacoco.exec" />
@@ -74,7 +74,7 @@
       <html destdir="${test.classes.dir}/report" />
     </jacoco:report>
   </target>
-  
+
   <target name="jar" depends="main-compile">
     <mkdir dir="${main.jar.dir}" />
     <jar destfile="${main.jar}" basedir="${main.classes.dir}">
@@ -83,7 +83,7 @@
       </manifest>
     </jar>
   </target>
-  
+
   <target name="default" depends="clean,test" />
-  
+
 </project>
