@@ -55,6 +55,8 @@ public class PuzzleLauncher extends Application {
 
 		Button menuButton = new Button("Main Menu");
 		menuButton.setOnAction(e -> displayMenu());
+		layout.setBottom(menuButton);
+
 		BorderPane.setAlignment(menuButton, Pos.CENTER);
 		BorderPane.setMargin(menuButton, new Insets(50, 50, 50, 50));
 

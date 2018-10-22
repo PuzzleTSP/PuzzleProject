@@ -22,13 +22,13 @@ public class MainMenu {
         title.setFont(new Font(40.0));
 
         Button b1 = buildButton("Puzzle 1");
-        b1.setOnMouseClicked(e -> launcher.display(new PuzzleType1(launcher)));
+        b1.setOnMouseClicked(e -> launcher.display(new PuzzleType1()));
 
         Button b2 = buildButton("Puzzle 1");
-        b2.setOnMouseClicked(e -> launcher.display(new PuzzleType1(launcher)));
+        b2.setOnMouseClicked(e -> launcher.display(new PuzzleType1()));
 
         Button b3 = buildButton("Puzzle 1");
-        b3.setOnMouseClicked(e -> launcher.display(new PuzzleType1(launcher)));
+        b3.setOnMouseClicked(e -> launcher.display(new PuzzleType1()));
 
         VBox puzzles = new VBox();
         puzzles.setAlignment(Pos.TOP_CENTER);
@@ -46,10 +46,10 @@ public class MainMenu {
     }
 
     private Button buildButton(String buttonName) {
-		Button button = new Button(buttonName);
-		button.setAlignment(Pos.CENTER);
-		button.setFont(new Font(30.0));
-		VBox.setMargin(button, new Insets(30, 30, 30, 30));
+				Button button = new Button(buttonName);
+				button.setAlignment(Pos.CENTER);
+				button.setFont(new Font(30.0));
+				VBox.setMargin(button, new Insets(30, 30, 30, 30));
 
 		return button;
 	}

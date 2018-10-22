@@ -7,19 +7,13 @@ import javafx.scene.layout.VBox;
 public class PuzzleType1 implements Puzzle {
 
 	private final String name = "Puzzle Type 1";
-	private PuzzleLauncher launcher = null;
-
-
-	public PuzzleType1(PuzzleLauncher launcher) {
-		this.launcher = launcher;
-	}
 
 	@Override
 	public Pane run() {
 		VBox layout1 = new VBox(20);
 		layout1.setAlignment(Pos.TOP_CENTER);
 
-		Button button1= new Button("Return to Menu");
+		Button button1= new Button("Do Nothing");
 		button1.setOnAction(e -> exit());
 
 		Button button2 = new Button("move");
@@ -32,7 +26,7 @@ public class PuzzleType1 implements Puzzle {
 
 	@Override
 	public void exit() {
-		launcher.displayMenu();
+
 	}
 
 	@Override
