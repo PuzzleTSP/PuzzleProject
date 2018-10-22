@@ -1,3 +1,5 @@
+package puzzle;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -6,38 +8,30 @@ import javafx.stage.Stage;
 
 public class PuzzleType1 implements Puzzle {
 
-	private Stage stage = null;
-	private Scene scene = null;
-
-	public PuzzleType1(Stage stage) {
-		this.stage = stage;
-		initialize();
-	}
-
+private Scene scene = null;
 
 	@Override
-	public void run() {
+	public Scene run() {
+		Label label1= new Label("PuzzleType1");
+		VBox layout1 = new VBox(20);
 
+		Button button1= new Button("Return to Menu");
+		button1.setOnAction(e -> exit());
+
+		Button button2 = new Button("move");
+		button2.setOnAction(e -> layout1.setAlignment(Pos.BOTTOM_RIGHT));
+
+
+
+        layout1.getChildren().addAll(label1, button1, button2);
+        scene = new Scene(layout1, 300, 250);
+
+        return scene;
 	}
 
 	@Override
 	public void exit() {
-
-	}
-
-	private void initialize() {
-		stage.setFullScreen(true);
-        stage.setTitle("PPPP - type 1 puzzle");
-
-		Label label1= new Label("Puzzle type 1");
-		Button button1= new Button("Return to Menu");
-		button1.setOnAction(e -> exit());
-        VBox layout1 = new VBox(20);
-        layout1.getChildren().addAll(label1, button1);
-        scene = new Scene(layout1, 300, 250);
-
-        stage.setScene(scene);
-        stage.show();
+		MainMenu.load();
 	}
 
 }

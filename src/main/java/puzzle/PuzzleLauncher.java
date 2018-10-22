@@ -1,15 +1,23 @@
-// @author dhmckenz
-
 package puzzle;
 
-import java.util.*;
+import javafx.application.Application;
+import javafx.stage.Stage;
 
-public class PuzzleLauncher {
+public class PuzzleLauncher extends Application {
 
-  private boolean launchSuccessful = false;
+	private Stage stage = null;
 
-  public boolean launch() {
-    launchSuccessful = true;
-    return launchSuccessful;
-  }
+	public static void main(String[] args) {
+	    launch(args);
+	}
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		stage = primaryStage;
+		stage.setFullScreen(true);
+        stage.setTitle("PPPP");
+
+        MainMenu.initialize(stage);
+		MainMenu.load();
+	}
 }

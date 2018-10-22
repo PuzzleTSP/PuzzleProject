@@ -1,3 +1,7 @@
+package puzzle;
+
+import javafx.scene.Scene;
+
 /**
  * Outline for Puzzle functionality
  *
@@ -7,7 +11,7 @@
 public interface Puzzle {
 
 
-	public void run();
+	public Scene run();
 
 	public void exit();
 
