@@ -6,6 +6,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -19,6 +20,7 @@ public class PuzzleLauncher extends Application {
 
 	private MainMenu menu = null;	// The main menu
 	private Scene scene = null;		// The scene for the stage
+	private Stage stage = null;
 
 	public static void main(String[] args) {
 		launch(args);
@@ -30,12 +32,18 @@ public class PuzzleLauncher extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 
-		Stage stage = primaryStage;
+		this.stage = primaryStage;
 		stage.setFullScreen(true);
 		stage.setTitle("PPPP");
 
 		menu = new MainMenu(this);
 		scene = new Scene(menu.load());
+
+		scene.setOnKeyPressed(e -> {
+			if (e.getCode() == KeyCode.X) {
+				stage.close();
+			}
+		});
 
 		stage.setScene(scene);
 		stage.show();
@@ -75,6 +83,10 @@ public class PuzzleLauncher extends Application {
 	 */
 	public void displayMenu() {
 		scene.setRoot(menu.load());
+	}
+
+	public Stage getStage() {
+		return stage;
 	}
 
 }

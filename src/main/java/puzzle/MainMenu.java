@@ -26,27 +26,33 @@ public class MainMenu {
 	 * @return The border pane layout of the menu
 	 */
   public BorderPane load() {
-    	BorderPane layout = new BorderPane();
+		BorderPane layout = new BorderPane();
 
-      Label title = new Label("Main Menu");
-      title.setFont(new Font(40.0));
+			Label title = new Label("Main Menu");
+			title.setFont(new Font(40.0));
 
-      Button b1 = buildPuzzleButton(new PuzzleType1());
-      Button b2 = buildPuzzleButton(new PuzzleType1());
-      Button b3 = buildPuzzleButton(new PuzzleType1());
+			Button b1 = buildPuzzleButton(new PuzzleType1());
+			Button b2 = buildPuzzleButton(new PuzzleType1());
+			Button b3 = buildPuzzleButton(new PuzzleType1());
 
-      VBox puzzles = new VBox();
-      puzzles.setAlignment(Pos.TOP_CENTER);
-      puzzles.getChildren().addAll(b1, b2, b3);
-      BorderPane.setAlignment(puzzles, Pos.CENTER);
+			VBox puzzles = new VBox();
+			puzzles.setAlignment(Pos.TOP_CENTER);
+			puzzles.getChildren().addAll(b1, b2, b3);
+			BorderPane.setAlignment(puzzles, Pos.CENTER);
 
-      layout.setCenter(puzzles);
-      layout.setTop(title);
+			Button exit = new Button("Exit");
+			exit.setAlignment(Pos.CENTER);
+			exit.setFont(new Font(30.0));
+			exit.setOnMouseClicked(e -> launcher.getStage().close());
 
-      BorderPane.setAlignment(title, Pos.CENTER);
-      BorderPane.setMargin(title, new Insets(50,50,50,50));
+			layout.setCenter(puzzles);
+			layout.setTop(title);
+			layout.setBottom(exit);
 
-      return layout;
+			BorderPane.setAlignment(title, Pos.CENTER);
+			BorderPane.setMargin(title, new Insets(50,50,50,50));
+
+			return layout;
     }
 
     /**
