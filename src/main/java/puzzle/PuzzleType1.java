@@ -4,11 +4,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 public class PuzzleType1 implements Puzzle {
 
 private Scene scene = null;
+private final String name = "Puzzle Type 1";
 
 	@Override
 	public Scene run() {
@@ -32,6 +32,11 @@ private Scene scene = null;
 	@Override
 	public void exit() {
 		MainMenu.load();
+	}
+
+	@Override
+	public String getName() {
+		return name;
 	}
 
 }

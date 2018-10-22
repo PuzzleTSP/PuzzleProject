@@ -10,6 +10,7 @@ import javafx.scene.Scene;
  */
 public interface Puzzle {
 
+	public String getName();
 
 	public Scene run();
 
