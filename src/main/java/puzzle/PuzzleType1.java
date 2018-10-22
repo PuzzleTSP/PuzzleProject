@@ -4,6 +4,9 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
+/**
+*	Example puzzle class
+*/
 public class PuzzleType1 implements Puzzle {
 
 	private final String name = "Puzzle Type 1";

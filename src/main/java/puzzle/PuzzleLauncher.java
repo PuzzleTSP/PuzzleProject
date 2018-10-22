@@ -10,15 +10,23 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+/**
+ * Control center for the application.
+ *
+ * @author dhmckenz
+ */
 public class PuzzleLauncher extends Application {
 
-	private MainMenu menu = null;
-	private Scene scene = null;
+	private MainMenu menu = null;	// The main menu
+	private Scene scene = null;		// The scene for the stage
 
 	public static void main(String[] args) {
 		launch(args);
 	}
 
+	/**
+	 * Sets up the stage for the application.
+	 */
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 
@@ -31,13 +39,12 @@ public class PuzzleLauncher extends Application {
 
 		stage.setScene(scene);
 		stage.show();
-
 	}
 
-	public MainMenu getMenu() {
-		return menu;
-	}
-
+	/**
+	 * Displays the selected puzzle.
+	 * @param puzzle The chosen puzzle
+	 */
 	public void display(Puzzle puzzle) {
 
 		Pane puzzlePane = puzzle.run();
@@ -63,6 +70,9 @@ public class PuzzleLauncher extends Application {
 		scene.setRoot(layout);
 	}
 
+	/**
+	 * Switches the display to the main menu.
+	 */
 	public void displayMenu() {
 		scene.setRoot(menu.load());
 	}
