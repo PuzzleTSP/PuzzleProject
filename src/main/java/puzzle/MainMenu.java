@@ -1,32 +1,56 @@
 package puzzle;
-import javafx.scene.Scene;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
+import javafx.scene.text.Font;
 
 public class MainMenu {
 
-	private static Stage stage;
+	private PuzzleLauncher launcher = null;
 
-	protected static void initialize(Stage primaryStage) {
-		stage = primaryStage;
+	public MainMenu(PuzzleLauncher launcher) {
+		this.launcher = launcher;
 	}
 
-    protected static void load() {
+    public BorderPane load() {
+    	BorderPane layout = new BorderPane();
 
-        //Menu scene
-        Label label1= new Label("Main Menu");
+        Label title = new Label("Main Menu");
+        title.setFont(new Font(40.0));
 
-        PuzzleType1 p1 = new PuzzleType1();
-        Button button1= new Button(p1.getName());
-        button1.setOnAction(e -> stage.setScene(p1.run()));
+        Button b1 = buildButton("Puzzle 1");
+        b1.setOnMouseClicked(e -> launcher.display(new PuzzleType1(launcher)));
 
-        VBox layout1 = new VBox(20);
-        layout1.getChildren().addAll(label1, button1);
-        Scene menu= new Scene(layout1, 300, 250);
+        Button b2 = buildButton("Puzzle 1");
+        b2.setOnMouseClicked(e -> launcher.display(new PuzzleType1(launcher)));
 
-        stage.setScene(menu);
-        stage.show();
+        Button b3 = buildButton("Puzzle 1");
+        b3.setOnMouseClicked(e -> launcher.display(new PuzzleType1(launcher)));
+
+        VBox puzzles = new VBox();
+        puzzles.setAlignment(Pos.TOP_CENTER);
+        puzzles.getChildren().addAll(b1, b2, b3);
+        BorderPane.setAlignment(puzzles, Pos.CENTER);
+
+        layout.setCenter(puzzles);
+        layout.setTop(title);
+
+        BorderPane.setAlignment(title, Pos.CENTER);
+        BorderPane.setMargin(title, new Insets(50,50,50,50));
+
+        return layout;
+
     }
+
+    private Button buildButton(String buttonName) {
+		Button button = new Button(buttonName);
+		button.setAlignment(Pos.CENTER);
+		button.setFont(new Font(30.0));
+		VBox.setMargin(button, new Insets(30, 30, 30, 30));
+
+		return button;
+	}
 }

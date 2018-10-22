@@ -1,19 +1,23 @@
 package puzzle;
 import javafx.geometry.Pos;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
 public class PuzzleType1 implements Puzzle {
 
-private Scene scene = null;
-private final String name = "Puzzle Type 1";
+	private final String name = "Puzzle Type 1";
+	private PuzzleLauncher launcher = null;
+
+
+	public PuzzleType1(PuzzleLauncher launcher) {
+		this.launcher = launcher;
+	}
 
 	@Override
-	public Scene run() {
-		Label label1= new Label("PuzzleType1");
+	public Pane run() {
 		VBox layout1 = new VBox(20);
+		layout1.setAlignment(Pos.TOP_CENTER);
 
 		Button button1= new Button("Return to Menu");
 		button1.setOnAction(e -> exit());
@@ -21,17 +25,14 @@ private final String name = "Puzzle Type 1";
 		Button button2 = new Button("move");
 		button2.setOnAction(e -> layout1.setAlignment(Pos.BOTTOM_RIGHT));
 
+        layout1.getChildren().addAll(button1, button2);
 
-
-        layout1.getChildren().addAll(label1, button1, button2);
-        scene = new Scene(layout1, 300, 250);
-
-        return scene;
+        return layout1;
 	}
 
 	@Override
 	public void exit() {
-		MainMenu.load();
+		launcher.displayMenu();
 	}
 
 	@Override
