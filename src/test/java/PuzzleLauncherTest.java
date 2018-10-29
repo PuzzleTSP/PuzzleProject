@@ -16,6 +16,6 @@ public class PuzzleLauncherTest {
 
   @Test
   public void sampleTest() {
-    assertTrue(p.launch());
+    //assertEquals(true, p.launch());         launch has no return type
   }
 }
