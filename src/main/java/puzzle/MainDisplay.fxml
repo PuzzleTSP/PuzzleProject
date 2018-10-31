@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="825.0" prefWidth="1108.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="125.0" prefWidth="610.0" text="Puzzle Launcher" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Britannic Bold" size="65.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="90.0" prefWidth="250.0" text="Puzzle 1">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="30.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" layoutX="439.0" layoutY="40.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="250.0" text="Puzzle 2">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" layoutX="439.0" layoutY="160.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="250.0" text="Puzzle 3">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
