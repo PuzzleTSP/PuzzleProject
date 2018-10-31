@@ -43,10 +43,11 @@ public class MainMenu {
         Button b1 = buildPuzzleButton(new PuzzleType1());
         Button b2 = buildPuzzleButton(new PuzzleType1());
         Button b3 = buildPuzzleButton(new PuzzleType1());
+        Button b4 = buildPuzzleButton(new SoccerBox());
 
         VBox puzzles = new VBox();
         puzzles.setAlignment(Pos.TOP_CENTER);
-        puzzles.getChildren().addAll(b1, b2, b3);
+        puzzles.getChildren().addAll(b1, b2, b3, b4);
         BorderPane.setAlignment(puzzles, Pos.CENTER);
 
         Button exit = new Button("Exit");
