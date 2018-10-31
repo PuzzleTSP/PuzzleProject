@@ -5,10 +5,15 @@
 
 import puzzle.*;
 import javafx.*;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.*;
 import javafx.scene.layout.Pane;
 
 public class SoccerBox implements Puzzle {
 
+	Pane gameScreen = null;
+	Rectangle board = null;
+	
 @Override
 public String getName() {
 	return "Soccer Box";
@@ -18,8 +23,12 @@ public String getName() {
 
 @Override
 public Pane run() {
-  Pane gameScreen = null;
-  
+   gameScreen = new Pane();
+   board = new Rectangle(500,600);
+	
+   
+   
+  gameScreen.getChildren().add(board); 
   return gameScreen;
 }
 
@@ -30,5 +39,11 @@ public void exit() {
 }
 	
 	
+
+public Rectangle drawBoard( Rectangle board ) {
+	
+	return board;
+}
+
 	
 }
