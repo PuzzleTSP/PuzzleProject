@@ -11,6 +11,10 @@ import javafx.scene.layout.Pane;
 
 public class SoccerBox implements Puzzle {
 
+	
+	SoccerBoxGameboard gameBoard = new SoccerBoxGameboard();
+	
+	
 	Pane gameScreen = null;
 	Rectangle board = null;
 	
@@ -24,18 +28,16 @@ public String getName() {
 @Override
 public Pane run() {
    gameScreen = new Pane();
-   board = new Rectangle(500,600);
 	
    
-   
-  gameScreen.getChildren().add(board); 
+  
   return gameScreen;
 }
 
 
 @Override
 public void exit() {
-
+  
 }
 	
 	
