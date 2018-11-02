@@ -1,3 +1,4 @@
+package puzzle;
 
 public class PuzzleBlock1x2 extends PuzzleBlock {
 

@@ -1,6 +1,9 @@
 import java.util.*;
 import static org.junit.Assert.*;
 import org.junit.Test;
+import puzzle.*;
+
+import puzzle.SoccerBoxGameboard;
 
 public class TestSoccerBox {
 
@@ -10,11 +13,11 @@ public class TestSoccerBox {
 	@Test
 	public void testGameboardGeneration() {
 		
-		assertEquals(false, testBox.gameBoard[0][0].isOccupied());    //Should be true
+		assertEquals(false, testBox.getGameBoard()[0][0].isOccupied());    //Should be true
 		
-		assertEquals(true, testBox.gameBoard[0][4].isOccupied());     //Should be false
+		assertEquals(true, testBox.getGameBoard()[0][4].isOccupied());     //Should be false
 		
-		assertEquals(testBox.blocks.get(0), testBox.gameBoard[1][0].occupiedBy());   //Should be the goal block
+		assertEquals(testBox.getBlocks().get(0), testBox.getGameBoard()[1][0].occupiedBy());   //Should be the goal block
 	}
 	
 	

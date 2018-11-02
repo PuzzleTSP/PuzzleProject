@@ -3,6 +3,8 @@
 //*** Date Modified: 10/22/18
 //*** Description:
 
+package puzzle;
+
 public class PuzzleBlock {
 
 	protected int height;
