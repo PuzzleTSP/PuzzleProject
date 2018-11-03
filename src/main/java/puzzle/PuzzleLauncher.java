@@ -1,92 +1,79 @@
 package puzzle;
 
+import java.io.IOException;
+
 import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import puzzle.view.MainMenuController;
 
-/**
- * Control center for the application.
- *
- * @author dhmckenz
- */
 public class PuzzleLauncher extends Application {
+	
+	private Stage primaryStage;
+	private BorderPane rootLayout;
+	
 
-	private MainMenu menu = null;	// The main menu
-	private Scene scene = null;		// The scene for the stage
-	private Stage stage = null;
+	@Override
+	public void start(Stage primaryStage) {
+		this.primaryStage = primaryStage;
+        this.primaryStage.setTitle("Puzzle Launcher");
+        this.primaryStage.setFullScreen(true);
+		
+        initRootLayout();
+        
+        showMainMenu();
+	}
+	
+	public void initRootLayout() {
+		try {
+            // Load root layout from fxml file.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(PuzzleLauncher.class.getResource("view/RootDisplay.fxml"));
+            rootLayout = (BorderPane) loader.load();
+            
+            // Show the scene containing the root layout.
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
+	
+	public void showMainMenu() {
+		try {
+			// Load main menu
+			FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(PuzzleLauncher.class.getResource("view/MainMenu.fxml"));
+            BorderPane mainMenu = (BorderPane) loader.load();
+            
+            // Set main menu as center of root
+            rootLayout.setCenter(mainMenu);
+            
+            // Give the controller access to the app
+            MainMenuController controller = loader.getController();
+            controller.setApp(this);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
+	/**
+     * Returns the main stage.
+     * @return
+     */
+    public Stage getPrimaryStage() {
+        return primaryStage;
+    }
+    
+    public void setCenterDisplay(Pane newCenter) {
+    	rootLayout.setCenter(newCenter);
+    }
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
-
-	/**
-	 * Sets up the stage for the application.
-	 */
-	@Override
-	public void start(Stage primaryStage) throws Exception {
-
-		this.stage = primaryStage;
-		stage.setFullScreen(true);
-		stage.setTitle("PPPP");
-
-		menu = new MainMenu(this);
-		scene = new Scene(menu.load());
-
-		scene.setOnKeyPressed(e -> {
-			if (e.getCode() == KeyCode.X) {
-				stage.close();
-			}
-		});
-
-		stage.setScene(scene);
-		stage.show();
-	}
-
-	/**
-	 * Displays the selected puzzle.
-	 * @param puzzle The chosen puzzle
-	 */
-	public void display(Puzzle puzzle) {
-
-		Pane puzzlePane = puzzle.run();
-
-		BorderPane layout = new BorderPane();
-
-		Label title = new Label(puzzle.getName());
-		BorderPane.setAlignment(title, Pos.CENTER);
-		BorderPane.setMargin(title, new Insets(50, 50, 50, 50));
-		layout.setTop(title);
-
-		BorderPane.setAlignment(puzzlePane, Pos.CENTER_LEFT);
-		BorderPane.setMargin(title, new Insets(50, 50, 50, 50));
-		layout.setCenter(puzzlePane);
-
-		Button menuButton = new Button("Main Menu");
-		menuButton.setOnAction(e -> displayMenu());
-		layout.setBottom(menuButton);
-
-		BorderPane.setAlignment(menuButton, Pos.CENTER);
-		BorderPane.setMargin(menuButton, new Insets(50, 50, 50, 50));
-
-		scene.setRoot(layout);
-	}
-
-	/**
-	 * Switches the display to the main menu.
-	 */
-	public void displayMenu() {
-		scene.setRoot(menu.load());
-	}
-
-	public Stage getStage() {
-		return stage;
-	}
-
 }

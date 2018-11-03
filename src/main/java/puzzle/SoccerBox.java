@@ -5,8 +5,8 @@
 
 package puzzle;
 
-import puzzle.*;
-import javafx.*;
+import puzzle.model.Puzzle;
+import puzzle.model.soccerbox.SoccerBoxGameboard;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
 

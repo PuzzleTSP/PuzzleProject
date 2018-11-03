@@ -1,4 +1,4 @@
-package puzzle.PegBoardPuzzle;
+package puzzle.model.peg;
 
 import javafx.scene.control.Button;
 

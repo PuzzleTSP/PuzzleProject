@@ -1,9 +1,6 @@
-import java.util.*;
 import static org.junit.Assert.*;
 import org.junit.Test;
-import puzzle.*;
-
-import puzzle.SoccerBoxGameboard;
+import puzzle.model.soccerbox.SoccerBoxGameboard;
 
 public class TestSoccerBox {
 
@@ -26,9 +23,9 @@ public class TestSoccerBox {
 		testBox = new SoccerBoxGameboard();
 		
 		
-		testBox.gameBoard[1][0].setUnoccupied();
+		testBox.getGameBoard()[1][0].setUnoccupied();
 		
-		assertEquals(false, testBox.gameBoard[1][0].isOccupied());
+		assertEquals(false, testBox.getGameBoard()[1][0].isOccupied());
 	}
 
 }

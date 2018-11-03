@@ -1,4 +1,4 @@
-package puzzle;
+package puzzle.model;
 
 import javafx.scene.layout.Pane;
 
