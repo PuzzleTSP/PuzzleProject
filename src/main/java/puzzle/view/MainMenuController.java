@@ -33,6 +33,22 @@ public class MainMenuController {
 	}
 	
 	@FXML
+    private void openSoccerBox() {
+		try {
+			// Load SoccerBox
+			FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(PuzzleLauncher.class.getResource("view/SoccerBoxPuzzle.fxml"));
+            AnchorPane soccerBox = (AnchorPane) loader.load();
+            
+            //Set soccer box as center of root
+            app.setCenterDisplay(soccerBox);
+            
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@FXML
 	private void closeApp() {
 		app.getPrimaryStage().close();
 	}

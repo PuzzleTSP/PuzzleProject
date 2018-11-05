@@ -5,38 +5,16 @@
 
 package puzzle;
 
-import puzzle.model.Puzzle;
 import puzzle.model.soccerbox.SoccerBoxGameboard;
-import javafx.scene.layout.Pane;
-import javafx.scene.shape.Rectangle;
 
-public class SoccerBox implements Puzzle {
+
+public class SoccerBox {
 
 	SoccerBoxGameboard gameBoard = new SoccerBoxGameboard();
 
-	Pane gameScreen = null;
-	Rectangle board = null;
-
-	@Override
+	
 	public String getName() {
 		return "Soccer Box";
-	}
-
-	@Override
-	public Pane run() {
-		gameScreen = new Pane();
-
-		return gameScreen;
-	}
-
-	@Override
-	public void exit() {
-
-	}
-
-	public Rectangle drawBoard(Rectangle board) {
-
-		return board;
 	}
 
 }
