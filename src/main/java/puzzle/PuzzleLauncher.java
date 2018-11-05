@@ -9,6 +9,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import puzzle.view.MainMenuController;
+import puzzle.view.RootDisplayController;
 
 public class PuzzleLauncher extends Application {
 	
@@ -38,6 +39,10 @@ public class PuzzleLauncher extends Application {
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
             primaryStage.show();
+            
+            // Give the controller access to the app
+            RootDisplayController controller = loader.getController();
+            controller.setApp(this);
         } catch (IOException e) {
             e.printStackTrace();
         }

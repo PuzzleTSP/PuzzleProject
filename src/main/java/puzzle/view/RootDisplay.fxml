@@ -7,17 +7,24 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-
-<BorderPane prefHeight="750.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<BorderPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.RootDisplayController">
+   <bottom>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button mnemonicParsing="false" onAction="#openMainMenu" text="Main Menu" />
+            <Button mnemonicParsing="false" onAction="#closeApp" text="EXIT" />
+        </items>
+      </ToolBar>
+   </bottom>
    <top>
-      <AnchorPane prefWidth="200.0" style="-fx-border-color: Gray;" BorderPane.alignment="CENTER">
-         <children>
-            <Label text="Puzzle Launcher" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <items>
+            <Label text="Puzzle Launcher">
                <font>
-                  <Font name="Candara" size="18.0" />
+                  <Font size="18.0" />
                </font>
             </Label>
-         </children>
-      </AnchorPane>
+         </items>
+      </ToolBar>
    </top>
 </BorderPane>

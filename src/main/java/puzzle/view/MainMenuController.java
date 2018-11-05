@@ -32,11 +32,6 @@ public class MainMenuController {
 		}
 	}
 	
-	@FXML
-	private void closeApp() {
-		app.getPrimaryStage().close();
-	}
-	
 	public void setApp(PuzzleLauncher app) {
 		this.app = app;
 	}

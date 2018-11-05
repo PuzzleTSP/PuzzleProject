@@ -48,15 +48,4 @@
          </BorderPane.margin>
       </Label>
    </top>
-   <bottom>
-      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-        <items>
-          <Button mnemonicParsing="false" onAction="#closeApp" text="EXIT">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-        </items>
-      </ToolBar>
-   </bottom>
 </BorderPane>
