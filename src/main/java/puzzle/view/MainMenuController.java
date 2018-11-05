@@ -32,23 +32,6 @@ public class MainMenuController {
 		}
 	}	
 
-	public void setApp(PuzzleLauncher app) {
-		this.app = app;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	@FXML
     private void openSoccerBox() {
@@ -66,5 +49,9 @@ public class MainMenuController {
 		}
 	}
 	
+
+	public void setApp(PuzzleLauncher app) {
+		this.app = app;
+	}
 	
 }
