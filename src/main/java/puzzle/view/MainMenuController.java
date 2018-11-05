@@ -30,7 +30,25 @@ public class MainMenuController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}	
+
+	public void setApp(PuzzleLauncher app) {
+		this.app = app;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	@FXML
     private void openSoccerBox() {
@@ -48,12 +66,5 @@ public class MainMenuController {
 		}
 	}
 	
-	@FXML
-	private void closeApp() {
-		app.getPrimaryStage().close();
-	}
 	
-	public void setApp(PuzzleLauncher app) {
-		this.app = app;
-	}
 }
