@@ -11,7 +11,7 @@ public class BoardTile {
 	int boardYPos;
 	PuzzleBlock occupiedBy;
 
-	protected BoardTile( int xPos, int yPos ) {
+	public BoardTile( int xPos, int yPos ) {
 		this.boardXPos = xPos;
 		this.boardYPos = yPos;
 	}
