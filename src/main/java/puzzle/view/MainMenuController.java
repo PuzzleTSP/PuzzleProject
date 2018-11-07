@@ -5,6 +5,7 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import puzzle.PuzzleLauncher;
 
 public class MainMenuController {
@@ -39,7 +40,7 @@ public class MainMenuController {
 			// Load SoccerBox
 			FXMLLoader loader = new FXMLLoader();
             loader.setLocation(PuzzleLauncher.class.getResource("view/SoccerBoxPuzzle.fxml"));
-            AnchorPane soccerBox = (AnchorPane) loader.load();
+            Pane soccerBox = (Pane) loader.load();
             
             //Set soccer box as center of root
             app.setCenterDisplay(soccerBox);

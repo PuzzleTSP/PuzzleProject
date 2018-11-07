@@ -1,7 +1,9 @@
 package puzzle.view;
 
+import java.awt.Stroke;
 import java.io.IOException;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
@@ -20,7 +22,27 @@ public class SoccerBoxPuzzleController {
 	
 	private PuzzleLauncher app;
 
+	@FXML
+	private Rectangle goal;
 	
+	@FXML
+	private Rectangle wide;
+	@FXML
+	private Rectangle tallA;
+	@FXML
+	private Rectangle tallB;
+	@FXML
+	private Rectangle tallC;
+	@FXML
+	private Rectangle tallD;
+	@FXML
+	private Rectangle singleA;
+	@FXML
+	private Rectangle singleB;
+	@FXML
+	private Rectangle singleC;
+	@FXML
+	private Rectangle singleD;
 	
 	@FXML
 	private void initialize() {	
@@ -37,8 +59,9 @@ public class SoccerBoxPuzzleController {
 	}
 	
 	@FXML
-	public void outlineSelected( Rectangle piece ) {
-		piece.setStroke( Color.RED );
+	public void outlineSelected(ActionEvent event) {
+		Rectangle pieceClicked = (Rectangle) event.getSource();
+		pieceClicked.setStroke(Color.RED);
 	}
 	
 }
