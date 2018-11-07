@@ -1,18 +1,11 @@
 package puzzle.view;
 
-import java.awt.Stroke;
-import java.io.IOException;
-
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import puzzle.PuzzleLauncher;
 import puzzle.model.soccerbox.SoccerBoxGameboard;
-import puzzle.model.soccerbox.*;
-import javafx.scene.layout.Pane;
 
 public class SoccerBoxPuzzleController {
 
@@ -44,6 +37,9 @@ public class SoccerBoxPuzzleController {
 	@FXML
 	private Rectangle singleD;
 	
+	private Rectangle previousSelected;
+	private Rectangle previousHovered;
+	
 	@FXML
 	private void initialize() {	
 		
@@ -59,9 +55,39 @@ public class SoccerBoxPuzzleController {
 	}
 	
 	@FXML
-	public void outlineSelected(ActionEvent event) {
-		Rectangle pieceClicked = (Rectangle) event.getSource();
-		pieceClicked.setStroke(Color.RED);
+	public void outlineSelected(MouseEvent event) {
+		Rectangle pieceSelected = (Rectangle) event.getSource();
+		if (isSelected(pieceSelected)) {
+			pieceSelected.setStroke(Color.GOLD);
+			previousHovered = pieceSelected;
+			previousSelected = null;
+		} else {
+			pieceSelected.setStroke(Color.RED);
+			deselect(previousSelected);
+			previousSelected = pieceSelected;
+			previousHovered = null;
+		}
 	}
 	
+	@FXML
+	private void outlineHovered(MouseEvent event) {
+		Rectangle pieceHovered = (Rectangle) event.getSource();
+		if (isSelected(pieceHovered)) {
+			deselect(previousHovered);
+		} else {
+			pieceHovered.setStroke(Color.GOLD);
+			deselect(previousHovered);
+			previousHovered = pieceHovered;
+		}
+	}
+	
+	private void deselect(Rectangle previous) {
+		if (previous == null) return;
+		previous.setStroke(Color.BLACK);
+	}
+	
+	private Boolean isSelected(Rectangle rectangle) {
+		if (rectangle.equals(previousSelected)) return true;
+		return false;
+	}
 }
