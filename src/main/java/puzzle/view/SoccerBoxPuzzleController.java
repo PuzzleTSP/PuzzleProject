@@ -9,11 +9,10 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import puzzle.PuzzleLauncher;
 import puzzle.model.soccerbox.SoccerBoxGameboard;
-import puzzle.model.Puzzle;
 import puzzle.model.soccerbox.*;
 import javafx.scene.layout.Pane;
 
-public class SoccerBoxPuzzleController implements Puzzle {
+public class SoccerBoxPuzzleController {
 
 	
 	private SoccerBoxGameboard board = new SoccerBoxGameboard();
@@ -40,29 +39,6 @@ public class SoccerBoxPuzzleController implements Puzzle {
 	@FXML
 	public void outlineSelected( Rectangle piece ) {
 		piece.setStroke( Color.RED );
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//Overriding methods to fit the interface (may or may not be used)
-	
-	@Override
-	public String getName() {
-		return "Soccer Box puzzle";
-	}
-	@Override
-	public void exit() {
-		app.showMainMenu();
-	}
-	@Override
-	public Pane run() {
-		return new Pane();
 	}
 	
 }
