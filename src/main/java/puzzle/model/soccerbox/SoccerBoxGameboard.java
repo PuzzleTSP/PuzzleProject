@@ -65,9 +65,9 @@ public class SoccerBoxGameboard {
 		blocks.add(goal);
 		PuzzleBlock singleA = new PuzzleBlock1x1(1, 3);
 		blocks.add(singleA);
-		PuzzleBlock singleB = new PuzzleBlock1x1(2, 3);
+		PuzzleBlock singleB = new PuzzleBlock1x1(1, 4);
 		blocks.add(singleB);
-		PuzzleBlock singleC = new PuzzleBlock1x1(1, 4);
+		PuzzleBlock singleC = new PuzzleBlock1x1(2, 3);
 		blocks.add(singleC);
 		PuzzleBlock singleD = new PuzzleBlock1x1(2, 4);
 		blocks.add(singleD);
@@ -75,9 +75,9 @@ public class SoccerBoxGameboard {
 		blocks.add(wide);
 		PuzzleBlock tallA = new PuzzleBlock1x2(0, 1);
 		blocks.add(tallA);
-		PuzzleBlock tallB = new PuzzleBlock1x2(3, 1);
+		PuzzleBlock tallB = new PuzzleBlock1x2(0, 3);
 		blocks.add(tallB);
-		PuzzleBlock tallC = new PuzzleBlock1x2(0, 3);
+		PuzzleBlock tallC = new PuzzleBlock1x2(3, 1);
 		blocks.add(tallC);
 		PuzzleBlock tallD = new PuzzleBlock1x2(3, 3);
 		blocks.add(tallD);
