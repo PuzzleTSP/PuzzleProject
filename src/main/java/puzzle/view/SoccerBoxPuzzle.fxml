@@ -6,9 +6,9 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.SoccerBoxPuzzleController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#move" onKeyReleased="#move" onKeyTyped="#move" prefHeight="550.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.SoccerBoxPuzzleController">
   <children>
-    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eb9d5c" height="550.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="25.0" width="450.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eb9d5c" height="550.0" onKeyPressed="#move" onKeyReleased="#move" onKeyTyped="#move" stroke="BLACK" strokeType="INSIDE" strokeWidth="25.0" width="450.0" />
     <Circle layoutX="225.0" layoutY="225.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
     <Line endX="450.0" layoutY="125.0" />
     <Line endX="450.0" layoutY="225.0" />
@@ -17,19 +17,19 @@
     <Line endX="125.0" endY="550.0" startX="125.0" />
     <Line endX="225.0" endY="550.0" startX="225.0" />
     <Line endX="325.0" endY="550.0" startX="325.0" />
-    <Rectangle fx:id="singleB" arcHeight="5.0" arcWidth="5.0" height="100.0" layoutX="225.0" layoutY="325.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0">
+    <Rectangle fx:id="singleB" arcHeight="5.0" arcWidth="5.0" height="100.0" layoutX="225.0" layoutY="325.0" onKeyReleased="#move" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0">
       <fill>
         <Color blue="0.024" green="0.180" red="0.369" fx:id="x1" />
       </fill>
     </Rectangle>
-    <Rectangle fx:id="singleA" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="100.0" layoutX="125.0" layoutY="325.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0" />
-    <Rectangle fx:id="singleC" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="100.0" layoutX="125.0" layoutY="425.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0" />
-    <Rectangle fx:id="singleD" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="100.0" layoutX="225.0" layoutY="425.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0" />
-    <Rectangle fx:id="tallC" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" layoutX="25.0" layoutY="325.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0" />
-    <Rectangle fx:id="tallD" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" layoutX="325.0" layoutY="325.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0" />
-    <Rectangle fx:id="tallA" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" layoutX="25.0" layoutY="125.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0" />
-    <Rectangle fx:id="tallB" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" layoutX="325.0" layoutY="125.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0" />
-    <Rectangle fx:id="wide" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="100.0" layoutX="125.0" layoutY="225.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
-    <Rectangle fx:id="goal" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" layoutX="125.0" layoutY="25.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+    <Rectangle fx:id="singleA" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="100.0" layoutX="125.0" layoutY="325.0" onKeyReleased="#move" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0" />
+    <Rectangle fx:id="singleC" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="100.0" layoutX="125.0" layoutY="425.0" onKeyReleased="#move" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0" />
+    <Rectangle fx:id="singleD" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="100.0" layoutX="225.0" layoutY="425.0" onKeyReleased="#move" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0" />
+    <Rectangle fx:id="tallC" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" layoutX="25.0" layoutY="325.0" onKeyReleased="#move" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0" />
+    <Rectangle fx:id="tallD" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" layoutX="325.0" layoutY="325.0" onKeyReleased="#move" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0" />
+    <Rectangle fx:id="tallA" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" layoutX="25.0" layoutY="125.0" onKeyReleased="#move" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0" />
+    <Rectangle fx:id="tallB" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" layoutX="325.0" layoutY="125.0" onKeyReleased="#move" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0" />
+    <Rectangle fx:id="wide" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="100.0" layoutX="125.0" layoutY="225.0" onKeyReleased="#move" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+    <Rectangle fx:id="goal" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" layoutX="125.0" layoutY="25.0" onKeyReleased="#move" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
   </children>
 </Pane>
