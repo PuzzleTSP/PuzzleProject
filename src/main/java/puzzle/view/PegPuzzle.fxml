@@ -5,26 +5,26 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.shape.*?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="puzzle.view.PegPuzzleController">
   <!-- TODO Add Nodes -->
   <center>
     <Pane prefHeight="360.0" prefWidth="638.0">
       <children>
-        <Circle fill="DODGERBLUE" layoutX="319.0" layoutY="46.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fill="DODGERBLUE" layoutX="383.0" layoutY="110.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fill="DODGERBLUE" layoutX="255.0" layoutY="110.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fill="DODGERBLUE" layoutX="191.0" layoutY="174.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fill="DODGERBLUE" layoutX="447.0" layoutY="180.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fill="DODGERBLUE" layoutX="319.0" layoutY="180.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fill="DODGERBLUE" layoutX="127.0" layoutY="244.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fill="DODGERBLUE" layoutX="255.0" layoutY="244.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fill="DODGERBLUE" layoutX="511.0" layoutY="244.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fill="DODGERBLUE" layoutX="383.0" layoutY="244.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fill="DODGERBLUE" layoutX="63.0" layoutY="306.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fill="DODGERBLUE" layoutX="575.0" layoutY="306.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fill="DODGERBLUE" layoutX="191.0" layoutY="306.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fill="DODGERBLUE" layoutX="447.0" layoutY="306.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fill="DODGERBLUE" layoutX="319.0" layoutY="306.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle id="peg15" fx:id="peg1" fill="DODGERBLUE" layoutX="319.0" layoutY="46.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="peg3" fill="DODGERBLUE" layoutX="383.0" layoutY="110.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="peg2" fill="DODGERBLUE" layoutX="255.0" layoutY="110.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="peg4" fill="DODGERBLUE" layoutX="191.0" layoutY="174.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="peg6" fill="DODGERBLUE" layoutX="447.0" layoutY="174.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="peg5" fill="DODGERBLUE" layoutX="319.0" layoutY="174.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="peg7" fill="DODGERBLUE" layoutX="127.0" layoutY="244.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="peg8" fill="DODGERBLUE" layoutX="255.0" layoutY="244.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="peg10" fill="DODGERBLUE" layoutX="511.0" layoutY="244.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="peg9" fill="DODGERBLUE" layoutX="383.0" layoutY="244.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="peg11" fill="DODGERBLUE" layoutX="63.0" layoutY="306.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="peg15" fill="DODGERBLUE" layoutX="575.0" layoutY="306.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="peg12" fill="DODGERBLUE" layoutX="191.0" layoutY="306.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="peg14" fill="DODGERBLUE" layoutX="447.0" layoutY="306.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="peg13" fill="DODGERBLUE" layoutX="319.0" layoutY="306.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
       </children>
     </Pane>
   </center>

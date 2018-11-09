@@ -3,8 +3,10 @@ package puzzle.view;
 import java.util.ArrayList;
 
 import javafx.fxml.FXML;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import puzzle.PuzzleLauncher;
 
 public class PegPuzzleController {
@@ -41,6 +43,9 @@ public class PegPuzzleController {
 	@FXML
 	private Circle peg15;
 	
+	private Circle previousSelected;
+	private Circle previousHovered;
+	
 	private ArrayList<Circle> pegs = new ArrayList<Circle>();
 	
 	@FXML
@@ -76,4 +81,6 @@ public class PegPuzzleController {
 	public void setApp(PuzzleLauncher app) {
 		this.app = app;
 	}
+	
+	
 }
