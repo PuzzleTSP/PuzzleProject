@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="750.0" prefWidth="1000.0" style="-fx-background-color: #ffffff; -fx-background-image: url(&quot;https://cdn.pixabay.com/photo/2013/07/12/14/09/football-147854_960_720.png&quot;),  url(&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/2000px-Soccerball.svg.png&quot;), url(&quot;https://is1-ssl.mzstatic.com/image/thumb/Purple111/v4/0b/f8/74/0bf874ca-7dff-3007-3dbf-e0bf0c59234d/mzl.mjfqjbhw.png/246x0w.jpg&quot;), url(&quot;https://is1-ssl.mzstatic.com/image/thumb/Purple111/v4/0b/f8/74/0bf874ca-7dff-3007-3dbf-e0bf0c59234d/mzl.mjfqjbhw.png/246x0w.jpg&quot;); -fx-background-size: 70; -fx-background-repeat: no-repeat; -fx-background-position: 35% 35%, 65% 35%, 65% 55%, 35% 55%;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.MainMenuController">
+<BorderPane prefHeight="750.0" prefWidth="1000.0" style="-fx-background-color: #ffffff; -fx-background-size: 70; -fx-background-repeat: no-repeat; -fx-background-position: 35% 35%, 65% 35%, 65% 55%, 35% 55%;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.MainMenuController">
   <center>
       <VBox alignment="TOP_CENTER" opacity="0.97" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
       <children>
