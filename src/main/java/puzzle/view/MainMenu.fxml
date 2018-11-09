@@ -1,41 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="750.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="puzzle.view.MainMenuController">
+<BorderPane prefHeight="750.0" prefWidth="1000.0" style="-fx-background-color: #ffffff; -fx-background-image: url(&quot;https://cdn.pixabay.com/photo/2013/07/12/14/09/football-147854_960_720.png&quot;),  url(&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/2000px-Soccerball.svg.png&quot;), url(&quot;https://is1-ssl.mzstatic.com/image/thumb/Purple111/v4/0b/f8/74/0bf874ca-7dff-3007-3dbf-e0bf0c59234d/mzl.mjfqjbhw.png/246x0w.jpg&quot;), url(&quot;https://is1-ssl.mzstatic.com/image/thumb/Purple111/v4/0b/f8/74/0bf874ca-7dff-3007-3dbf-e0bf0c59234d/mzl.mjfqjbhw.png/246x0w.jpg&quot;); -fx-background-size: 70; -fx-background-repeat: no-repeat; -fx-background-position: 35% 35%, 65% 35%, 65% 55%, 35% 55%;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.MainMenuController">
   <center>
-    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" opacity="0.97" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
       <children>
-        <Button mnemonicParsing="false" onAction="#openPuzzle1" prefHeight="85.0" prefWidth="200.0" text="Puzzle 1">
+            <AmbientLight color="CHARTREUSE" lightOn="true" />
+        <Button depthTest="DISABLE" mnemonicParsing="false" onAction="#openPuzzle1" prefHeight="94.0" prefWidth="195.0" style="-fx-background-color: #000099; -fx-border-width: 5; -fx-border-color: #000000;" text="Placeholder" textFill="#1d1d1e" textOverrun="CLIP">
           <font>
-            <Font size="24.0" fx:id="x1" />
+            <Font name="Monospaced Bold" size="24.0" fx:id="x1" />
           </font>
           <VBox.margin>
             <Insets top="50.0" />
           </VBox.margin>
         </Button>
-        <Button font="$x1" mnemonicParsing="false" onAction="#openSoccerBox" prefHeight="85.0" prefWidth="200.0" text="SoccerBox">
+        <Button font="$x1" mnemonicParsing="false" onAction="#openSoccerBox" prefHeight="85.0" prefWidth="200.0" style="-fx-background-color: #000099; -fx-border-color: #000000; -fx-border-width: 5;" text="SoccerBox" textFill="#202021">
           <VBox.margin>
             <Insets top="30.0" />
           </VBox.margin>
         </Button>
-        <Button font="$x1" mnemonicParsing="false" prefHeight="85.0" prefWidth="200.0" text="Button">
+        <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="200.0" style="-fx-background-color: #000099; -fx-border-color: #000000; -fx-border-width: 5;" text="Button" textFill="#101011">
           <VBox.margin>
             <Insets top="30.0" />
           </VBox.margin>
+               <font>
+                  <Font name="Monospaced Bold" size="24.0" />
+               </font>
         </Button>
       </children>
-    </VBox>
+      </VBox>
   </center>
   <top>
-    <Label text="Main Menu" BorderPane.alignment="CENTER">
+    <Label text="Puzzled Puzzlers Puzzling Puzzle Collection" textFill="#070009" BorderPane.alignment="CENTER">
       <font>
-        <Font size="36.0" />
+        <Font name="Monospaced Bold" size="36.0" />
       </font>
       <BorderPane.margin>
         <Insets top="15.0" />
