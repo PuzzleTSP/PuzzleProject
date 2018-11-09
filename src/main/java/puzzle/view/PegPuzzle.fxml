@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.*?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <!-- TODO Add Nodes -->
+  <center>
+    <Pane prefHeight="360.0" prefWidth="638.0">
+      <children>
+        <Circle fill="DODGERBLUE" layoutX="319.0" layoutY="46.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fill="DODGERBLUE" layoutX="383.0" layoutY="110.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fill="DODGERBLUE" layoutX="255.0" layoutY="110.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fill="DODGERBLUE" layoutX="191.0" layoutY="174.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fill="DODGERBLUE" layoutX="447.0" layoutY="180.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fill="DODGERBLUE" layoutX="319.0" layoutY="180.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fill="DODGERBLUE" layoutX="127.0" layoutY="244.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fill="DODGERBLUE" layoutX="255.0" layoutY="244.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fill="DODGERBLUE" layoutX="511.0" layoutY="244.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fill="DODGERBLUE" layoutX="383.0" layoutY="244.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fill="DODGERBLUE" layoutX="63.0" layoutY="306.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fill="DODGERBLUE" layoutX="575.0" layoutY="306.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fill="DODGERBLUE" layoutX="191.0" layoutY="306.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fill="DODGERBLUE" layoutX="447.0" layoutY="306.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fill="DODGERBLUE" layoutX="319.0" layoutY="306.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+      </children>
+    </Pane>
+  </center>
 </BorderPane>
-
