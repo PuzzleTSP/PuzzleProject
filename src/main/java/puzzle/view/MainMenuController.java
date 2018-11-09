@@ -5,6 +5,7 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import puzzle.PuzzleLauncher;
 
@@ -18,12 +19,12 @@ public class MainMenuController {
 	}
 	
 	@FXML
-    private void openPuzzle1() {
+    private void openPegPuzzle() {
 		try {
 			// Load Puzzle 1
 			FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(PuzzleLauncher.class.getResource("view/Puzzle1.fxml"));
-            AnchorPane puzzle1 = (AnchorPane) loader.load();
+            loader.setLocation(PuzzleLauncher.class.getResource("view/PegPuzzle.fxml"));
+            BorderPane puzzle1 = (BorderPane) loader.load();
             
             //Set main menu as center of root
             app.setCenterDisplay(puzzle1);
