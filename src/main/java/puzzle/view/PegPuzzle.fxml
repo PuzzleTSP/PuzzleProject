@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.BorderPane?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
-</BorderPane>
-
+<Pane id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="751.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="puzzle.view.PegPuzzleController">
+  <children>
+    <Circle fx:id="peg1" fill="#72cc00" layoutX="376.0" layoutY="50.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle id="peg1" fx:id="peg2" layoutX="304.0" layoutY="122.0" radius="36.0" stroke="BLACK" strokeType="INSIDE">
+      <fill>
+        <Color blue="0.000" green="0.800" red="0.447" fx:id="x1" />
+      </fill>
+    </Circle>
+    <Circle id="peg1" fx:id="peg3" fill="$x1" layoutX="448.0" layoutY="122.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle id="peg1" fx:id="peg5" fill="$x1" layoutX="376.0" layoutY="194.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle id="peg1" fx:id="peg4" fill="$x1" layoutX="232.0" layoutY="194.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle id="peg1" fx:id="peg6" fill="$x1" layoutX="520.0" layoutY="194.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle id="peg1" fx:id="peg8" fill="$x1" layoutX="304.0" layoutY="266.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle id="peg1" fx:id="peg9" fill="$x1" layoutX="448.0" layoutY="266.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle id="peg1" fx:id="peg10" fill="$x1" layoutX="592.0" layoutY="266.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle id="peg1" fx:id="peg7" fill="$x1" layoutX="160.0" layoutY="266.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle id="peg1" fx:id="peg12" fill="$x1" layoutX="232.0" layoutY="338.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle id="peg1" fx:id="peg13" fill="$x1" layoutX="376.0" layoutY="338.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle id="peg1" fx:id="peg14" fill="$x1" layoutX="520.0" layoutY="338.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle id="peg1" fx:id="peg15" fill="$x1" layoutX="673.0" layoutY="338.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle id="peg1" fx:id="peg11" fill="$x1" layoutX="88.0" layoutY="338.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Button fx:id="refreshButton" layoutX="33.0" layoutY="37.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+  </children>
+</Pane>

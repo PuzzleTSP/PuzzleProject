@@ -22,11 +22,16 @@ public class MainMenuController {
 		try {
 			// Load Puzzle 1
 			FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(PuzzleLauncher.class.getResource("view/Puzzle1.fxml"));
-            AnchorPane puzzle1 = (AnchorPane) loader.load();
-            
+            loader.setLocation(PuzzleLauncher.class.getResource("view/PegPuzzle.fxml"));
+            Pane pegPuzzle = (Pane) loader.load();
+            try {
+				app.init();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             //Set main menu as center of root
-            app.setCenterDisplay(puzzle1);
+            app.setCenterDisplay(pegPuzzle);
             
 		} catch (IOException e) {
 			e.printStackTrace();
