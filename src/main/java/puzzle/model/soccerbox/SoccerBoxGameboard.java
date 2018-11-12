@@ -6,6 +6,8 @@
 package puzzle.model.soccerbox;
 
 import java.util.*;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.KeyCode;
 
 public class SoccerBoxGameboard {
 
@@ -22,16 +24,16 @@ public class SoccerBoxGameboard {
 	}
 
 	public void setGameBoard(BoardTile[][] gameBoard) {
-		// this.gameBoard = gameBoard;
+		 this.gameBoard = gameBoard;
 	}
 
 	public ArrayList<PuzzleBlock> getBlocks() {
 		return blocks;
 	}
 
-	public void setBlocks(ArrayList<PuzzleBlock> blocks) {
+	//public void setBlocks(ArrayList<PuzzleBlock> blocks) {
 		// this.blocks = blocks;
-	}
+	//}
 
 	protected ArrayList<PuzzleBlock> blocks = new ArrayList<PuzzleBlock>(10);
 
@@ -61,25 +63,25 @@ public class SoccerBoxGameboard {
 
 	public void initBlocks() {
 
-		PuzzleBlock goal = new PuzzleBlock2x2(1, 0);
+		PuzzleBlock goal = new PuzzleBlock2x2(1, 0, "goal");
 		blocks.add(goal);
-		PuzzleBlock singleA = new PuzzleBlock1x1(1, 3);
+		PuzzleBlock singleA = new PuzzleBlock1x1(1, 3, "singleA");
 		blocks.add(singleA);
-		PuzzleBlock singleB = new PuzzleBlock1x1(1, 4);
+		PuzzleBlock singleB = new PuzzleBlock1x1(1, 4, "singleC");
 		blocks.add(singleB);
-		PuzzleBlock singleC = new PuzzleBlock1x1(2, 3);
+		PuzzleBlock singleC = new PuzzleBlock1x1(2, 3, "singleB");
 		blocks.add(singleC);
-		PuzzleBlock singleD = new PuzzleBlock1x1(2, 4);
+		PuzzleBlock singleD = new PuzzleBlock1x1(2, 4, "singleD");
 		blocks.add(singleD);
-		PuzzleBlock wide = new PuzzleBlock2x1(1, 2);
+		PuzzleBlock wide = new PuzzleBlock2x1(1, 2, "wide");
 		blocks.add(wide);
-		PuzzleBlock tallA = new PuzzleBlock1x2(0, 1);
+		PuzzleBlock tallA = new PuzzleBlock1x2(0, 1, "tallA");
 		blocks.add(tallA);
-		PuzzleBlock tallB = new PuzzleBlock1x2(0, 3);
+		PuzzleBlock tallB = new PuzzleBlock1x2(0, 3, "tallC");
 		blocks.add(tallB);
-		PuzzleBlock tallC = new PuzzleBlock1x2(3, 1);
+		PuzzleBlock tallC = new PuzzleBlock1x2(3, 1, "tallB");
 		blocks.add(tallC);
-		PuzzleBlock tallD = new PuzzleBlock1x2(3, 3);
+		PuzzleBlock tallD = new PuzzleBlock1x2(3, 3, "tallD");
 		blocks.add(tallD);
 
 	}
@@ -115,7 +117,66 @@ public class SoccerBoxGameboard {
 				gameBoard[x][y].setOccupied(p);
 			}
 		}
-
+		
+	}
+	
+	public boolean checkMove( String ID, KeyCode code ) {
+		boolean result = true;
+		PuzzleBlock piece = getBlock(ID);
+		int xPos = piece.getX();
+		int yPos = piece.getY();
+		
+		if( code == KeyCode.UP ) {
+			int width = piece.width;
+			for( int i = 0; i < width; i++ ) {
+				if( gameBoard[xPos + i][yPos - 1].isOccupied() ) {
+					return false;
+				}
+			}
+		}else if( code == KeyCode.DOWN ) {
+			int width = piece.width;
+			for( int i = 0; i < width; i++ ) {
+				System.out.println( gameBoard[xPos + i][yPos + 1].isOccupied() );
+				if( gameBoard[xPos + i][yPos + 1].isOccupied() ) {
+					return false;
+				}
+			}
+		}else if( code == KeyCode.LEFT ) {
+			int height = piece.height;
+			for( int i = 0; i < height; i++ ) {
+				if( gameBoard[xPos - 1][yPos + i].isOccupied() ) {
+					return false;
+				}
+			}
+		}else if( code == KeyCode.RIGHT ) {
+			int height = piece.height;
+			for( int i = 0; i < height; i++ ) {
+				if( gameBoard[xPos + 1][yPos + i].isOccupied() ) {
+					return false;
+				}
+			}
+		}
+		
+		return result;
+	}
+	
+	
+	public void logMove( String ID, KeyCode code ) {
+		
 	}
 
+	
+	public PuzzleBlock getBlock( String ID ) {
+		PuzzleBlock result = null;
+		for( PuzzleBlock block : blocks ) {
+			if( block.getID().equals(ID) ) {
+				return block;
+			}
+		}
+		return result;
+	}
+	
+	
+	
+	
 }

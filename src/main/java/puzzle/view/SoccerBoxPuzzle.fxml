@@ -6,7 +6,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.SoccerBoxPuzzleController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#move" prefHeight="550.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.SoccerBoxPuzzleController">
   <children>
     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eb9d5c" height="550.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="25.0" width="450.0" />
     <Circle layoutX="225.0" layoutY="225.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />

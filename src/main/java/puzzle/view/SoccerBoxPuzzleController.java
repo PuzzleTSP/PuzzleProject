@@ -2,6 +2,9 @@ package puzzle.view;
 
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.event.EventHandler;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import puzzle.PuzzleLauncher;
@@ -54,6 +57,16 @@ public class SoccerBoxPuzzleController {
 		this.app = app;
 	}
 	
+	public void initMoves( ) {
+		app.getPrimaryStage().getScene().setOnKeyPressed( new EventHandler<KeyEvent>() {
+			@Override
+			public void handle(KeyEvent event) {
+				move(event);
+			}
+			
+		});
+	}
+	
 	@FXML
 	public void outlineSelected(MouseEvent event) {
 		Rectangle pieceSelected = (Rectangle) event.getSource();
@@ -84,6 +97,38 @@ public class SoccerBoxPuzzleController {
 	private void deselect(Rectangle previous) {
 		if (previous == null) return;
 		previous.setStroke(Color.BLACK);
+	}
+	
+	@FXML
+	public void move( KeyEvent event ) {
+		if( previousSelected != null ) {
+			
+			Rectangle piece = previousSelected;
+			String ID = piece.getId();
+			
+			
+			if( event.getCode() == KeyCode.UP ) {
+				if( piece.getLayoutY() >= 125 ) {
+					System.out.println( board.checkMove(ID, KeyCode.UP));
+					if( board.checkMove(ID, KeyCode.UP ) ) piece.setLayoutY( piece.getLayoutY() - 100 );
+				}
+			} else if( event.getCode() == KeyCode.DOWN ) {
+				if (piece.getLayoutY() + piece.getHeight() <= 425 ) {
+					if( board.checkMove(ID, KeyCode.DOWN ) ) piece.setLayoutY( piece.getLayoutY() + 100 );
+				}
+			}else if( event.getCode() == KeyCode.LEFT ) {
+				if (piece.getLayoutX() >= 125 ) {
+					if( board.checkMove(ID, KeyCode.LEFT ) ) piece.setLayoutX( piece.getLayoutX() - 100 );
+				}
+			}else if( event.getCode() == KeyCode.RIGHT ) {
+				if (piece.getLayoutX() + piece.getWidth() <= 325 ) {
+					if( board.checkMove(ID, KeyCode.RIGHT ) ) piece.setLayoutX( piece.getLayoutX() + 100 );
+				}
+			}
+			
+		}
+		
+		//checkWin();
 	}
 	
 	private Boolean isSelected(Rectangle rectangle) {

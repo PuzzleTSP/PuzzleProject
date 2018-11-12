@@ -45,6 +45,11 @@ public class MainMenuController {
             //Set soccer box as center of root
             app.setCenterDisplay(soccerBox);
             
+            //Initialize app in soccerBox
+            SoccerBoxPuzzleController controller = loader.getController();
+            controller.setApp( app );
+            controller.initMoves();
+            
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
