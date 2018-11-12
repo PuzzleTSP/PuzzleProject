@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="750.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="puzzle.view.MainMenuController">
+<BorderPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.MainMenuController">
   <center>
     <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
       <children>
-        <Button mnemonicParsing="false" onAction="#openPuzzle1" prefHeight="85.0" prefWidth="200.0" text="Puzzle 1">
+        <Button fx:id="SoccerBoxButton" mnemonicParsing="false" onAction="#openPuzzle" onMouseEntered="#outlineHovered" prefHeight="85.0" prefWidth="230.0" text="Soccer Box Puzzle">
           <font>
             <Font size="24.0" fx:id="x1" />
           </font>
@@ -19,16 +19,24 @@
             <Insets top="50.0" />
           </VBox.margin>
         </Button>
-        <Button font="$x1" mnemonicParsing="false" onAction="#openSoccerBox" prefHeight="85.0" prefWidth="200.0" text="SoccerBox">
+        <Button fx:id="PegButton" font="$x1" mnemonicParsing="false" onAction="#openPuzzle" onMouseEntered="#outlineHovered" prefHeight="85.0" prefWidth="230.0" text="Peg Puzzle">
           <VBox.margin>
             <Insets top="30.0" />
           </VBox.margin>
         </Button>
-        <Button font="$x1" mnemonicParsing="false" prefHeight="85.0" prefWidth="200.0" text="Button">
+        <Button fx:id="HanoiButton" font="$x1" mnemonicParsing="false" onAction="#openPuzzle" onMouseEntered="#outlineHovered" prefHeight="85.0" prefWidth="230.0" text="Towers of Hanoi">
           <VBox.margin>
             <Insets top="30.0" />
           </VBox.margin>
         </Button>
+            <Button fx:id="NonogramButton" mnemonicParsing="false" onAction="#openPuzzle" onMouseEntered="#outlineHovered" prefHeight="85.0" prefWidth="230.0" text="Nonogram">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Button>
       </children>
     </VBox>
   </center>
