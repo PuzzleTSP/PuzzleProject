@@ -106,10 +106,10 @@ public class SoccerBoxPuzzleController {
 			Rectangle piece = previousSelected;
 			String ID = piece.getId();
 			
+			//System.out.println( board.checkMove(ID, event.getCode()) );
 			
 			if( event.getCode() == KeyCode.UP ) {
 				if( piece.getLayoutY() >= 125 ) {
-					System.out.println( board.checkMove(ID, KeyCode.UP));
 					if( board.checkMove(ID, KeyCode.UP ) ) piece.setLayoutY( piece.getLayoutY() - 100 );
 				}
 			} else if( event.getCode() == KeyCode.DOWN ) {

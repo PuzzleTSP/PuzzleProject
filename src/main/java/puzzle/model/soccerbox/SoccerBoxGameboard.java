@@ -14,7 +14,7 @@ public class SoccerBoxGameboard {
 	// Instance variables, 2D-array of BoardTile's functions as gameBoard
 	// "blocks" functions as the list of pieces on the board.
 
-	protected BoardTile[][] gameBoard = null;
+	public BoardTile[][] gameBoard = null;
 
 	/*
 	 * @return Returns the gameboard, an array of BoardTile elements
@@ -125,34 +125,35 @@ public class SoccerBoxGameboard {
 		PuzzleBlock piece = getBlock(ID);
 		int xPos = piece.getX();
 		int yPos = piece.getY();
-		
+				
 		if( code == KeyCode.UP ) {
 			int width = piece.width;
 			for( int i = 0; i < width; i++ ) {
+				System.out.println( gameBoard[0][0].isOccupied() );
+				System.out.println( gameBoard[xPos + i][yPos - 1].isOccupied() );
 				if( gameBoard[xPos + i][yPos - 1].isOccupied() ) {
-					return false;
+					result = false;
 				}
 			}
 		}else if( code == KeyCode.DOWN ) {
 			int width = piece.width;
 			for( int i = 0; i < width; i++ ) {
-				System.out.println( gameBoard[xPos + i][yPos + 1].isOccupied() );
 				if( gameBoard[xPos + i][yPos + 1].isOccupied() ) {
-					return false;
+					result = false;
 				}
 			}
 		}else if( code == KeyCode.LEFT ) {
 			int height = piece.height;
 			for( int i = 0; i < height; i++ ) {
 				if( gameBoard[xPos - 1][yPos + i].isOccupied() ) {
-					return false;
+					result = false;
 				}
 			}
 		}else if( code == KeyCode.RIGHT ) {
 			int height = piece.height;
 			for( int i = 0; i < height; i++ ) {
 				if( gameBoard[xPos + 1][yPos + i].isOccupied() ) {
-					return false;
+					result = false;
 				}
 			}
 		}

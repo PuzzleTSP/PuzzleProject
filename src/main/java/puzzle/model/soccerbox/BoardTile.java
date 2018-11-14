@@ -10,14 +10,16 @@ public class BoardTile {
 	int boardXPos;
 	int boardYPos;
 	PuzzleBlock occupiedBy;
+	boolean isOccupied = false;
 
 	public BoardTile( int xPos, int yPos ) {
 		this.boardXPos = xPos;
 		this.boardYPos = yPos;
+		occupiedBy = null;
 	}
 
 	public boolean isOccupied() {
-		return (occupiedBy != null);
+		return isOccupied;
 	}
 
 	public PuzzleBlock occupiedBy() {
@@ -26,10 +28,12 @@ public class BoardTile {
 
 	protected void setOccupied( PuzzleBlock block ) {
 	  occupiedBy = block;
+	  isOccupied = true;
 	}
 
 	public void setUnoccupied() {
 		occupiedBy = null;
+		isOccupied = false;
 	}
 
 
