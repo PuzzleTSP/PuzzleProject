@@ -9,6 +9,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import puzzle.PuzzleLauncher;
+import puzzle.model.peg.PegMove;
 
 public class PegPuzzleController {
 	private PuzzleLauncher app;
@@ -82,6 +83,10 @@ public class PegPuzzleController {
 		app.getPrimaryStage().close();
 	}
 	
+	public void setApp(PuzzleLauncher app) {
+		this.app = app;
+	}
+	
 	@FXML
 	private void refresh() {
 		for(Circle c: pegList) {
@@ -116,4 +121,5 @@ public class PegPuzzleController {
 		if (c.equals(previousSelected)) return true;
 		return false;
 	}
+	
 }
