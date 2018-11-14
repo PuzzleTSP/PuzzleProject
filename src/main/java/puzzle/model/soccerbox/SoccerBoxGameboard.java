@@ -63,25 +63,25 @@ public class SoccerBoxGameboard {
 
 	public void initBlocks() {
 
-		PuzzleBlock goal = new PuzzleBlock2x2(1, 0, "goal");
+		PuzzleBlock goal = new PuzzleBlock2x2(1, 0, "goal", 2, 2);
 		blocks.add(goal);
-		PuzzleBlock singleA = new PuzzleBlock1x1(1, 3, "singleA");
+		PuzzleBlock singleA = new PuzzleBlock1x1(1, 3, "singleA", 1, 1);
 		blocks.add(singleA);
-		PuzzleBlock singleB = new PuzzleBlock1x1(1, 4, "singleC");
+		PuzzleBlock singleB = new PuzzleBlock1x1(1, 4, "singleC", 1, 1);
 		blocks.add(singleB);
-		PuzzleBlock singleC = new PuzzleBlock1x1(2, 3, "singleB");
+		PuzzleBlock singleC = new PuzzleBlock1x1(2, 3, "singleB", 1, 1);
 		blocks.add(singleC);
-		PuzzleBlock singleD = new PuzzleBlock1x1(2, 4, "singleD");
+		PuzzleBlock singleD = new PuzzleBlock1x1(2, 4, "singleD", 1, 1);
 		blocks.add(singleD);
-		PuzzleBlock wide = new PuzzleBlock2x1(1, 2, "wide");
+		PuzzleBlock wide = new PuzzleBlock2x1(1, 2, "wide", 1, 2);
 		blocks.add(wide);
-		PuzzleBlock tallA = new PuzzleBlock1x2(0, 1, "tallA");
+		PuzzleBlock tallA = new PuzzleBlock1x2(0, 1, "tallA", 2, 1);
 		blocks.add(tallA);
-		PuzzleBlock tallB = new PuzzleBlock1x2(0, 3, "tallC");
+		PuzzleBlock tallB = new PuzzleBlock1x2(0, 3, "tallC", 2, 1);
 		blocks.add(tallB);
-		PuzzleBlock tallC = new PuzzleBlock1x2(3, 1, "tallB");
+		PuzzleBlock tallC = new PuzzleBlock1x2(3, 1, "tallB", 2, 1);
 		blocks.add(tallC);
-		PuzzleBlock tallD = new PuzzleBlock1x2(3, 3, "tallD");
+		PuzzleBlock tallD = new PuzzleBlock1x2(3, 3, "tallD", 2, 1);
 		blocks.add(tallD);
 
 	}
@@ -125,18 +125,16 @@ public class SoccerBoxGameboard {
 		PuzzleBlock piece = getBlock(ID);
 		int xPos = piece.getX();
 		int yPos = piece.getY();
-				
+					
 		if( code == KeyCode.UP ) {
-			int width = piece.width;
+			int width = piece.getWidth();
 			for( int i = 0; i < width; i++ ) {
-				System.out.println( gameBoard[0][0].isOccupied() );
-				System.out.println( gameBoard[xPos + i][yPos - 1].isOccupied() );
 				if( gameBoard[xPos + i][yPos - 1].isOccupied() ) {
 					result = false;
 				}
 			}
 		}else if( code == KeyCode.DOWN ) {
-			int width = piece.width;
+			int width = piece.getWidth();
 			for( int i = 0; i < width; i++ ) {
 				if( gameBoard[xPos + i][yPos + 1].isOccupied() ) {
 					result = false;
@@ -162,8 +160,68 @@ public class SoccerBoxGameboard {
 	}
 	
 	
+	/** 
+	 * A Method which updates the gameboard[][] array to keep up with player movements/UI
+	 * 
+	 * @param ID
+	 * @param code
+	 */
 	public void logMove( String ID, KeyCode code ) {
+		PuzzleBlock piece = getBlock(ID);
+		int xPos = piece.getX();
+		int yPos = piece.getY();
+		int width = piece.getWidth();
+		int height = piece.getHeight();
 		
+		if( code == KeyCode.UP ) {
+			for( int i = 0; i < width; i++ ) {
+				for( int j = 0; j < height; j++ ) {
+					gameBoard[xPos + i][yPos + j].setUnoccupied();
+				}
+			}
+			piece.setY( yPos - 1);
+			for( int i = 0; i < width; i ++ ) {
+				for( int j = 0; j < height; j++ ) {
+					gameBoard[piece.getX() + i][piece.getY() + j].setOccupied( piece );
+				}
+			}
+		}else if( code == KeyCode.DOWN ) {
+			for( int i = 0; i < width; i++ ) {
+				for( int j = 0; j < height; j++ ) {
+					gameBoard[xPos + i][yPos + j].setUnoccupied();
+				}
+			}
+			piece.setY( yPos + 1);
+			for( int i = 0; i < width; i ++ ) {
+				for( int j = 0; j < height; j++ ) {
+					gameBoard[piece.getX() + i][piece.getY() + j].setOccupied( piece );
+				}
+			}
+		} else if( code == KeyCode.LEFT ) {
+			for( int i = 0; i < width; i++ ) {
+				for( int j = 0; j < height; j++ ) {
+					gameBoard[xPos + i][yPos + j].setUnoccupied();
+				}
+			}
+			piece.setX( xPos - 1);
+			for( int i = 0; i < width; i ++ ) {
+				for( int j = 0; j < height; j++ ) {
+					gameBoard[piece.getX() + i][piece.getY() + j].setOccupied( piece );
+				}
+			}
+		} else if( code == KeyCode.RIGHT ) {
+			for( int i = 0; i < width; i++ ) {
+				for( int j = 0; j < height; j++ ) {
+					gameBoard[xPos + i][yPos + j].setUnoccupied();
+				}
+			}
+			piece.setX( xPos + 1);
+			for( int i = 0; i < width; i ++ ) {
+				for( int j = 0; j < height; j++ ) {
+					gameBoard[piece.getX() + i][piece.getY() + j].setOccupied( piece );
+				}
+			}
+		}
 	}
 
 	

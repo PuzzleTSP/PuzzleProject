@@ -7,8 +7,8 @@ package puzzle.model.soccerbox;
 
 public class PuzzleBlock {
 
-	protected int height;
-	protected int width;
+	public int height;
+	public int width;
 	protected int topLeftX;
 	protected int topLeftY;
 	protected String ID;
@@ -16,10 +16,12 @@ public class PuzzleBlock {
 
 	public PuzzleBlock () { }
 
-	public PuzzleBlock ( int startingX, int startingY, String ID ) {
+	public PuzzleBlock ( int startingX, int startingY, String ID, int height, int width ) {
 		this.topLeftX = startingX;
 		this.topLeftY = startingY;
 		this.ID = ID;
+		this.height = height;
+		this.width = width;
 	}
 
 
@@ -29,8 +31,20 @@ public class PuzzleBlock {
 	public int getY() {
 		return topLeftY;
 	}
+	public void setX( int x ) {
+		topLeftX = x;
+	}
+	public void setY( int y ) {
+		topLeftY = y;
+	}
 	public String getID() {
 		return ID;
+	}
+	public int getWidth() {
+		return width;
+	}
+	public int getHeight() {
+		return height;
 	}
 
 }

@@ -6,8 +6,8 @@ public class PuzzleBlock1x1 extends PuzzleBlock {
 	int width = 1;
 	
 	
-	protected PuzzleBlock1x1 ( int startingX, int startingY, String ID ) {
-		super( startingX, startingY, ID );
+	protected PuzzleBlock1x1 ( int startingX, int startingY, String ID, int height, int width ) {
+		super( startingX, startingY, ID, height, width );
 	}
 	
 	

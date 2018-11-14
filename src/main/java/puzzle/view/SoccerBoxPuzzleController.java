@@ -106,23 +106,35 @@ public class SoccerBoxPuzzleController {
 			Rectangle piece = previousSelected;
 			String ID = piece.getId();
 			
-			//System.out.println( board.checkMove(ID, event.getCode()) );
+			System.out.println( board.checkMove(ID, event.getCode()) );
 			
 			if( event.getCode() == KeyCode.UP ) {
 				if( piece.getLayoutY() >= 125 ) {
-					if( board.checkMove(ID, KeyCode.UP ) ) piece.setLayoutY( piece.getLayoutY() - 100 );
+					if( board.checkMove(ID, KeyCode.UP ) ) {
+						piece.setLayoutY( piece.getLayoutY() - 100 );
+						board.logMove(ID, event.getCode() );
+					}
 				}
 			} else if( event.getCode() == KeyCode.DOWN ) {
 				if (piece.getLayoutY() + piece.getHeight() <= 425 ) {
-					if( board.checkMove(ID, KeyCode.DOWN ) ) piece.setLayoutY( piece.getLayoutY() + 100 );
+					if( board.checkMove(ID, KeyCode.DOWN ) ) {
+						piece.setLayoutY( piece.getLayoutY() + 100 );
+						board.logMove(ID, event.getCode() );
+					}
 				}
 			}else if( event.getCode() == KeyCode.LEFT ) {
 				if (piece.getLayoutX() >= 125 ) {
-					if( board.checkMove(ID, KeyCode.LEFT ) ) piece.setLayoutX( piece.getLayoutX() - 100 );
+					if( board.checkMove(ID, KeyCode.LEFT ) ) {
+						piece.setLayoutX( piece.getLayoutX() - 100 );
+						board.logMove(ID, event.getCode() );
+					}
 				}
 			}else if( event.getCode() == KeyCode.RIGHT ) {
 				if (piece.getLayoutX() + piece.getWidth() <= 325 ) {
-					if( board.checkMove(ID, KeyCode.RIGHT ) ) piece.setLayoutX( piece.getLayoutX() + 100 );
+					if( board.checkMove(ID, KeyCode.RIGHT ) ) {
+						piece.setLayoutX( piece.getLayoutX() + 100 );
+						board.logMove(ID, event.getCode() );
+					}
 				}
 			}
 			
