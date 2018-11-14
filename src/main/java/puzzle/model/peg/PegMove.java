@@ -40,6 +40,13 @@ public class PegMove {
 
 	public boolean moveExist() {
 		//find move in array
+		int location = getPosition(startCirc);
+		
+		for(int[] t: moves) {
+			if(t[0] == location) {
+				
+			}
+		}
 		//if move is in the array, move on    else return false
 		//check if the color are valid for a move, if they are move on    else false
 		return false;
