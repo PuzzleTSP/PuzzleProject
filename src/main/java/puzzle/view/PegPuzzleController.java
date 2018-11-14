@@ -4,8 +4,10 @@ import java.util.ArrayList;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import puzzle.PuzzleLauncher;
 
 public class PegPuzzleController {
@@ -44,7 +46,11 @@ public class PegPuzzleController {
 	@FXML
 	Button refreshButton;
 	
+	private Circle previousSelected;
+	private Circle previousHovered;
+	
 	ArrayList<Circle> pegList = new ArrayList<Circle>();
+	
 	
 	@FXML
 	private void initialize() {	
@@ -79,7 +85,7 @@ public class PegPuzzleController {
 	@FXML
 	private void refresh() {
 		for(Circle c: pegList) {
-			c.setFill(Color.GREEN);
+			c.setFill(Color.rgb(114,204,0));
 		}
 		
 		int randPeg = (int)(Math.random() * 15);
@@ -87,5 +93,27 @@ public class PegPuzzleController {
 		pegList.get(randPeg).setFill(Color.WHITE);
 	}
 	
+	@FXML
+	private void circleHover(MouseEvent event) {
+		Circle pieceHovered = (Circle) event.getSource();
+		
+		if (isSelected(pieceHovered)) {
+			deselect(previousHovered);
+		} else {
+			pieceHovered.setStroke(Color.BLUE);
+			pieceHovered.setStrokeWidth(2);
+			deselect(previousHovered);
+			previousHovered = pieceHovered;
+		}
+	}
 	
+	private void deselect(Circle previous) {
+		if (previous == null) return;
+		previous.setStroke(Color.BLACK);
+	}
+	
+	private Boolean isSelected(Circle c) {
+		if (c.equals(previousSelected)) return true;
+		return false;
+	}
 }
