@@ -53,7 +53,7 @@ public class MainMenuController {
 		if (selected.equals(SoccerBoxButton)) location = "view/SoccerBoxPuzzle.fxml";
 		else if (selected.equals(PegButton)) location = "view/PegPuzzle.fxml";
 //		else if (selected.equals(HanoiButton)) resource = "view/TowersOfHanoi.fxml";
-//		else if (selected.equals(NonogramButton)) resource = "view/Nonogram.fxml";
+		else if (selected.equals(NonogramButton)) location = "view/Nonogram.fxml";
 		else location = "view/EmptyPuzzle.fxml";
 		
 		try {
@@ -65,9 +65,11 @@ public class MainMenuController {
             //Set puzzle as center of root
             app.setCenterDisplay(puzzle);
    
-            SoccerBoxPuzzleController controller = (SoccerBoxPuzzleController)loader.getController();
-            controller.setApp( app );
-            controller.initMoves();
+            if (selected.equals(SoccerBoxButton)) {
+	            SoccerBoxPuzzleController controller = (SoccerBoxPuzzleController)loader.getController();
+	            controller.setApp( app );
+	            controller.initMoves();
+            }
             
             
 		} catch (IOException e) {
