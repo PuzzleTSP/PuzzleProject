@@ -106,7 +106,7 @@ public class SoccerBoxPuzzleController {
 			Rectangle piece = previousSelected;
 			String ID = piece.getId();
 			
-			System.out.println( board.checkMove(ID, event.getCode()) );
+			//System.out.println( board.checkMove(ID, event.getCode()) );
 			
 			if( event.getCode() == KeyCode.UP ) {
 				if( piece.getLayoutY() >= 125 ) {
@@ -140,7 +140,11 @@ public class SoccerBoxPuzzleController {
 			
 		}
 		
-		//checkWin();
+		//board.printOcc();
+		
+		if( board.checkWin() ) {
+			app.showMainMenu();
+		}
 	}
 	
 	private Boolean isSelected(Rectangle rectangle) {

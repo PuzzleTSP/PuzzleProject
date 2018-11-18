@@ -136,7 +136,7 @@ public class SoccerBoxGameboard {
 		}else if( code == KeyCode.DOWN ) {
 			int width = piece.getWidth();
 			for( int i = 0; i < width; i++ ) {
-				if( gameBoard[xPos + i][yPos + 1].isOccupied() ) {
+				if( gameBoard[xPos + i][yPos + piece.getHeight()].isOccupied() ) {
 					result = false;
 				}
 			}
@@ -150,7 +150,7 @@ public class SoccerBoxGameboard {
 		}else if( code == KeyCode.RIGHT ) {
 			int height = piece.height;
 			for( int i = 0; i < height; i++ ) {
-				if( gameBoard[xPos + 1][yPos + i].isOccupied() ) {
+				if( gameBoard[xPos + piece.getWidth()][yPos + i].isOccupied() ) {
 					result = false;
 				}
 			}
@@ -225,6 +225,17 @@ public class SoccerBoxGameboard {
 	}
 
 	
+	public boolean checkWin() {
+		boolean result = false;
+		
+		PuzzleBlock goal = getBlock("goal");
+		if( goal.getX() == 1 && goal.getY() == 1) {
+			result = true;
+		}
+		
+		return result;
+	}
+	
 	public PuzzleBlock getBlock( String ID ) {
 		PuzzleBlock result = null;
 		for( PuzzleBlock block : blocks ) {
@@ -235,6 +246,22 @@ public class SoccerBoxGameboard {
 		return result;
 	}
 	
+	public void printOcc() {
+		String print = "";
+		
+		for(int i = 0; i < 5; i++ ) {
+			print = "";
+			for(int j = 0; j < 4; j++ ) {
+				if( gameBoard[j][i].isOccupied() ) {
+					print += "O ";
+				} else {
+					print += "U ";
+				}
+			}
+			System.out.println( print );
+		}
+		
+	}
 	
 	
 	
