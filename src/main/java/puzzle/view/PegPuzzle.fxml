@@ -20,41 +20,27 @@
         <Double fx:value="-60.0" />
       </points>
     </Polygon>
-    <Circle fx:id="peg1" fill="#72cc00" layoutX="425.0" layoutY="106.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg2" layoutX="367.0" layoutY="178.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE">
+    <Circle fx:id="peg1" fill="#72cc00" layoutX="425.0" layoutY="106.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="peg2" layoutX="367.0" layoutY="178.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE">
       <fill>
         <Color blue="0.000" green="0.800" red="0.447" fx:id="x1" />
       </fill>
     </Circle>
-    <Circle fx:id="peg3" fill="$x1" layoutX="495.0" layoutY="178.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg5" fill="$x1" layoutX="423.0" layoutY="250.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg4" fill="$x1" layoutX="295.0" layoutY="250.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg6" fill="$x1" layoutX="567.0" layoutY="250.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg8" fill="$x1" layoutX="351.0" layoutY="322.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg9" fill="$x1" layoutX="495.0" layoutY="322.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg10" fill="$x1" layoutX="639.0" layoutY="322.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg7" fill="$x1" layoutX="223.0" layoutY="322.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg12" fill="$x1" layoutX="279.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg13" fill="$x1" layoutX="423.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg14" fill="$x1" layoutX="567.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg15" fill="$x1" layoutX="711.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg11" fill="$x1" layoutX="151.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="peg3" fill="$x1" layoutX="495.0" layoutY="178.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="peg5" fill="$x1" layoutX="423.0" layoutY="250.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="peg4" fill="$x1" layoutX="295.0" layoutY="250.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="peg6" fill="$x1" layoutX="567.0" layoutY="250.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="peg8" fill="$x1" layoutX="351.0" layoutY="322.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="peg9" fill="$x1" layoutX="495.0" layoutY="322.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="peg10" fill="$x1" layoutX="639.0" layoutY="322.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="peg7" fill="$x1" layoutX="223.0" layoutY="322.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="peg12" fill="$x1" layoutX="279.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="peg13" fill="$x1" layoutX="423.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="peg14" fill="$x1" layoutX="567.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="peg15" fill="$x1" layoutX="711.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="peg11" fill="$x1" layoutX="151.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
     <Button fx:id="refreshButton" layoutX="60.0" layoutY="72.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
-    <Text layoutX="651.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Peg Solitaire" />
-    <Text layoutX="420.0" layoutY="112.0" scaleX="1.0" scaleY="1.0000050122367798" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
-    <Text layoutX="360.0" layoutY="182.0" scaleX="1.0" scaleY="1.0000050122367798" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
-    <Text layoutX="290.0" layoutY="251.0" scaleX="1.0" scaleY="1.0000050122367798" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
-    <Text layoutX="147.0" layoutY="400.0" scaleX="1.0" scaleY="1.0000050122367798" strokeType="OUTSIDE" strokeWidth="0.0" text="11" />
-    <Text layoutX="347.0" layoutY="330.0" scaleX="1.0" scaleY="1.0000050122367798" strokeType="OUTSIDE" strokeWidth="0.0" text="8" />
-    <Text layoutX="563.0" layoutY="256.0" scaleX="1.0" scaleY="1.0000050122367798" strokeType="OUTSIDE" strokeWidth="0.0" text="6" />
-    <Text layoutX="419.0" layoutY="257.0" scaleX="1.0" scaleY="1.0000050122367798" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
-    <Text layoutX="423.0" layoutY="396.0" scaleX="1.0" scaleY="1.0000050122367798" strokeType="OUTSIDE" strokeWidth="0.0" text="13" />
-    <Text layoutX="279.0" layoutY="400.0" scaleX="1.0" scaleY="1.0000050122367798" strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
-    <Text layoutX="219.0" layoutY="324.0" scaleX="1.0" scaleY="1.0000050122367798" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
-    <Text layoutX="635.0" layoutY="328.0" scaleX="1.0" scaleY="1.0000050122367798" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
-    <Text layoutX="495.0" layoutY="326.0" scaleX="0.9999924513489593" scaleY="1.0000050122367798" strokeType="OUTSIDE" strokeWidth="0.0" text="9" />
-    <Text layoutX="495.0" layoutY="178.0" scaleX="1.0" scaleY="1.0000050122367798" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
-    <Text layoutX="563.0" layoutY="400.0" scaleX="1.0" scaleY="1.0000050122367798" strokeType="OUTSIDE" strokeWidth="0.0" text="14" />
-    <Text layoutX="704.0" layoutY="400.0" scaleX="1.844549649647897" scaleY="1.0000050122367798" strokeType="OUTSIDE" strokeWidth="0.0" text="15" />
+    <Text layoutX="651.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Peg Solitaire" visible="true" />
+    <Button fx:id="undo" layoutX="60.0" layoutY="123.0" mnemonicParsing="false" onAction="#undo" text="Undo Last Move" />
   </children>
 </Pane>

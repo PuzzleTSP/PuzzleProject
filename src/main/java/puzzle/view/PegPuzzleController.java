@@ -12,6 +12,9 @@ import javafx.scene.shape.Rectangle;
 import puzzle.PuzzleLauncher;
 import puzzle.model.peg.PegMove;
 
+//TODO win condition 
+
+
 public class PegPuzzleController {
 	private PuzzleLauncher app;
 	
@@ -22,6 +25,9 @@ public class PegPuzzleController {
 	
 	@FXML
 	Button refreshButton;
+	
+	@FXML
+	Button undo;
 	
 	private Circle previousSelected;
 	private Circle previousHovered;
@@ -34,6 +40,8 @@ public class PegPuzzleController {
 	Stack<PegMove> moveStack;
 	
 	Color greenFill = Color.rgb(114,204,0);
+	
+	int numFill;
 	
 	@FXML
 	private void initialize() {	
@@ -63,6 +71,8 @@ public class PegPuzzleController {
 		jumpCirc = null;
 		currMove = null;
 		moveStack = new Stack<PegMove>();
+		
+		numFill = 15;
 	}
 	
 	@FXML
@@ -123,8 +133,15 @@ public class PegPuzzleController {
 				moveTriple[1].setFill(Color.WHITE);
 				moveTriple[2].setFill(greenFill);
 				
+				startCirc.setStroke(Color.BLACK);
+				jumpCirc.setStroke(Color.BLACK);
+
+				startCirc = null;
+				jumpCirc = null;
 				//add move to the stack of moves
 				moveStack.push(currMove);
+				
+				numFill--;
 			}
 			else {
 				//if not a valid move, reset the move
@@ -142,8 +159,21 @@ public class PegPuzzleController {
 	}
 	
 	private Boolean isSelected(Circle c) {
-		if (c.equals(previousSelected)) return true;
+		if (c.equals(previousSelected) || c.getStroke().equals(Color.RED)) return true;
 		return false;
 	}
 	
+	
+	@FXML
+	private void undo() {
+		if(moveStack.isEmpty() == false) {
+			PegMove lastMove = moveStack.pop();
+		
+			Circle[] lastTriple = lastMove.getJumpTriple();
+			
+			lastTriple[0].setFill(greenFill);
+			lastTriple[1].setFill(greenFill);
+			lastTriple[2].setFill(Color.WHITE);
+		}
+	}
 }
