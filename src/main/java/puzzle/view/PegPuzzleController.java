@@ -1,6 +1,7 @@
 package puzzle.view;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -14,44 +15,25 @@ import puzzle.model.peg.PegMove;
 public class PegPuzzleController {
 	private PuzzleLauncher app;
 	
-	@FXML
-	Circle peg1;
-	@FXML
-	Circle peg2;
-	@FXML
-	Circle peg3;
-	@FXML
-	Circle peg4;
-	@FXML
-	Circle peg5;
-	@FXML
-	Circle peg6;
-	@FXML
-	Circle peg7;
-	@FXML
-	Circle peg8;
-	@FXML
-	Circle peg9;
-	@FXML
-	Circle peg10;
-	@FXML
-	Circle peg11;
-	@FXML
-	Circle peg12;
-	@FXML
-	Circle peg13;
-	@FXML
-	Circle peg14;
-	@FXML
-	Circle peg15;
+	
+	@FXML Circle peg1; @FXML Circle peg2;@FXML Circle peg3;	@FXML Circle peg4; @FXML Circle peg5;
+	@FXML Circle peg6; @FXML Circle peg7; @FXML Circle peg8; @FXML Circle peg9; @FXML Circle peg10;
+	@FXML Circle peg11; @FXML Circle peg12; @FXML Circle peg13; @FXML Circle peg14; @FXML Circle peg15;
+	
 	@FXML
 	Button refreshButton;
 	
 	private Circle previousSelected;
 	private Circle previousHovered;
+	private Circle startCirc, jumpCirc;
 	
 	ArrayList<Circle> pegList = new ArrayList<Circle>();
 	
+	PegMove currMove;
+	Circle[] moveTriple;
+	Stack<PegMove> moveStack;
+	
+	Color greenFill = Color.rgb(114,204,0);
 	
 	@FXML
 	private void initialize() {	
@@ -76,6 +58,11 @@ public class PegPuzzleController {
 		int randPeg = (int)(Math.random() * 15);
 		
 		pegList.get(randPeg).setFill(Color.WHITE);
+		
+		startCirc = null;
+		jumpCirc = null;
+		currMove = null;
+		moveStack = new Stack<PegMove>();
 	}
 	
 	@FXML
@@ -90,7 +77,7 @@ public class PegPuzzleController {
 	@FXML
 	private void refresh() {
 		for(Circle c: pegList) {
-			c.setFill(Color.rgb(114,204,0));
+			c.setFill(greenFill);
 		}
 		
 		int randPeg = (int)(Math.random() * 15);
@@ -106,14 +93,52 @@ public class PegPuzzleController {
 			deselect(previousHovered);
 		} else {
 			pieceHovered.setStroke(Color.BLUE);
-			pieceHovered.setStrokeWidth(2);
 			deselect(previousHovered);
 			previousHovered = pieceHovered;
 		}
 	}
 	
+	@FXML 
+	private void selectPeg(MouseEvent event) {
+		Circle selectedPeg = (Circle) event.getSource();
+		
+		//add first peg to the move
+		if(startCirc == null) {
+			startCirc = selectedPeg;
+			startCirc.setStroke(Color.RED);
+		}
+		else {
+			//add second peg to the move
+			jumpCirc = selectedPeg;
+			jumpCirc.setStroke(Color.RED);
+			currMove = new PegMove(startCirc,jumpCirc,pegList);
+			
+			System.out.println("Start: " + startCirc.getId() + " End: " + jumpCirc.getId() + " Valid: " + currMove.validMove());
+			//check if the move is valid
+			if(currMove.validMove()) {
+				//get valid move triple
+				moveTriple = currMove.getJumpTriple();
+				
+				//change colors of pegs to make the jump 
+				moveTriple[0].setFill(Color.WHITE);
+				moveTriple[1].setFill(Color.WHITE);
+				moveTriple[2].setFill(greenFill);
+				
+				//add move to the stack of moves
+				moveStack.push(currMove);
+			}
+			else {
+				//if not a valid move, reset the move
+				startCirc.setStroke(Color.BLACK);
+				jumpCirc.setStroke(Color.BLACK);
+				
+				startCirc = null;
+				jumpCirc = null;
+			}
+		}
+	}
 	private void deselect(Circle previous) {
-		if (previous == null) return;
+		if (previous == null || previous.getStroke().equals(Color.RED)) return;
 		previous.setStroke(Color.BLACK);
 	}
 	
