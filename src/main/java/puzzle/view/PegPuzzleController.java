@@ -113,7 +113,6 @@ public class PegPuzzleController {
 			jumpCirc.setStroke(Color.RED);
 			currMove = new PegMove(startCirc,jumpCirc,pegList);
 			
-			System.out.println("Start: " + startCirc.getId() + " End: " + jumpCirc.getId() + " Valid: " + currMove.validMove());
 			//check if the move is valid
 			if(currMove.validMove()) {
 				//get valid move triple

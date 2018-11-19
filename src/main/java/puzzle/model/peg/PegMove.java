@@ -48,13 +48,11 @@ public class PegMove {
 		
 		for(int[] t: moves) {
 			if(t[0] == first && t[2] == last) {
-				System.out.println("made it here");
 				for(Circle c: pegList) {
 					if(Integer.parseInt(c.getId().substring(3)) == t[1]) {
 						middleCirc = c;
 					}
 				}
-				System.out.println(startCirc.getFill().toString() + " " + greenFill.toString());
 				if(startCirc.getFill().toString().equals(greenFill.toString()) && 
 				   middleCirc.getFill().toString().equals(greenFill.toString()) && 
 				   endCirc.getFill().toString().equals(Color.WHITE.toString())) {
