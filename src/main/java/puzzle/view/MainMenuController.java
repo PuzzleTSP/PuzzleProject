@@ -70,8 +70,7 @@ public class MainMenuController {
 	            controller.setApp( app );
 	            controller.initMoves();
             }
-            
-            
+    
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -9,7 +9,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 import puzzle.PuzzleLauncher;
+import puzzle.model.peg.PegBoard;
 import puzzle.model.peg.PegMove;
 
 //TODO win condition 
@@ -29,6 +31,17 @@ public class PegPuzzleController {
 	@FXML
 	Button undo;
 	
+	@FXML
+	Rectangle winBox;
+	
+	@FXML
+	Text gameOver;
+	
+	@FXML
+	Button winRestart;
+	
+	@FXML Text numPegs; @FXML Text winMessage; @FXML Text otherText1; @FXML Text otherText2;
+	
 	private Circle previousSelected;
 	private Circle previousHovered;
 	private Circle startCirc, jumpCirc;
@@ -36,12 +49,16 @@ public class PegPuzzleController {
 	ArrayList<Circle> pegList = new ArrayList<Circle>();
 	
 	PegMove currMove;
+	PegBoard gameBoard;
 	Circle[] moveTriple;
 	Stack<PegMove> moveStack;
+	
 	
 	Color greenFill = Color.rgb(114,204,0);
 	
 	int numFill;
+	
+	boolean boardFlip =false ;
 	
 	@FXML
 	private void initialize() {	
@@ -72,7 +89,20 @@ public class PegPuzzleController {
 		currMove = null;
 		moveStack = new Stack<PegMove>();
 		
-		numFill = 15;
+		gameBoard = new PegBoard(pegList);
+		System.out.println(gameBoard.possibleMove());
+		numFill = 14;
+		
+		winBox.setVisible(boardFlip);
+		gameOver.setVisible(boardFlip);
+		winRestart.setVisible(boardFlip);
+		numPegs.setVisible(boardFlip);
+		winMessage.setVisible(boardFlip);
+		otherText1.setVisible(boardFlip);
+		otherText2.setVisible(boardFlip);
+		
+		
+		boardFlip = !boardFlip;
 	}
 	
 	@FXML
@@ -93,6 +123,30 @@ public class PegPuzzleController {
 		int randPeg = (int)(Math.random() * 15);
 		
 		pegList.get(randPeg).setFill(Color.WHITE);
+		
+		gameBoard = new PegBoard(pegList);
+		
+		numFill = 14;
+		
+		moveStack.removeAllElements();
+	}
+	
+	@FXML
+	private void restart() {
+		for(Circle c: pegList) {
+			c.setFill(greenFill);
+		}
+		
+		int randPeg = (int)(Math.random() * 15);
+		
+		pegList.get(randPeg).setFill(Color.WHITE);
+		
+		gameBoard = new PegBoard(pegList);
+		moveStack.removeAllElements();
+
+		numFill = 14;
+		
+		flipVisible();
 	}
 	
 	@FXML
@@ -142,6 +196,11 @@ public class PegPuzzleController {
 				moveStack.push(currMove);
 				
 				numFill--;
+				
+				gameBoard.updateBoard(pegList);
+				if(gameBoard.possibleMove() == 0) {
+					flipVisible();
+				}
 			}
 			else {
 				//if not a valid move, reset the move
@@ -176,4 +235,43 @@ public class PegPuzzleController {
 			lastTriple[2].setFill(Color.WHITE);
 		}
 	}
+	
+	public void flipVisible() {
+		winBox.setVisible(boardFlip);
+		gameOver.setVisible(boardFlip);
+		winRestart.setVisible(boardFlip);
+		
+		numPegs.setText(Integer.toString(numFill));
+		numPegs.setVisible(boardFlip);
+		
+		switch(numFill) {
+			case 1:
+				winMessage.setText("a genius!");
+				break;
+			case 2:
+				winMessage.setText("pretty smart.");
+				break;
+			case 3:
+				winMessage.setText("just average.");
+				break;
+			default:
+				winMessage.setText("just plain dumb :(");
+				break;
+		}
+		winMessage.setVisible(boardFlip);
+		
+		undo.setDisable(boardFlip);
+		refreshButton.setDisable(boardFlip);
+		
+		otherText1.setVisible(boardFlip);
+		otherText2.setVisible(boardFlip);
+		
+		for(Circle c: pegList) {
+			c.setDisable(boardFlip);
+		}
+		
+		boardFlip = !boardFlip;
+	}
+	
+	
 }

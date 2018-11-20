@@ -1,8 +1,0 @@
-1. As a user, I want to have a main menu with different puzzle options (4 hours)
-2. As a user, I want to be able to save my scores and stats to an account (10 hours)
-3. As a user, I want to be able to play the soccer-box puzzle (10 hours)
-4. As a user, I want to be able to play the triangle peg puzzle (6 hours)
-5. As a user, I want to be able to play the hanoi tower puzzle (6 hours)
-6. As a user, I want to be able to save game progress and return at a later time (5 hours)
-7. As a user, I want to be able to recieve hints/solutions on the soccer-box puzzle (~20 hours)
-

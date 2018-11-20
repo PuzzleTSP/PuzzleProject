@@ -10,7 +10,7 @@
 
 <Pane id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="858.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="puzzle.view.PegPuzzleController">
   <children>
-    <Polygon id="woodBoard" fill="DODGERBLUE" layoutX="425.0" layoutY="253.0" scaleX="8.075388386305121" scaleY="4.177001873349183" stroke="BLACK" strokeType="INSIDE">
+    <Polygon id="woodBoard" fill="DODGERBLUE" layoutX="425.0" layoutY="253.0" opacity="1.0" scaleX="8.075388386305121" scaleY="4.177001873349183" stroke="BLACK" strokeType="INSIDE" style="">
       <points>
         <Double fx:value="-50.0" />
         <Double fx:value="40.0" />
@@ -42,5 +42,12 @@
     <Button fx:id="refreshButton" layoutX="60.0" layoutY="72.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
     <Text layoutX="651.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Peg Solitaire" visible="true" />
     <Button fx:id="undo" layoutX="60.0" layoutY="123.0" mnemonicParsing="false" onAction="#undo" text="Undo Last Move" />
+    <Rectangle fx:id="winBox" arcHeight="5.0" arcWidth="5.0" fill="#00ff29" height="336.0" layoutX="133.0" layoutY="44.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.4" visible="true" width="593.0" />
+    <Button id="restart" fx:id="winRestart" layoutX="359.0" layoutY="299.0" mnemonicParsing="false" onAction="#restart" prefHeight="46.951171875" prefWidth="128.0" text="Restart" visible="true" />
+    <Text fx:id="gameOver" layoutX="386.0" layoutY="130.0" scaleX="4.568393465302727" scaleY="4.806570219823186" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Over" visible="true" />
+    <Text fx:id="numPegs" layoutX="321.0" layoutY="195.0" scaleX="1.4096616866456635" scaleY="1.8137542829172786" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+    <Text id="" fx:id="otherText1" layoutX="364.0" layoutY="195.0" scaleX="1.4096616866456635" scaleY="1.8137542829172786" strokeType="OUTSIDE" strokeWidth="0.0" text="pegs left on the board" />
+    <Text fx:id="otherText2" layoutX="225.0" layoutY="252.0" scaleX="1.3894543249263787" scaleY="1.8673191134550438" strokeType="OUTSIDE" strokeWidth="0.0" text="That means you are " />
+    <Text fx:id="winMessage" layoutX="401.0" layoutY="252.0" scaleX="1.7474097953215475" scaleY="1.813754260027828" strokeType="OUTSIDE" strokeWidth="0.0" text="stupid" />
   </children>
 </Pane>
