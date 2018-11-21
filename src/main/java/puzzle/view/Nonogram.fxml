@@ -39,7 +39,7 @@
 	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 	  </rowConstraints>
 	   <children>
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+	      <Rectangle fill="WHITE" height="100.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="0" GridPane.rowIndex="0" />
 	      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
               <children>
                  <Label />
@@ -142,16 +142,16 @@
                   <Insets right="7.0" />
                </padding>
            </HBox>
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="1" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="1" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="1" />
 	      <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
               <children>
                  <Label />
@@ -164,16 +164,16 @@
                   <Insets right="7.0" />
                </padding>
            </HBox>
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="2" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="2" />
 	      <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
               <children>
                  <Label />
@@ -186,16 +186,16 @@
                   <Insets right="7.0" />
                </padding>
            </HBox>
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="3" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="3" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="3" />
 	      <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="4">
               <children>
                  <Label />
@@ -208,16 +208,16 @@
                   <Insets right="7.0" />
                </padding>
            </HBox>
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="4" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="4" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="4" />
 	      <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="5">
               <children>
                  <Label />
@@ -230,16 +230,16 @@
                   <Insets right="7.0" />
                </padding>
            </HBox>
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="5" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="5" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="5" />
 	      <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="6">
               <children>
                  <Label />
@@ -252,16 +252,16 @@
                   <Insets right="7.0" />
                </padding>
            </HBox>
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="6" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="6" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="6" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="6" />
 	      <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="7">
               <children>
                  <Label />
@@ -274,16 +274,16 @@
                   <Insets right="7.0" />
                </padding>
            </HBox>
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="7" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="7" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="7" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="7" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="7" />
 	      <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="8">
               <children>
                  <Label />
@@ -296,16 +296,16 @@
                   <Insets right="7.0" />
                </padding>
            </HBox>
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="8" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="8" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="8" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="8" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="8" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="8" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="8" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="8" />
 	      <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="9">
               <children>
                  <Label />
@@ -318,16 +318,16 @@
                   <Insets right="7.0" />
                </padding>
            </HBox>
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="9" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="9" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="9" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="9" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="9" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="9" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="9" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="9" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="9" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="9" />
 	      <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="10">
               <children>
                  <Label />
@@ -340,17 +340,267 @@
                   <Insets right="7.0" />
                </padding>
            </HBox>
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="10" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="10" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="10" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="10" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="10" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="10" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="10" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="10" />
-	      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="10" />      
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="10" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="10" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="10" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="10" />
+	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="10" />
+          
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="1" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+          
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="2" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+          
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="3" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+          
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="4" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="4" /> 
+          
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="5" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="5" />   
+          
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="6" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="6" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="6" />    
+          
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="7" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="7" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="7" />  
+          
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="8" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="8" />
+          
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="9" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="9" />
+          
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="10" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="10" />
+          
 	   </children>
 	 </GridPane>
 	</center>
+   <top>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="8.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Nonogram">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label text="Shape Name">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="How to Play:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="THis is what you do" wrapText="true" />
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox fx:id="correctBox" prefHeight="200.0" prefWidth="100.0" visible="false" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="You've Done It!">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </right>
 </BorderPane>

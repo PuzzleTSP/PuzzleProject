@@ -1,29 +1,30 @@
 package puzzle.model.nonogram;
 
-import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-
 public class Square {
 	
-	public static int EMPTY = 0;
-	public static int FULL = 1;
-	private int state;
+	private SquareState state;
 	
 	public Square() {
-		state = EMPTY;
+		state = SquareState.EMPTY;
 	}
 	
-	public int getState() {
+	public SquareState getState() {
 		return state;
 	}
 	
-	public Paint update() {
-		if (state == EMPTY) {
-			state = FULL;
-			return Color.BLACK;
-		} else {
-			state = EMPTY;
-			return Color.WHITE;
-		}
+	public void setState(SquareState newState) {
+		state = newState;
 	}
+	
+	public SquareState update() {
+		if (state == SquareState.EMPTY) {
+			state = SquareState.FULL;
+		} else if (state == SquareState.FULL) {
+			state = SquareState.XOUT;
+		} else {
+			state = SquareState.EMPTY;
+		}
+		return state;
+	}
+	
 }

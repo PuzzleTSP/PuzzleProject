@@ -3,7 +3,6 @@ package puzzle.view;
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
-
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -13,26 +12,33 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Rectangle;
-import puzzle.PuzzleLauncher;
 import puzzle.model.nonogram.Square;
+import puzzle.model.nonogram.SquareState;
 
 public class NonogramController {
 	
-	private PuzzleLauncher app;
 	private Square[][] squares;
 	private ObservableList<Node> gridChildren;
 	private String[][] colLabels;
 	private String[][] rowLabels;
+	private int [][] solution;
+	private int numberFull;
+	private int correctNumberFull;
 	
 	@FXML
 	GridPane grid;
+	@FXML
+	VBox correctBox;
 	
 	@FXML
 	private void initialize() {
+		numberFull = 0;
+		
 		gridChildren = grid.getChildren();
 		colLabels = new String[10][5];
 		rowLabels = new String[10][5];
 		squares = new Square[10][10];
+		solution = new int[10][10];
 		
 		// Init Squares
 		for (int i = 0; i <= 9; i++) {
@@ -41,16 +47,7 @@ public class NonogramController {
 			}
 		}
 
-		loadNonogram("cat.txt");
-		
-		// check that children are correct
-//		for (int i = 0; i <= 10; i++) {
-//			for (int j = 0; j <= 10; j++) {
-//				Node child = gridChildren.get(11*i+j);
-//				System.out.println(GridPane.getRowIndex(child) + " " + GridPane.getColumnIndex(child));
-//			}
-//			System.out.println();
-//		}
+		loadNonogram("singlesquare.txt");
 		
 		for (int i = 0; i < 10; i++) {
 			VBox vBox = (VBox) gridChildren.get(i+1);
@@ -73,12 +70,21 @@ public class NonogramController {
 	@FXML
 	private void Select(MouseEvent event) {
 		Rectangle rec = (Rectangle) event.getSource();
-		Square square = squares[GridPane.getRowIndex(rec)-1][GridPane.getColumnIndex(rec)-1];
-		rec.setFill(square.update());
-	}
-	
-	public void setApp(PuzzleLauncher app) {
-		this.app = app;
+		int rowIndex = GridPane.getRowIndex(rec) - 1;
+		int colIndex = GridPane.getColumnIndex(rec) - 1;
+		Square square = squares[rowIndex][colIndex];
+		
+		SquareState state = square.update();
+		numberFull += state.getValue();
+		rec.setFill(state.getColor());
+		
+		Boolean xVisible = state.getxVisible();
+		gridChildren.get(121 + 2*(10*rowIndex + colIndex)).setVisible(xVisible);
+		gridChildren.get(122 + 2*(10*rowIndex + colIndex)).setVisible(xVisible);
+		
+		if (numberFull == correctNumberFull) {
+			checkAnswer();
+		}
 	}
 
 	private void loadNonogram(String fileName) {
@@ -97,6 +103,14 @@ public class NonogramController {
 				}
 			}
 			
+			// Load correct states
+			for (int i = 0; i < 10; i++) {
+				for (int j = 0; j < 5; j++) {
+					int correctState = in.nextInt();
+					solution[i][j] = correctState;
+					correctNumberFull += correctState;
+				}
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -108,5 +122,21 @@ public class NonogramController {
 			labelText = String.valueOf(num);
 		}
 		return labelText;
+	}
+	
+	private void checkAnswer() {
+		Boolean correct = true;
+		for (int i = 0; i < 10; i++) {
+			for (int j = 0; j < 10; j++) {
+				if (solution[i][j] == 1 && squares[i][j].getState().getValue() != 1) {
+					correct = false;
+				}
+			}
+		}
+		
+		if (correct) {
+			grid.setDisable(true);
+			correctBox.setVisible(true);
+		}
 	}
 }
