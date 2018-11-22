@@ -6,6 +6,7 @@ import java.util.Stack;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
@@ -32,7 +33,7 @@ public class PegPuzzleController {
 	Button undo;
 	
 	@FXML
-	Rectangle winBox;
+	VBox winBox;
 	
 	@FXML
 	Text gameOver;
@@ -58,7 +59,7 @@ public class PegPuzzleController {
 	
 	int numFill;
 	
-	boolean boardFlip =false ;
+	boolean boardFlip = false ;
 	
 	@FXML
 	private void initialize() {	

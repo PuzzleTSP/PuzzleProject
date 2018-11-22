@@ -6,53 +6,87 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="750.0" prefWidth="1000.0" styleClass="w3-green" stylesheets="@w3.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.MainMenuController">
+<BorderPane prefHeight="750.0" prefWidth="1000.0" stylesheets="@w3.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.MainMenuController">
   <center>
     <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" stylesheets="@w3.css" BorderPane.alignment="CENTER">
       <children>
-        <Button fx:id="SoccerBoxButton" mnemonicParsing="false" onAction="#openPuzzle" onMouseEntered="#outlineHovered" prefHeight="85.0" prefWidth="230.0" stylesheets="@../../../../w3.css" text="Soccer Box Puzzle">
+            <Line endX="522.8643798828125" endY="-2.0710806846618652" startX="-100.0" startY="-2.0710830688476562" stroke="#846a00" strokeWidth="5.0" style="-fx-min-width: 100%;" />
+        <Button fx:id="SoccerBoxButton" mnemonicParsing="false" onAction="#openPuzzle" onMouseEntered="#outlineHovered" prefHeight="85.0" prefWidth="230.0" stylesheets="@w3.css" text="Soccer Box">
           <font>
             <Font size="24.0" fx:id="x1" />
           </font>
           <VBox.margin>
             <Insets top="50.0" />
           </VBox.margin>
+               <styleClass>
+                  <String fx:value="w3-button" />
+                  <String fx:value="w3-green" />
+                  <String fx:value="w3-text-black" />
+                  <String fx:value="w3-hover-pale-green" />
+                  <String fx:value="w3-hover-border-green" />
+               </styleClass>
         </Button>
-        <Button fx:id="PegButton" font="$x1" mnemonicParsing="false" onAction="#openPuzzle" onMouseEntered="#outlineHovered" prefHeight="85.0" prefWidth="230.0" text="Peg Puzzle">
+        <Button fx:id="PegButton" font="$x1" mnemonicParsing="false" onAction="#openPuzzle" onMouseEntered="#outlineHovered" prefHeight="85.0" prefWidth="230.0" stylesheets="@w3.css" text="Peg Solitaire">
           <VBox.margin>
             <Insets top="30.0" />
           </VBox.margin>
+               <styleClass>
+                  <String fx:value="w3-button" />
+                  <String fx:value="w3-amber" />
+                  <String fx:value="w3-text-black" />
+                  <String fx:value="w3-hover-pale-yellow" />
+                  <String fx:value="w3-hover-border-amber" />
+               </styleClass>
         </Button>
-        <Button fx:id="HanoiButton" font="$x1" mnemonicParsing="false" onAction="#openPuzzle" onMouseEntered="#outlineHovered" prefHeight="85.0" prefWidth="230.0" text="Towers of Hanoi">
+        <Button fx:id="HanoiButton" font="$x1" mnemonicParsing="false" onAction="#openPuzzle" onMouseEntered="#outlineHovered" prefHeight="85.0" prefWidth="230.0" stylesheets="@w3.css" text="Towers of Hanoi">
           <VBox.margin>
             <Insets top="30.0" />
           </VBox.margin>
+               <styleClass>
+                  <String fx:value="w3-button" />
+                  <String fx:value="w3-blue" />
+                  <String fx:value="w3-text-black" />
+                  <String fx:value="w3-hover-pale-blue" />
+                  <String fx:value="w3-hover-border-blue" />
+               </styleClass>
         </Button>
-            <Button fx:id="NonogramButton" mnemonicParsing="false" onAction="#openPuzzle" onMouseEntered="#outlineHovered" prefHeight="85.0" prefWidth="230.0" text="Nonogram">
+            <Button fx:id="NonogramButton" mnemonicParsing="false" onAction="#openPuzzle" onMouseEntered="#outlineHovered" prefHeight="85.0" prefWidth="230.0" stylesheets="@w3.css" text="Nonogram">
                <font>
                   <Font size="24.0" />
                </font>
                <VBox.margin>
                   <Insets top="30.0" />
                </VBox.margin>
+               <styleClass>
+                  <String fx:value="w3-button" />
+                  <String fx:value="w3-red" />
+                  <String fx:value="w3-text-black" />
+                  <String fx:value="w3-hover-pale-red" />
+                  <String fx:value="w3-hover-border-red" />
+               </styleClass>
             </Button>
       </children>
          <styleClass>
-            <String fx:value="w3-container" />
-            <String fx:value="w3-green" />
+            <String fx:value="w3-black" />
+            <String fx:value="w3-panel" />
          </styleClass>
     </VBox>
   </center>
   <top>
-    <Label text="Main Menu" BorderPane.alignment="CENTER">
+    <Label styleClass="w3-text-white" stylesheets="@w3.css" text="Main Menu" BorderPane.alignment="CENTER">
       <font>
-        <Font size="36.0" />
+        <Font name="Monospaced Regular" size="48.0" />
       </font>
       <BorderPane.margin>
         <Insets top="15.0" />
       </BorderPane.margin>
     </Label>
   </top>
+   <styleClass>
+      <String fx:value="w3-black" />
+      <String fx:value="w3-text-white" />
+   </styleClass>
 </BorderPane>
