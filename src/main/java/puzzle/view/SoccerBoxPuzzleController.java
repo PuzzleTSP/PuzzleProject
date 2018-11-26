@@ -7,6 +7,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.event.EventHandler;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Sphere;
 import puzzle.PuzzleLauncher;
 import puzzle.model.soccerbox.SoccerBoxGameboard;
 
@@ -39,6 +40,8 @@ public class SoccerBoxPuzzleController {
 	private Rectangle singleC;
 	@FXML
 	private Rectangle singleD;
+	@FXML
+	private Sphere ball;
 	
 	private Rectangle previousSelected;
 	private Rectangle previousHovered;
@@ -105,13 +108,17 @@ public class SoccerBoxPuzzleController {
 			
 			Rectangle piece = previousSelected;
 			String ID = piece.getId();
+			boolean goalBlock = (ID.equals("goal"));
 			
-			//System.out.println( board.checkMove(ID, event.getCode()) );
+			
 			
 			if( event.getCode() == KeyCode.UP ) {
 				if( piece.getLayoutY() >= 125 ) {
 					if( board.checkMove(ID, KeyCode.UP ) ) {
 						piece.setLayoutY( piece.getLayoutY() - 100 );
+						if( goalBlock ) {
+							ball.setLayoutY( ball.getLayoutY() - 100 );
+						}
 						board.logMove(ID, event.getCode() );
 					}
 				}
@@ -119,6 +126,9 @@ public class SoccerBoxPuzzleController {
 				if (piece.getLayoutY() + piece.getHeight() <= 425 ) {
 					if( board.checkMove(ID, KeyCode.DOWN ) ) {
 						piece.setLayoutY( piece.getLayoutY() + 100 );
+						if( goalBlock ) {
+							ball.setLayoutY( ball.getLayoutY() + 100 );
+						}
 						board.logMove(ID, event.getCode() );
 					}
 				}
@@ -126,6 +136,9 @@ public class SoccerBoxPuzzleController {
 				if (piece.getLayoutX() >= 125 ) {
 					if( board.checkMove(ID, KeyCode.LEFT ) ) {
 						piece.setLayoutX( piece.getLayoutX() - 100 );
+						if( goalBlock ) {
+							ball.setLayoutX( ball.getLayoutX() - 100 );
+						}
 						board.logMove(ID, event.getCode() );
 					}
 				}
@@ -133,6 +146,9 @@ public class SoccerBoxPuzzleController {
 				if (piece.getLayoutX() + piece.getWidth() <= 325 ) {
 					if( board.checkMove(ID, KeyCode.RIGHT ) ) {
 						piece.setLayoutX( piece.getLayoutX() + 100 );
+						if( goalBlock ) {
+							ball.setLayoutX( ball.getLayoutX() + 100 );
+						}
 						board.logMove(ID, event.getCode() );
 					}
 				}

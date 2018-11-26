@@ -6,10 +6,10 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#move" prefHeight="550.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.SoccerBoxPuzzleController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#move" prefHeight="550.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.SoccerBoxPuzzleController">
   <children>
     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eb9d5c" height="550.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="25.0" width="450.0" />
-    <Circle layoutX="225.0" layoutY="225.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle layoutX="225.0" layoutY="325.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
     <Line endX="450.0" layoutY="125.0" />
     <Line endX="450.0" layoutY="225.0" />
     <Line endX="450.0" layoutY="325.0" />
@@ -30,6 +30,11 @@
     <Rectangle fx:id="tallA" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" layoutX="25.0" layoutY="125.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0" />
     <Rectangle fx:id="tallB" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" layoutX="325.0" layoutY="125.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0" />
     <Rectangle fx:id="wide" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="100.0" layoutX="125.0" layoutY="225.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
-    <Rectangle fx:id="goal" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" layoutX="125.0" layoutY="25.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+      <Group>
+         <children>
+          <Rectangle fx:id="goal" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" layoutX="125.0" layoutY="25.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+            <Sphere id="ball" fx:id="ball" layoutX="225.0" layoutY="125.0" radius="25.0" />
+         </children>
+      </Group>
   </children>
 </Pane>
