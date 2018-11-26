@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.layout.*?>
@@ -37,6 +36,5 @@
             <Sphere id="ball" fx:id="ball" layoutX="225.0" layoutY="125.0" radius="25.0" />
          </children>
       </Group>
-      <TextArea layoutX="-200.0" prefHeight="200.0" prefWidth="200.0" text="Box Puzzle!&#10;&#10;Move the pieces to get the&#10;ball to fall down the hole!&#10;&#10;Select pieces with the&#10;mouse, and move with&#10;the arrow keys" />
   </children>
 </Pane>

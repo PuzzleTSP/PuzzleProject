@@ -21,6 +21,7 @@ public class SoccerBoxPuzzleController {
 
 	@FXML
 	private Rectangle goal;
+	
 	@FXML
 	private Rectangle wide;
 	@FXML
@@ -41,7 +42,7 @@ public class SoccerBoxPuzzleController {
 	private Rectangle singleD;
 	@FXML
 	private Sphere ball;
-
+	
 	private Rectangle previousSelected;
 	private Rectangle previousHovered;
 	
