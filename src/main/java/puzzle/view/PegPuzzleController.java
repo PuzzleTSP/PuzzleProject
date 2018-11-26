@@ -234,6 +234,8 @@ public class PegPuzzleController {
 			lastTriple[0].setFill(greenFill);
 			lastTriple[1].setFill(greenFill);
 			lastTriple[2].setFill(Color.WHITE);
+			
+			numFill += 1;
 		}
 	}
 	
