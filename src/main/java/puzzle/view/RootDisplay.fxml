@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.geometry.*?>
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.RootDisplayController">
-   <bottom>
-      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-        <items>
-          <Button mnemonicParsing="false" onAction="#openMainMenu" text="Main Menu" />
-            <Button mnemonicParsing="false" onAction="#closeApp" text="EXIT" />
-        </items>
-      </ToolBar>
-   </bottom>
+<BorderPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.RootDisplayController">
    <top>
-      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <ToolBar accessibleRole="MENU_BAR" prefHeight="46.0" prefWidth="1000.0" styleClass="w3-black" stylesheets="@w3.css" BorderPane.alignment="CENTER">
          <items>
-            <Label text="Puzzle Launcher">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
+          <Button accessibleRole="MENU_ITEM" alignment="CENTER" mnemonicParsing="false" onAction="#openMainMenu" prefHeight="34.0" prefWidth="102.0" stylesheets="@w3.css" text="Main Menu">
+               <styleClass>
+                  <String fx:value="w3-button" />
+                  <String fx:value="w3-white" />
+                  <String fx:value="w3-text-black" />
+               </styleClass>
+            </Button>
+            <Button alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#closeApp" stylesheets="@w3.css" text="Exit">
+               <styleClass>
+                  <String fx:value="w3-button" />
+                  <String fx:value="w3-red" />
+               </styleClass>
+            </Button>
          </items>
       </ToolBar>
    </top>
