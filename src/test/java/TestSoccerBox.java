@@ -1,8 +1,8 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
-import puzzle.view.SoccerBoxPuzzleController;
 
 import javafx.scene.input.KeyCode;
+import puzzle.controller.SoccerBoxPuzzleController;
 import puzzle.model.soccerbox.SoccerBoxGameboard;
 
 public class TestSoccerBox {

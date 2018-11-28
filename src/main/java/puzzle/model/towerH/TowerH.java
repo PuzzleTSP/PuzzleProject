@@ -1,4 +1,4 @@
-package puzzle;
+package puzzle.model.towerH;
 
 import java.util.Stack;
 

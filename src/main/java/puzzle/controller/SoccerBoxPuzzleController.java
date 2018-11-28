@@ -1,4 +1,4 @@
-package puzzle.view;
+package puzzle.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
