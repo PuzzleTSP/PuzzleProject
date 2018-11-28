@@ -15,9 +15,6 @@ import puzzle.PuzzleLauncher;
 import puzzle.model.peg.PegBoard;
 import puzzle.model.peg.PegMove;
 
-//TODO win condition 
-
-
 public class PegPuzzleController {
 	private PuzzleLauncher app;
 	
@@ -62,7 +59,7 @@ public class PegPuzzleController {
 	boolean boardFlip = false ;
 	
 	@FXML
-	private void initialize() {	
+	public void initialize() {	
 		if(pegList.isEmpty()) {
 			pegList.add(peg1);
 			pegList.add(peg2);
