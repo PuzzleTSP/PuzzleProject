@@ -1,4 +1,4 @@
-package puzzle.view;
+package puzzle.controller;
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -88,7 +88,6 @@ public class PegPuzzleController {
 		moveStack = new Stack<PegMove>();
 		
 		gameBoard = new PegBoard(pegList);
-		System.out.println(gameBoard.possibleMove());
 		numFill = 14;
 		
 		winBox.setVisible(boardFlip);

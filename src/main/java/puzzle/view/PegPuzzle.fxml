@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.PegPuzzleController">
+<Pane id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.PegPuzzleController">
   <children>
     <Polygon id="woodBoard" fill="DODGERBLUE" layoutX="425.0" layoutY="253.0" opacity="1.0" scaleX="8.075388386305121" scaleY="4.177001873349183" stroke="BLACK" strokeType="INSIDE" style="">
       <points>

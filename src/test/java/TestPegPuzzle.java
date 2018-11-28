@@ -2,7 +2,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import puzzle.view.PegPuzzleController;
+import puzzle.controller.PegPuzzleController;
 public class TestPegPuzzle {
 	PegPuzzleController testPuzzle = new PegPuzzleController();
 	
