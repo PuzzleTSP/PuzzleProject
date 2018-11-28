@@ -4,8 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
@@ -28,7 +30,7 @@ public class NonogramController {
 	@FXML
 	GridPane grid;
 	@FXML
-	VBox correctBox;
+	Label correctBox;
 	
 	@FXML
 	private void initialize() {
@@ -49,6 +51,11 @@ public class NonogramController {
 
 		loadNonogram("singlesquare.txt");
 		
+		assignLabels();
+		
+	}
+	
+	private void assignLabels() {
 		for (int i = 0; i < 10; i++) {
 			VBox vBox = (VBox) gridChildren.get(i+1);
 			ObservableList<Node> vBoxChildren = vBox.getChildren();
@@ -64,7 +71,6 @@ public class NonogramController {
 				rowLabel.setText(rowLabels[i][j]);
 			}
 		}
-		
 	}
 	
 	@FXML
@@ -87,6 +93,26 @@ public class NonogramController {
 		}
 	}
 
+	@FXML
+	private void selectNonogram(ActionEvent event) {
+		Button selection = (Button) event.getSource();
+		loadNonogram(selection.getText() + ".txt");
+		assignLabels();
+		resetGrid();
+	}
+	
+	private void resetGrid() {
+		for (int i = 0; i < 10; i++) {
+			for (int j = 0; j < 10; j++) {
+				squares[i][j].setState(SquareState.EMPTY);
+				Rectangle rec = (Rectangle) gridChildren.get(12 + 11*i + j);
+				rec.setFill(SquareState.EMPTY.getColor());
+				gridChildren.get(121 + 2*(10*i + j)).setVisible(false);
+				gridChildren.get(122 + 2*(10*i + j)).setVisible(false);
+			}
+		}
+	}
+	
 	private void loadNonogram(String fileName) {
 		File modelNonogramDir = new File("./src/main/java/puzzle/model/nonogram");
 		try (Scanner in = new Scanner(new File(modelNonogramDir, fileName))) {

@@ -39,7 +39,7 @@
 	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 	  </rowConstraints>
 	   <children>
-	      <Rectangle fill="WHITE" height="100.0" onMouseClicked="#Select" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+	      <Rectangle fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="0" GridPane.rowIndex="0" />
 	      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
               <children>
                  <Label />
@@ -581,26 +581,54 @@
       </VBox>
    </top>
    <left>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="400.0" prefWidth="250.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="How to Play:">
+            <Label alignment="CENTER" text="How to Play:">
                <font>
-                  <Font size="18.0" />
+                  <Font size="24.0" />
                </font>
             </Label>
-            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="THis is what you do" wrapText="true" />
+            <TextArea editable="false" prefHeight="400.0" prefWidth="250.0" text="- Complete the picture by filling in the correct squares&#10;- The numbers preceding each column and row tells you how the black squares should be grouped (so the numbers 1 2 3 mean that there is a single black square followed by a group of two and then a group of 3&#10;- There must be at least one white square between each group of black squares&#10;- You can mark a square with an X if you're certain that it should be empty" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font></TextArea>
          </children>
+         <BorderPane.margin>
+            <Insets left="100.0" right="20.0" />
+         </BorderPane.margin>
       </VBox>
    </left>
    <right>
-      <VBox fx:id="correctBox" prefHeight="200.0" prefWidth="100.0" visible="false" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="250.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="You've Done It!">
+            <Label text="Choose a Puzzle:">
                <font>
-                  <Font size="18.0" />
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="113.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Cat" />
+                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Button" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <Label fx:id="correctBox" text="You've Done It!" visible="false">
+               <font>
+                  <Font size="24.0" />
                </font>
             </Label>
          </children>
+         <padding>
+            <Insets left="20.0" right="100.0" />
+         </padding>
       </VBox>
    </right>
 </BorderPane>
