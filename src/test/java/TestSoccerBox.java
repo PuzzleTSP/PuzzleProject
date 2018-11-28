@@ -1,10 +1,14 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
+import puzzle.view.SoccerBoxPuzzleController;
+
+import javafx.scene.input.KeyCode;
 import puzzle.model.soccerbox.SoccerBoxGameboard;
 
 public class TestSoccerBox {
 
 	SoccerBoxGameboard testBox = new SoccerBoxGameboard();
+	SoccerBoxPuzzleController testController = new SoccerBoxPuzzleController();
 	
 	
 	@Test
@@ -26,6 +30,54 @@ public class TestSoccerBox {
 		testBox.getGameBoard()[1][0].setUnoccupied();
 		
 		assertEquals(false, testBox.getGameBoard()[1][0].isOccupied());
+	}
+	
+	@Test
+	public void testGoodMoves() {
+		
+		testBox = new SoccerBoxGameboard();
+		
+		//Test moves up
+		assertEquals( testBox.checkMove( "tallA", KeyCode.UP ), true );
+		testBox.logMove( "tallA", KeyCode.UP );
+		assertEquals( testBox.gameBoard[0][0].occupiedBy(), testBox.getBlock("tallA") );
+		
+		//Test moves down
+		assertEquals( testBox.checkMove( "tallA" , KeyCode.DOWN ), true);
+		testBox.logMove( "tallA", KeyCode.DOWN );
+		assertEquals( testBox.gameBoard[0][2].occupiedBy(), testBox.getBlock("tallA") );
+		
+		//Test moves left
+		testBox.logMove( "tallA", KeyCode.UP );
+		assertEquals( testBox.checkMove( "wide", KeyCode.LEFT), true );
+		testBox.logMove( "wide", KeyCode.LEFT );
+		assertEquals( testBox.gameBoard[0][2].occupiedBy(), testBox.getBlock("wide") );
+		
+		//Test moves right
+		assertEquals( testBox.checkMove( "wide", KeyCode.RIGHT ), true );
+		testBox.logMove( "wide", KeyCode.RIGHT );
+		assertEquals( testBox.gameBoard[1][2].occupiedBy(), testBox.getBlock("wide") );
+		
+	}
+	
+	
+	
+	
+	@Test
+	public void testMisc() {
+		
+		testBox = new SoccerBoxGameboard();
+		
+		//Test null result from getBlock
+		assertEquals( testBox.getBlock( "doesntexist"), null );
+		
+		
+		//Test win condition
+		//testBox.gameBoard[1][2].setOccupied( testBox.getBlock("goal"));
+		testBox.logMove("goal", KeyCode.DOWN);
+		testBox.logMove("goal", KeyCode.DOWN);
+		assertEquals( testBox.gameBoard[1][2].occupiedBy(), testBox.getBlock("goal"));
+		assertEquals( testBox.checkWin(), true );
 	}
 
 }

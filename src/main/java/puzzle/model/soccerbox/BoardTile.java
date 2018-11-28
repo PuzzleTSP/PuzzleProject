@@ -26,7 +26,7 @@ public class BoardTile {
 		return occupiedBy;
 	}
 
-	protected void setOccupied( PuzzleBlock block ) {
+	public void setOccupied( PuzzleBlock block ) {
 	  occupiedBy = block;
 	  isOccupied = true;
 	}

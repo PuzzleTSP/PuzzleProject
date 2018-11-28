@@ -246,23 +246,6 @@ public class SoccerBoxGameboard {
 		return result;
 	}
 	
-	public void printOcc() {
-		String print = "";
-		
-		for(int i = 0; i < 5; i++ ) {
-			print = "";
-			for(int j = 0; j < 4; j++ ) {
-				if( gameBoard[j][i].isOccupied() ) {
-					print += "O ";
-				} else {
-					print += "U ";
-				}
-			}
-			System.out.println( print );
-		}
-		
-	}
-	
 	
 	
 }

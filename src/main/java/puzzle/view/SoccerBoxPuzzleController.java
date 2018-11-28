@@ -156,8 +156,6 @@ public class SoccerBoxPuzzleController {
 			
 		}
 		
-		//board.printOcc();
-		
 		if( board.checkWin() ) {
 			app.showMainMenu();
 		}
