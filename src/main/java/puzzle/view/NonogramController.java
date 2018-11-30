@@ -140,9 +140,7 @@ public class NonogramController {
 				for (int j = 0; j < 10; j++) {
 					int correctState = in.nextInt();
 					solution[i][j] = correctState;
-					if (correctState == 1) {
-						correctNumberFull += 1;
-					}
+					correctNumberFull += correctState;
 				}
 			}
 		} catch (IOException e) {
