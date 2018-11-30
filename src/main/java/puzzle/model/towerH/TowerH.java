@@ -16,5 +16,10 @@ public class TowerH {
 		else return true;
 	}
 	
-	
+	public void move(Stack<Integer> from, Stack<Integer> to) {
+		if (acceptableMove(from, to)) {
+			int toStack = from.pop();
+			to.push(toStack);
+		}
+	}
 }
