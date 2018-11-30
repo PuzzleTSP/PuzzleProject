@@ -109,6 +109,9 @@ public class NonogramController {
 				rec.setFill(SquareState.EMPTY.getColor());
 				gridChildren.get(121 + 2*(10*i + j)).setVisible(false);
 				gridChildren.get(122 + 2*(10*i + j)).setVisible(false);
+				
+				grid.setDisable(false);
+				correctBox.setVisible(false);
 			}
 		}
 	}
