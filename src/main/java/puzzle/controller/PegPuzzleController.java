@@ -9,7 +9,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import puzzle.PuzzleLauncher;
 import puzzle.model.peg.PegBoard;
@@ -44,7 +43,7 @@ public class PegPuzzleController {
 	private Circle previousHovered;
 	private Circle startCirc, jumpCirc;
 	
-	ArrayList<Circle> pegList = new ArrayList<Circle>();
+	public ArrayList<Circle> pegList = new ArrayList<Circle>();
 	
 	PegMove currMove;
 	PegBoard gameBoard;

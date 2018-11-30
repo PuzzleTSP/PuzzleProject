@@ -37,6 +37,9 @@
             <Sphere id="ball" fx:id="ball" layoutX="225.0" layoutY="125.0" radius="25.0" />
          </children>
       </Group>
-      <TextArea editable="false" layoutX="-200.0" prefHeight="200.0" prefWidth="200.0" text="Welcome to Soccer Box!&#10;&#10;Select a block and use the&#10;arrow keys to move it!&#10;&#10;Try and get the ball in the&#10;center hole" />
+      <TextArea editable="false" focusTraversable="false" layoutX="-200.0" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0" text="Welcome to Soccer Box!&#10;&#10;Select a block and use the&#10;arrow keys to move it!&#10;&#10;Try and get the ball in the&#10;center hole">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor></TextArea>
   </children>
 </Pane>
