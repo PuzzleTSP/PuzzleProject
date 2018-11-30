@@ -50,7 +50,7 @@
     <Circle fx:id="peg15" fill="$x1" layoutX="711.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
     <Circle fx:id="peg11" fill="$x1" layoutX="151.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
     <Button fx:id="refreshButton" layoutX="60.0" layoutY="72.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
-      <TextArea layoutX="634.0" layoutY="12.0" prefHeight="234.0" prefWidth="208.0" text="Welcome to Peg Solitaire!&#10;&#10;The aim of the game is to&#10;leave the board with the &#10;least amount of pegs left. &#10;Leave only one and you're&#10; a genius!&#10;&#10;You can jump the pegs&#10;diagonally or horizontally" />
+      <TextArea editable="false" layoutX="634.0" layoutY="12.0" prefHeight="234.0" prefWidth="208.0" text="Welcome to Peg Solitaire!&#10;&#10;The aim of the game is to&#10;leave the board with the &#10;least amount of pegs left. &#10;Leave only one and you're&#10; a genius!&#10;&#10;You can jump the pegs&#10;diagonally or horizontally" />
     <Button fx:id="undo" layoutX="60.0" layoutY="123.0" mnemonicParsing="false" onAction="#undo" text="Undo Last Move" />
       <VBox fx:id="winBox" alignment="CENTER" layoutX="132.0" layoutY="44.0" prefHeight="336.0" prefWidth="593.0" style="-fx-border-color: black; -fx-border-width: 5px;" styleClass="w3-green" stylesheets="@w3.css">
          <children>
