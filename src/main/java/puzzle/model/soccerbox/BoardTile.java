@@ -1,16 +1,17 @@
 //*** Author: Wiley Roemer
 //*** Date Created: 10/15/18
-//*** Date Modified: 10/22/18
-//*** Description:
+//*** Date Modified: 11/12/18
+//*** Description: The base tile object, used in a 2D array to create the "gameboard"
 
 package puzzle.model.soccerbox;
 
 public class BoardTile {
 
-	int boardXPos;
+	/*Instance variables*/
+	int boardXPos;					//Tile X/Y position on the gameboard
 	int boardYPos;
-	PuzzleBlock occupiedBy;
-	boolean isOccupied = false;
+	PuzzleBlock occupiedBy;         //The puzzleblock occupying a tile
+	boolean isOccupied = false;     //Boolean value, whether a tile is occupied or not
 
 	public BoardTile( int xPos, int yPos ) {
 		this.boardXPos = xPos;
@@ -18,6 +19,10 @@ public class BoardTile {
 		occupiedBy = null;
 	}
 
+	
+	/* Basic getters and setters */
+	
+	
 	public boolean isOccupied() {
 		return isOccupied;
 	}

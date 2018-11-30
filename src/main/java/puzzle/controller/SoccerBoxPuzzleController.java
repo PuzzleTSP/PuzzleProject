@@ -13,15 +13,16 @@ import puzzle.model.soccerbox.SoccerBoxGameboard;
 
 public class SoccerBoxPuzzleController {
 
-	
-	private SoccerBoxGameboard board = new SoccerBoxGameboard();
-	
-	
+	//Instance variables, gameboard and reference to main application
+	private SoccerBoxGameboard board = new SoccerBoxGameboard();	
 	private PuzzleLauncher app;
+	
+	private Rectangle previousSelected;
+	private Rectangle previousHovered;
 
+	//FXML tags
 	@FXML
 	private Rectangle goal;
-	
 	@FXML
 	private Rectangle wide;
 	@FXML
@@ -43,23 +44,47 @@ public class SoccerBoxPuzzleController {
 	@FXML
 	private Sphere ball;
 	
-	private Rectangle previousSelected;
-	private Rectangle previousHovered;
 	
+	/**
+	 * Initialize function - required by MVC
+	 * 
+	 */
 	@FXML
 	private void initialize() {	
 		
 	}
 	
+	/**
+	 * closeApp function, required by MVC
+	 * 
+	 * Terminates the stage
+	 */
 	@FXML
 	private void closeApp() {
 		app.getPrimaryStage().close();
 	}
 	
+	/**
+	 * setApp (PuzzleLauncher app) 
+	 * 
+	 * Stores the application object in use, to be used by the controller to reference the 
+	 * scene and stage
+	 * 
+	 * @param app
+	 */
 	public void setApp(PuzzleLauncher app) {
 		this.app = app;
 	}
 	
+	/**
+	 * initMoves()
+	 * 
+	 * A function which takes the scene (from the application object) and creates
+	 * a new event handler for key-presses
+	 * 
+	 * INTEGRAL FOR MOVEMENT OF PIECES
+	 * 
+	 */
 	public void initMoves( ) {
 		app.getPrimaryStage().getScene().setOnKeyPressed( new EventHandler<KeyEvent>() {
 			@Override
@@ -70,6 +95,13 @@ public class SoccerBoxPuzzleController {
 		});
 	}
 	
+	/**
+	 * outlineSelected (MouseEvent event)
+	 * 
+	 * Handles the logic for clicking on and selecting an individual block
+	 * 
+	 * @param event
+	 */
 	@FXML
 	public void outlineSelected(MouseEvent event) {
 		Rectangle pieceSelected = (Rectangle) event.getSource();
@@ -85,6 +117,13 @@ public class SoccerBoxPuzzleController {
 		}
 	}
 	
+	/**
+	 * outlineHovered (MouseEvent event)
+	 * 
+	 * Handle the logic for hovering over a block, and indicating a hover with a yellow border
+	 * 
+	 * @param event
+	 */
 	@FXML
 	private void outlineHovered(MouseEvent event) {
 		Rectangle pieceHovered = (Rectangle) event.getSource();
@@ -97,29 +136,47 @@ public class SoccerBoxPuzzleController {
 		}
 	}
 	
+	/**
+	 * deselect (Rectangle previous)
+	 * 
+	 * De-selects the currently chosen (red-bordered) piece
+	 * 
+	 * @param previous
+	 */
 	private void deselect(Rectangle previous) {
 		if (previous == null) return;
 		previous.setStroke(Color.BLACK);
 	}
 	
+	/**
+	 * move (KeyEvent event)
+	 * 
+	 * Receives a key input, and if is accepted (one of the four arrow keys), executes
+	 * the move on the game board
+	 * 
+	 * @param event
+	 */
 	@FXML
 	public void move( KeyEvent event ) {
-		if( previousSelected != null ) {
+		if( previousSelected != null ) {           //If there is a piece selected (red-border)
 			
+			//Retrieve block information
 			Rectangle piece = previousSelected;
 			String ID = piece.getId();
 			boolean goalBlock = (ID.equals("goal"));
 			
 			
+			//Handles moves based on the inputted key
+			//Format is more or less the same for each case
 			
 			if( event.getCode() == KeyCode.UP ) {
-				if( piece.getLayoutY() >= 125 ) {
-					if( board.checkMove(ID, KeyCode.UP ) ) {
-						piece.setLayoutY( piece.getLayoutY() - 100 );
-						if( goalBlock ) {
+				if( piece.getLayoutY() >= 125 ) {             //Check bounds of piece
+					if( board.checkMove(ID, KeyCode.UP ) ) {           //Check move validity on game board
+						piece.setLayoutY( piece.getLayoutY() - 100 );  
+						if( goalBlock ) {								//Execute move (and move the ball if needed)
 							ball.setLayoutY( ball.getLayoutY() - 100 );
 						}
-						board.logMove(ID, event.getCode() );
+						board.logMove(ID, event.getCode() );       //Log move in to the gameboard object
 					}
 				}
 			} else if( event.getCode() == KeyCode.DOWN ) {
@@ -156,11 +213,21 @@ public class SoccerBoxPuzzleController {
 			
 		}
 		
+		//After each move, check the position of the goal block for a win
+		
 		if( board.checkWin() ) {
 			app.showMainMenu();
 		}
 	}
 	
+	/**
+	 * isSelected()
+	 * 
+	 * return whether a rectangle (puzzle block) is selected
+	 * 
+	 * @param rectangle
+	 * @return
+	 */
 	private Boolean isSelected(Rectangle rectangle) {
 		if (rectangle.equals(previousSelected)) return true;
 		return false;
