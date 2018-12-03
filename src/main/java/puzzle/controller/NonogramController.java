@@ -1,4 +1,4 @@
-package puzzle.view;
+package puzzle.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,6 +31,8 @@ public class NonogramController {
 	GridPane grid;
 	@FXML
 	Label correctBox;
+	@FXML
+	Label titleBox;
 	
 	@FXML
 	private void initialize() {
@@ -50,7 +52,7 @@ public class NonogramController {
 			}
 		}
 
-		loadNonogram("singlesquare.txt");
+		loadNonogram("Cat.txt");
 		
 		assignLabels();
 		
@@ -102,6 +104,7 @@ public class NonogramController {
 		loadNonogram(selection.getText() + ".txt");
 		assignLabels();
 		resetGrid();
+		titleBox.setText(selection.getText());
 	}
 	
 	private void resetGrid() {
@@ -146,10 +149,6 @@ public class NonogramController {
 					catch (Exception e) {
 						System.err.println("The file named '" + fileName + "' caused an exception of the type:  " + e);
 						System.err.println("This is an error of the method loadNonogram()  in the class NonogramController");
-					}
-					finally {
-						j = 11;
-						i = 11;
 					}
 				}
 			}

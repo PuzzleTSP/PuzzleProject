@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -16,34 +22,34 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane stylesheets="@w3.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.NonogramController">
+<BorderPane stylesheets="@w3.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.NonogramController">
   <center>
 	<GridPane fx:id="grid" alignment="CENTER" gridLinesVisible="true" maxHeight="600.0" maxWidth="600.0" prefHeight="600.0" prefWidth="600.0" style="-fx-border-color:white;-fx-border-width:2;" BorderPane.alignment="CENTER">
-	  <columnConstraints  >
-    	<ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0"   />
-	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"   />
-	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"   />
-	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"   />
-	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"   />
-	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"   />
-	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"   />
-	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"   />
-	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"   />
-	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"   />
-	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"   />
+	  <columnConstraints>
+    	<ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+	    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
 	  </columnConstraints>
-	  <rowConstraints >
-	    <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES"  />
-	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"  />
-	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"  />
-	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"  />
+	  <rowConstraints>
+	    <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
 	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"  />
-	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"  />
-	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"  />
-	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"  />
-	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"  />
+	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+	    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 	  </rowConstraints>
 	   <children>
 	      <Rectangle height="100.0" stroke="WHITE" styleClass="w3-black w3-border-white" width="100.0" GridPane.columnIndex="0" GridPane.rowIndex="0" />
@@ -362,215 +368,215 @@
 	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="WHITE" strokeType="INSIDE" width="50.0" GridPane.columnIndex="9" GridPane.rowIndex="10" />
 	      <Rectangle fill="WHITE" height="50.0" onMouseClicked="#Select" stroke="WHITE" strokeType="INSIDE" width="50.0" GridPane.columnIndex="10" GridPane.rowIndex="10" />
           
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="1" /> 
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="1" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="1" disable="true" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="1" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="1" disable="true" />
           
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="2" /> 
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="2" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="2" disable="true" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="2" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="2" disable="true" />
           
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="3" /> 
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="3" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="3" disable="true" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="3" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="3" disable="true" />
           
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="4" /> 
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="4" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="4" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="4" disable="true" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="4" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="4" disable="true" /> 
           
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="5" /> 
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="5" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="5" />   
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="5" disable="true" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="5" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="5" disable="true" />   
           
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="6" /> 
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="6" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="6" />    
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="6" disable="true" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="6" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="6" disable="true" />    
           
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="7" /> 
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="7" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="7" />  
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="7" disable="true" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="7" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="7" disable="true" />  
           
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="8" /> 
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="8" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="8" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="8" disable="true" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="8" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="8" disable="true" />
           
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="9" /> 
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="9" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="9" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="9" disable="true" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="9" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="9" disable="true" />
           
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="10" /> 
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="10" />
-          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="10" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="10" disable="true" /> 
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="7" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="8" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="25.0" startX="-25.0" startY="-25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="10" disable="true" />
+          <Line endX="25.0" endY="-25.0" startX="-25.0" startY="25.0" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="10" disable="true" />
           
 	   </children>
          <styleClass>
@@ -591,7 +597,7 @@
                   <String fx:value="w3-text-white" />
                </styleClass>
             </Label>
-            <Label text="Shape Name">
+            <Label fx:id="titleBox" text="Shape Name">
                <font>
                   <Font size="22.0" />
                </font>
@@ -670,30 +676,16 @@
    <right>
       <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="250.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Choose a Puzzle:">
+            <Label prefHeight="35.0" prefWidth="160.0" text="Choose a Puzzle:" textFill="WHITE" textOverrun="CLIP">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="113.0">
-                           <children>
-                              <Button mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Cat" />
-                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Chick" />
-                              <Button layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Dog" />
-                              <Button layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Moose" />
-                              <Button layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Trophy" />
-                              <Button layoutX="10.0" layoutY="170.0" mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Moose" />
-                           </children>
-                        </VBox>
-                     </children>
-                  </AnchorPane>
-              </content>
-            </ScrollPane>
-            <Label fx:id="correctBox" text="You've Done It!" visible="false">
+            <Button mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Cat" />
+            <Button mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Chick" />
+            <Button mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Dog" />
+            <Button mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Moose" />
+            <Label fx:id="correctBox" text="You've Done It!" textFill="WHITE" visible="false">
                <font>
                   <Font size="24.0" />
                </font>
