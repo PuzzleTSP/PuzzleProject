@@ -8,11 +8,17 @@ public class TowerH {
 	private Stack<Integer> Tower3 = new Stack<Integer>();
 	
 	
+	public TowerH() {
+		for(int i = 5; i > 0; i--) {
+			Tower1.push(i);
+		}
+	}
+	
 	/**
 	 * Boolean to tell whether a move is acceptable.
 	 */
 	protected boolean acceptableMove(Stack<Integer> from, Stack<Integer> to) {
-		if (from.peek() < to.peek() ) return false;
+		if (from.peek() > to.peek() ) return false;
 		else return true;
 	}
 	
