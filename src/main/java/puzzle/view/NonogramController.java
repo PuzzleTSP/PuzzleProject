@@ -35,6 +35,7 @@ public class NonogramController {
 	@FXML
 	private void initialize() {
 		numberFull = 0;
+		correctNumberFull = 0;
 		
 		gridChildren = grid.getChildren();
 		colLabels = new String[10][5];
@@ -96,6 +97,8 @@ public class NonogramController {
 	@FXML
 	private void selectNonogram(ActionEvent event) {
 		Button selection = (Button) event.getSource();
+		numberFull = 0;
+		correctNumberFull = 0;
 		loadNonogram(selection.getText() + ".txt");
 		assignLabels();
 		resetGrid();
@@ -109,6 +112,9 @@ public class NonogramController {
 				rec.setFill(SquareState.EMPTY.getColor());
 				gridChildren.get(121 + 2*(10*i + j)).setVisible(false);
 				gridChildren.get(122 + 2*(10*i + j)).setVisible(false);
+				
+				grid.setDisable(false);
+				correctBox.setVisible(false);
 			}
 		}
 	}
@@ -131,7 +137,7 @@ public class NonogramController {
 			
 			// Load correct states
 			for (int i = 0; i < 10; i++) {
-				for (int j = 0; j < 5; j++) {
+				for (int j = 0; j < 10; j++) {
 					int correctState = in.nextInt();
 					solution[i][j] = correctState;
 					correctNumberFull += correctState;
@@ -150,7 +156,7 @@ public class NonogramController {
 		return labelText;
 	}
 	
-	private void checkAnswer() {
+	private void checkAnswer() {		
 		Boolean correct = true;
 		for (int i = 0; i < 10; i++) {
 			for (int j = 0; j < 10; j++) {

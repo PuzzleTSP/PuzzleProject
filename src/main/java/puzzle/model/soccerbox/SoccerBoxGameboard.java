@@ -1,7 +1,7 @@
 //*** Author: Wiley Roemer
 //*** Date Created: 10/15/18
-//*** Date Modified: 10/22/18
-//*** Description:
+//*** Date Modified: 11/26/18
+//*** Description: The gameboard object, containing most of the back-end functionality of the puzzle
 
 package puzzle.model.soccerbox;
 
@@ -86,6 +86,12 @@ public class SoccerBoxGameboard {
 
 	}
 
+	/* 
+	 * void initOccupations() 
+	 * 
+	 * Initializes occupation settings on individual BoardTile objects
+	 * 
+	 */
 	public void initOccupations() {
 
 		for (PuzzleBlock p : blocks) {
@@ -120,6 +126,13 @@ public class SoccerBoxGameboard {
 		
 	}
 	
+	/*
+	 * boolean checkMove( String ID, KeyCode code )
+	 * 
+	 * String ID - The string name of the puzzle block, ex "goal"
+	 * KeyCode code - the key input received, ideally one of the arrow keys
+	 * 
+	 */
 	public boolean checkMove( String ID, KeyCode code ) {
 		boolean result = true;
 		PuzzleBlock piece = getBlock(ID);

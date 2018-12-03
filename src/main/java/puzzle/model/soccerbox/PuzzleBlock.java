@@ -1,17 +1,19 @@
 //*** Author: Wiley Roemer
 //*** Date Created: 10/15/18
-//*** Date Modified: 10/22/18
-//*** Description:
+//*** Date Modified: 11/17/18
+//*** Description: The superclass of all puzzleblock objects
 
 package puzzle.model.soccerbox;
 
 public class PuzzleBlock {
 
-	public int height;
+	/* Instance variables */
+	
+	public int height;			//Height and width (in tiles) of the puzzle block
 	public int width;
-	protected int topLeftX;
+	protected int topLeftX;		//X and Y position on the board, stored as the top left portion of the block
 	protected int topLeftY;
-	protected String ID;
+	protected String ID;		//An ID (name) for the puzzle block
 
 
 	public PuzzleBlock () { }
@@ -25,6 +27,9 @@ public class PuzzleBlock {
 	}
 
 
+	/* Basic getters and setters */
+	
+	
 	public int getX() {
 		return topLeftX;
 	}

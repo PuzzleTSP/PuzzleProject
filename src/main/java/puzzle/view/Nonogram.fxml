@@ -613,7 +613,11 @@
                         <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="113.0">
                            <children>
                               <Button mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Cat" />
-                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Button" />
+                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Chick" />
+                              <Button layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Dog" />
+                              <Button layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Moose" />
+                              <Button layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Trophy" />
+                              <Button layoutX="10.0" layoutY="170.0" mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Moose" />
                            </children>
                         </VBox>
                      </children>

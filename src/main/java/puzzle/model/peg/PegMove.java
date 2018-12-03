@@ -2,7 +2,6 @@ package puzzle.model.peg;
 
 import java.util.ArrayList;
 
-import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 

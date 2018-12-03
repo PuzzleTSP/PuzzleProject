@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.Double?>
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
@@ -12,7 +18,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.PegPuzzleController">
+<Pane id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.PegPuzzleController">
   <children>
     <Polygon id="woodBoard" fill="DODGERBLUE" layoutX="425.0" layoutY="253.0" opacity="1.0" scaleX="8.075388386305121" scaleY="4.177001873349183" stroke="BLACK" strokeType="INSIDE" style="">
       <points>
@@ -44,7 +50,7 @@
     <Circle fx:id="peg15" fill="$x1" layoutX="711.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
     <Circle fx:id="peg11" fill="$x1" layoutX="151.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
     <Button fx:id="refreshButton" layoutX="60.0" layoutY="72.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
-    <Text layoutX="651.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Peg Solitaire" visible="true" />
+      <TextArea editable="false" layoutX="634.0" layoutY="12.0" prefHeight="234.0" prefWidth="208.0" text="Welcome to Peg Solitaire!&#10;&#10;The aim of the game is to&#10;leave the board with the &#10;least amount of pegs left. &#10;Leave only one and you're&#10; a genius!&#10;&#10;You can jump the pegs&#10;diagonally or horizontally" />
     <Button fx:id="undo" layoutX="60.0" layoutY="123.0" mnemonicParsing="false" onAction="#undo" text="Undo Last Move" />
       <VBox fx:id="winBox" alignment="CENTER" layoutX="132.0" layoutY="44.0" prefHeight="336.0" prefWidth="593.0" style="-fx-border-color: black; -fx-border-width: 5px;" styleClass="w3-green" stylesheets="@w3.css">
          <children>
