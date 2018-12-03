@@ -9,7 +9,7 @@
    <top>
       <ToolBar accessibleRole="MENU_BAR" prefHeight="46.0" prefWidth="1000.0" styleClass="w3-black" stylesheets="@w3.css" BorderPane.alignment="CENTER">
          <items>
-          <Button accessibleRole="MENU_ITEM" alignment="CENTER" mnemonicParsing="false" onAction="#openMainMenu" prefHeight="34.0" prefWidth="102.0" stylesheets="@w3.css" text="Main Menu">
+          <Button accessibleRole="MENU_ITEM" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openMainMenu" stylesheets="@w3.css" text="Main Menu" textAlignment="CENTER">
                <styleClass>
                   <String fx:value="w3-button" />
                   <String fx:value="w3-white" />
