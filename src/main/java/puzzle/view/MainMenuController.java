@@ -3,9 +3,11 @@ package puzzle.view;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderStroke;
@@ -67,7 +69,7 @@ public class MainMenuController {
             app.setCenterDisplay(puzzle);
    
             if (selected.equals(SoccerBoxButton)) {
-	            SoccerBoxPuzzleController controller = (SoccerBoxPuzzleController)loader.getController();
+	            SoccerBoxPuzzleController controller = loader.getController();
 	            controller.setApp( app );
 	            controller.initMoves();
             }

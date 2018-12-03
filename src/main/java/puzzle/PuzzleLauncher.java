@@ -10,6 +10,8 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import puzzle.view.MainMenuController;
 import puzzle.view.RootDisplayController;
+import javafx.event.EventHandler;
+import javafx.scene.input.KeyEvent;
 
 public class PuzzleLauncher extends Application {
 	
@@ -61,6 +63,7 @@ public class PuzzleLauncher extends Application {
             // Give the controller access to the app
             MainMenuController controller = loader.getController();
             controller.setApp(this);
+            
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -72,6 +75,10 @@ public class PuzzleLauncher extends Application {
      */
     public Stage getPrimaryStage() {
         return primaryStage;
+    }
+    
+    public Scene getScene() {
+    	return primaryStage.getScene();
     }
     
     public void setCenterDisplay(Pane newCenter) {

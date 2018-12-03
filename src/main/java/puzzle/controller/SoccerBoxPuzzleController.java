@@ -86,12 +86,11 @@ public class SoccerBoxPuzzleController {
 	 * 
 	 */
 	public void initMoves( ) {
-		app.getPrimaryStage().getScene().setOnKeyPressed( new EventHandler<KeyEvent>() {
+		app.getScene().addEventHandler(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
 			@Override
 			public void handle(KeyEvent event) {
 				move(event);
-			}
-			
+			}	
 		});
 	}
 	
@@ -159,6 +158,8 @@ public class SoccerBoxPuzzleController {
 	@FXML
 	public void move( KeyEvent event ) {
 		if( previousSelected != null ) {           //If there is a piece selected (red-border)
+			
+			System.out.println("Moving");
 			
 			//Retrieve block information
 			Rectangle piece = previousSelected;
