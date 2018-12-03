@@ -8,8 +8,8 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import puzzle.view.MainMenuController;
-import puzzle.view.RootDisplayController;
+import puzzle.controller.MainMenuController;
+import puzzle.controller.RootDisplayController;
 import javafx.event.EventHandler;
 import javafx.scene.input.KeyEvent;
 

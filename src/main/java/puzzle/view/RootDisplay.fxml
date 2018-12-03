@@ -5,7 +5,7 @@
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.RootDisplayController">
+<BorderPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.RootDisplayController">
    <top>
       <ToolBar accessibleRole="MENU_BAR" prefHeight="46.0" prefWidth="1000.0" styleClass="w3-black" stylesheets="@w3.css" BorderPane.alignment="CENTER">
          <items>

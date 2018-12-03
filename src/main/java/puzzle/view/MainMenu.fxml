@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="750.0" prefWidth="1000.0" stylesheets="@w3.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.view.MainMenuController">
+<BorderPane prefHeight="750.0" prefWidth="1000.0" stylesheets="@w3.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.MainMenuController">
   <center>
     <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" stylesheets="@w3.css" BorderPane.alignment="CENTER">
       <children>
