@@ -138,9 +138,19 @@ public class NonogramController {
 			// Load correct states
 			for (int i = 0; i < 10; i++) {
 				for (int j = 0; j < 10; j++) {
-					int correctState = in.nextInt();
-					solution[i][j] = correctState;
-					correctNumberFull += correctState;
+					try {
+						int correctState = in.nextInt();
+						solution[i][j] = correctState;
+						correctNumberFull += correctState;
+					} 
+					catch (Exception e) {
+						System.err.println("The file named '" + fileName + "' caused an exception of the type:  " + e);
+						System.err.println("This is an error of the method loadNonogram()  in the class NonogramController");
+					}
+					finally {
+						j = 11;
+						i = 11;
+					}
 				}
 			}
 		} catch (IOException e) {
