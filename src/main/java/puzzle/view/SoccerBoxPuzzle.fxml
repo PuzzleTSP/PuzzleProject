@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.Sphere?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#move" prefHeight="550.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.SoccerBoxPuzzleController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#move" prefHeight="550.0" prefWidth="450.0" stylesheets="@w3.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.SoccerBoxPuzzleController">
   <children>
     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eb9d5c" height="550.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="25.0" width="450.0" />
     <Circle layoutX="225.0" layoutY="325.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
@@ -37,9 +41,17 @@
             <Sphere id="ball" fx:id="ball" layoutX="225.0" layoutY="125.0" radius="25.0" />
          </children>
       </Group>
-      <TextArea editable="false" focusTraversable="false" layoutX="-200.0" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0" text="Welcome to Soccer Box!&#10;&#10;Select a block and use the&#10;arrow keys to move it!&#10;&#10;Try and get the ball in the&#10;center hole">
+      <TextArea editable="false" focusTraversable="false" layoutX="-200.0" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0" stylesheets="@w3.css" text="Welcome to Soccer Box!&#10;&#10;Select a block and use the&#10;arrow keys to move it!&#10;&#10;Try and get the ball in the&#10;center hole">
          <cursor>
             <Cursor fx:constant="NONE" />
-         </cursor></TextArea>
+         </cursor>
+         <styleClass>
+            <String fx:value="w3-black" />
+            <String fx:value="w3-text-white" />
+         </styleClass></TextArea>
   </children>
+   <styleClass>
+      <String fx:value="w3-container" />
+      <String fx:value="w3-black" />
+   </styleClass>
 </Pane>
