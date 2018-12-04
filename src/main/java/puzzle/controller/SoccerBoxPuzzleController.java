@@ -10,6 +10,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Sphere;
 import puzzle.PuzzleLauncher;
 import puzzle.model.soccerbox.SoccerBoxGameboard;
+import javafx.scene.layout.*;
 
 public class SoccerBoxPuzzleController {
 
@@ -21,6 +22,8 @@ public class SoccerBoxPuzzleController {
 	private Rectangle previousHovered;
 
 	//FXML tags
+	@FXML
+	private Pane pane;
 	@FXML
 	private Rectangle goal;
 	@FXML
@@ -51,7 +54,6 @@ public class SoccerBoxPuzzleController {
 	 */
 	@FXML
 	private void initialize() {	
-		
 	}
 	
 	/**
@@ -86,13 +88,16 @@ public class SoccerBoxPuzzleController {
 	 * 
 	 */
 	public void initMoves( ) {
-		app.getScene().addEventHandler(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+		pane.requestFocus();
+		app.getScene().setOnKeyPressed( new EventHandler<KeyEvent>() {
 			@Override
 			public void handle(KeyEvent event) {
 				move(event);
 			}	
 		});
+		pane.requestFocus();
 	}
+
 	
 	/**
 	 * outlineSelected (MouseEvent event)
@@ -103,6 +108,7 @@ public class SoccerBoxPuzzleController {
 	 */
 	@FXML
 	public void outlineSelected(MouseEvent event) {
+		initMoves();
 		Rectangle pieceSelected = (Rectangle) event.getSource();
 		if (isSelected(pieceSelected)) {
 			pieceSelected.setStroke(Color.GOLD);
@@ -125,6 +131,7 @@ public class SoccerBoxPuzzleController {
 	 */
 	@FXML
 	private void outlineHovered(MouseEvent event) {
+		initMoves();
 		Rectangle pieceHovered = (Rectangle) event.getSource();
 		if (isSelected(pieceHovered)) {
 			deselect(previousHovered);
@@ -158,15 +165,13 @@ public class SoccerBoxPuzzleController {
 	@FXML
 	public void move( KeyEvent event ) {
 		if( previousSelected != null ) {           //If there is a piece selected (red-border)
-			
-			System.out.println("Moving");
-			
+						
 			//Retrieve block information
 			Rectangle piece = previousSelected;
 			String ID = piece.getId();
 			boolean goalBlock = (ID.equals("goal"));
 			
-			
+			System.out.println("Moving " + ID);
 			//Handles moves based on the inputted key
 			//Format is more or less the same for each case
 			
@@ -178,7 +183,11 @@ public class SoccerBoxPuzzleController {
 							ball.setLayoutY( ball.getLayoutY() - 100 );
 						}
 						board.logMove(ID, event.getCode() );       //Log move in to the gameboard object
+					} else {
+						initMoves();
 					}
+				}  else {
+					initMoves();
 				}
 			} else if( event.getCode() == KeyCode.DOWN ) {
 				if (piece.getLayoutY() + piece.getHeight() <= 425 ) {
@@ -188,7 +197,11 @@ public class SoccerBoxPuzzleController {
 							ball.setLayoutY( ball.getLayoutY() + 100 );
 						}
 						board.logMove(ID, event.getCode() );
+					} else {
+						initMoves();
 					}
+				} else {
+					initMoves();
 				}
 			}else if( event.getCode() == KeyCode.LEFT ) {
 				if (piece.getLayoutX() >= 125 ) {
@@ -198,7 +211,11 @@ public class SoccerBoxPuzzleController {
 							ball.setLayoutX( ball.getLayoutX() - 100 );
 						}
 						board.logMove(ID, event.getCode() );
+					} else {
+						initMoves();
 					}
+				} else {
+					initMoves();
 				}
 			}else if( event.getCode() == KeyCode.RIGHT ) {
 				if (piece.getLayoutX() + piece.getWidth() <= 325 ) {
@@ -208,11 +225,17 @@ public class SoccerBoxPuzzleController {
 							ball.setLayoutX( ball.getLayoutX() + 100 );
 						}
 						board.logMove(ID, event.getCode() );
+					} else {
+						initMoves();
 					}
+				} else {
+					initMoves();
 				}
 			}
 			
 		}
+		
+		initMoves();
 		
 		//After each move, check the position of the goal block for a win
 		
@@ -233,4 +256,5 @@ public class SoccerBoxPuzzleController {
 		if (rectangle.equals(previousSelected)) return true;
 		return false;
 	}
+	
 }
