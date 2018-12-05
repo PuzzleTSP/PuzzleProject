@@ -66,7 +66,8 @@ public class MainMenuController {
             
             //Set puzzle as center of root
             app.setCenterDisplay(puzzle);
-   
+            app.getPrimaryStage().requestFocus();
+            
             if (selected.equals(SoccerBoxButton)) {
 	            SoccerBoxPuzzleController controller = loader.getController();
 	            controller.setApp( app );

@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.shape.Sphere?>
 
-<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="450.0" stylesheets="@w3.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.SoccerBoxPuzzleController">
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#initMoves" prefHeight="550.0" prefWidth="450.0" stylesheets="@w3.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.SoccerBoxPuzzleController">
   <children>
     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eb9d5c" height="550.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="25.0" width="450.0" />
     <Circle layoutX="225.0" layoutY="325.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />

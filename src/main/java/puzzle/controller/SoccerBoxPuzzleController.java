@@ -87,6 +87,7 @@ public class SoccerBoxPuzzleController {
 	 * INTEGRAL FOR MOVEMENT OF PIECES
 	 * 
 	 */
+	@FXML
 	public void initMoves( ) {
 		pane.requestFocus();
 		app.getScene().setOnKeyPressed( new EventHandler<KeyEvent>() {
@@ -107,8 +108,7 @@ public class SoccerBoxPuzzleController {
 	 * @param event
 	 */
 	@FXML
-	public void outlineSelected(MouseEvent event) {
-		initMoves();
+	public void outlineSelected(MouseEvent event) { 
 		Rectangle pieceSelected = (Rectangle) event.getSource();
 		if (isSelected(pieceSelected)) {
 			pieceSelected.setStroke(Color.GOLD);
@@ -131,7 +131,6 @@ public class SoccerBoxPuzzleController {
 	 */
 	@FXML
 	private void outlineHovered(MouseEvent event) {
-		initMoves();
 		Rectangle pieceHovered = (Rectangle) event.getSource();
 		if (isSelected(pieceHovered)) {
 			deselect(previousHovered);
@@ -165,7 +164,7 @@ public class SoccerBoxPuzzleController {
 	@FXML
 	public void move( KeyEvent event ) {
 		if( previousSelected != null ) {           //If there is a piece selected (red-border)
-						
+									
 			//Retrieve block information
 			Rectangle piece = previousSelected;
 			String ID = piece.getId();
@@ -242,6 +241,7 @@ public class SoccerBoxPuzzleController {
 		if( board.checkWin() ) {
 			app.showMainMenu();
 		}
+		
 	}
 	
 	/**
