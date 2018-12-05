@@ -12,6 +12,7 @@ public class PegBoard {
 	private int possMove;
 	
 	private Color greenFill = Color.rgb(114,204,0);
+	Color yellowFill = Color.web("#ffeb3b");
 	
 	Circle start, middle, end;
 	
@@ -59,8 +60,8 @@ public class PegBoard {
 				end = pegs.get(move[2] - 1);
 				
 				
-				if(start.getFill().toString().equals(greenFill.toString()) && 
-						   middle.getFill().toString().equals(greenFill.toString()) && 
+				if(start.getFill().toString().equals(yellowFill.toString()) && 
+						   middle.getFill().toString().equals(yellowFill.toString()) && 
 						   end.getFill().toString().equals(Color.WHITE.toString())) {
 					possMove++;
 

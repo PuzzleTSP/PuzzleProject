@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -13,7 +19,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="858.0" styleClass="w3-black" stylesheets="@w3.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.PegPuzzleController">
+<BorderPane id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="858.0" styleClass="w3-black" stylesheets="@w3.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.PegPuzzleController">
 	<center>
 		<Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
 			<children>
@@ -22,37 +28,37 @@
 					<children>
 						<HBox fx:id="one" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
 							<children>
-								<Circle fx:id="peg1" fill="#72cc00" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+								<Circle fx:id="peg1" fill="#ffeb3b" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
 							</children>
 						</HBox>
 						<HBox fx:id="two" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
 							<children>
-								<Circle fx:id="peg2" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
-								<Circle fx:id="peg3" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+								<Circle fx:id="peg2" fill="#ffeb3b" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+								<Circle fx:id="peg3" fill="#ffeb3b" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
 							</children>
 						</HBox>
 						<HBox fx:id="three" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
 							<children>
-								<Circle fx:id="peg4" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
-								<Circle fx:id="peg5" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
-								<Circle fx:id="peg6" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+								<Circle fx:id="peg4" fill="#ffeb3b" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+								<Circle fx:id="peg5" fill="#ffeb3b" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+								<Circle fx:id="peg6" fill="#ffeb3b" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
 							</children>
 						</HBox>
 						<HBox fx:id="four" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
 							<children>
-								<Circle fx:id="peg7" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
-								<Circle fx:id="peg8" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
-								<Circle fx:id="peg9" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
-								<Circle fx:id="peg10" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+								<Circle fx:id="peg7" fill="#ffeb3b" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+								<Circle fx:id="peg8" fill="#ffeb3b" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+								<Circle fx:id="peg9" fill="#ffeb3b" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+								<Circle fx:id="peg10" fill="#ffeb3b" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
 							</children>
 						</HBox>
 						<HBox fx:id="five" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
 							<children>
-								<Circle fx:id="peg11" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
-								<Circle fx:id="peg12" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
-								<Circle fx:id="peg13" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
-								<Circle fx:id="peg14" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
-								<Circle fx:id="peg15" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+								<Circle fx:id="peg11" fill="#ffeb3b" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+								<Circle fx:id="peg12" fill="#ffeb3b" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+								<Circle fx:id="peg13" fill="#ffeb3b" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+								<Circle fx:id="peg14" fill="#ffeb3b" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+								<Circle fx:id="peg15" fill="#ffeb3b" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
 							</children>
 						</HBox>
 					</children>

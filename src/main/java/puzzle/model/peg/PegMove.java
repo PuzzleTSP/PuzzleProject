@@ -13,6 +13,7 @@ public class PegMove {
 	private Circle[] jumpTriple = new Circle[3];
 	
 	private Color greenFill = Color.rgb(114,204,0);
+	Color yellowFill = Color.web("#ffeb3b");
 	
 	//Array of Possible Moves
 	int[][] moves = { {1,2,4}, {1,3,6}, 
@@ -52,8 +53,8 @@ public class PegMove {
 						middleCirc = c;
 					}
 				}
-				if(startCirc.getFill().toString().equals(greenFill.toString()) && 
-				   middleCirc.getFill().toString().equals(greenFill.toString()) && 
+				if(startCirc.getFill().toString().equals(yellowFill.toString()) && 
+				   middleCirc.getFill().toString().equals(yellowFill.toString()) && 
 				   endCirc.getFill().toString().equals(Color.WHITE.toString())) {
 					return true;
 				}
