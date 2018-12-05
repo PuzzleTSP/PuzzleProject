@@ -55,7 +55,7 @@
                <GridPane.margin>
                   <Insets top="1.0" />
                </GridPane.margin></Rectangle>
-	      <VBox alignment="CENTER" prefHeight="105.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+	      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
               <children>
                  <Label styleClass="w3-text-white" />
                  <Label styleClass="w3-text-white" />
@@ -621,7 +621,7 @@
       </VBox>
    </top>
    <left>
-      <VBox prefHeight="400.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="250.0" BorderPane.alignment="CENTER">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" prefHeight="72.0" prefWidth="218.0" text="How to Play" textAlignment="CENTER">
                <font>
@@ -640,6 +640,9 @@
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
             </Label>
             <Label focusTraversable="false" layoutX="26.0" layoutY="45.0" text="- The numbers preceding each column and row tells you how the black squares should be grouped (so the numbers 1 2 3 mean that there is a single black square followed by a group of two and then a group of 3" textOverrun="CENTER_ELLIPSIS" wrapText="true">
                <styleClass>
@@ -649,6 +652,9 @@
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
             </Label>
             <Label focusTraversable="false" layoutX="26.0" layoutY="96.0" text="- There must be at least one white square between each group of black squares" textOverrun="CENTER_ELLIPSIS" wrapText="true">
                <styleClass>
@@ -658,6 +664,9 @@
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
             </Label>
             <Label focusTraversable="false" layoutX="26.0" layoutY="210.0" text="- You can mark a square with an X if you're certain that it should be empty" textOverrun="CENTER_ELLIPSIS" wrapText="true">
                <styleClass>
@@ -667,6 +676,9 @@
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
             </Label>
          </children>
          <BorderPane.margin>
@@ -680,7 +692,7 @@
       </VBox>
    </left>
    <right>
-      <VBox alignment="TOP_CENTER" prefHeight="600.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" BorderPane.alignment="TOP_CENTER">
          <children>
             <Label focusTraversable="false" prefHeight="73.0" prefWidth="130.0" text="Choose a Puzzle" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
                <font>
