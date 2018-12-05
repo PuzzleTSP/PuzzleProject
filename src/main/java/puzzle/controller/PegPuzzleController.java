@@ -52,6 +52,7 @@ public class PegPuzzleController {
 	
 	
 	Color greenFill = Color.rgb(114,204,0);
+	Color yellowFill = Color.web("#ffeb3b");
 	
 	int numFill;
 	
@@ -113,7 +114,7 @@ public class PegPuzzleController {
 	@FXML
 	private void refresh() {
 		for(Circle c: pegList) {
-			c.setFill(greenFill);
+			c.setFill(yellowFill);
 		}
 		
 		int randPeg = (int)(Math.random() * 15);
@@ -130,7 +131,7 @@ public class PegPuzzleController {
 	@FXML
 	private void restart() {
 		for(Circle c: pegList) {
-			c.setFill(greenFill);
+			c.setFill(yellowFill);
 		}
 		
 		int randPeg = (int)(Math.random() * 15);
@@ -181,7 +182,7 @@ public class PegPuzzleController {
 				//change colors of pegs to make the jump 
 				moveTriple[0].setFill(Color.WHITE);
 				moveTriple[1].setFill(Color.WHITE);
-				moveTriple[2].setFill(greenFill);
+				moveTriple[2].setFill(yellowFill);
 				
 				startCirc.setStroke(Color.BLACK);
 				jumpCirc.setStroke(Color.BLACK);
@@ -226,8 +227,8 @@ public class PegPuzzleController {
 		
 			Circle[] lastTriple = lastMove.getJumpTriple();
 			
-			lastTriple[0].setFill(greenFill);
-			lastTriple[1].setFill(greenFill);
+			lastTriple[0].setFill(yellowFill);
+			lastTriple[1].setFill(yellowFill);
 			lastTriple[2].setFill(Color.WHITE);
 		}
 	}

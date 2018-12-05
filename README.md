@@ -1,4 +1,1 @@
-# PuzzleProject
-U know what this is
-Edited readme
-Test again
+The Perplexed Ponderers Peddling Puzzles welcome you to our Puzzle Launcher!
