@@ -26,7 +26,7 @@ public class TowerHController {
 	private int[] yLoc = {438,400,362,324,286};
 	private int[] xLoc = {32, 48, 58, 71, 92};
 
-	
+	private Color towerColor = Color.rgb(67, 46, 36);
 	@FXML
 	private void initialize() {	
 
@@ -34,11 +34,13 @@ public class TowerHController {
 		tower2Stack = new Stack<Rectangle>();
 		tower3Stack = new Stack<Rectangle>();
 		
+		
 		tower1Stack.push(ring5);
 		tower1Stack.push(ring4);
 		tower1Stack.push(ring3);
 		tower1Stack.push(ring2);
 		tower1Stack.push(ring1);
+
 
 		fromTow = null;
 		toTow = null;
@@ -96,27 +98,33 @@ public class TowerHController {
 		if(fromTow == (null)) {
 			fromTow = selectedTower;
 			fromTow.setStroke(Color.RED);
+			fromTow.setFill(Color.RED);
 		}
 		else {
 			toTow = selectedTower;
+			toTow.setStroke(Color.RED);
+			toTow.setFill(Color.RED);
 			if(fromTow.equals(toTow)) {
 				deselect(fromTow);
+				deselect(toTow);
 				fromTow = null;
 				toTow = null;
 			}else {
 				moveRing(fromTow,toTow);
-				System.out.println("finishedMove");
 				updateGraphics();
 				deselect(fromTow);
 				deselect(toTow);
 				fromTow = null;
 				toTow = null;
+				
+				checkWin();
 			}
 		}
 	}
 	
 	private void deselect(Rectangle rect) {
 		rect.setStroke(Color.BLACK);
+		rect.setFill(towerColor);
 	}
 	
 	private void moveRing(Rectangle from, Rectangle to) {
@@ -218,4 +226,10 @@ public class TowerHController {
 		}
 	}
 	
+	private void checkWin() {
+		if(tower3Stack.size() == 5) {
+			System.out.println("ya won kiddo");
+		}
+		
+	}
 }
