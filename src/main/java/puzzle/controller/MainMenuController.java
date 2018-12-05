@@ -30,6 +30,8 @@ public class MainMenuController {
 	private Button HanoiButton;
 	@FXML
 	private Button NonogramButton;
+	@FXML
+	private Button ExitButton;
 
 	@FXML
 	private void initialize() {
@@ -44,6 +46,11 @@ public class MainMenuController {
 		}
 		pieceHovered.setBorder(new Border(new BorderStroke(Color.GOLD, BorderStrokeStyle.SOLID, new CornerRadii(3.0), BorderStroke.THIN)));
 		previousHovered = pieceHovered;
+	}
+	
+	@FXML
+	private void closeApp() {
+		app.getPrimaryStage().close();
 	}
 	
 	@FXML

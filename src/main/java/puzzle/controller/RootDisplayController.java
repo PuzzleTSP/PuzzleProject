@@ -17,11 +17,6 @@ public class RootDisplayController {
 		app.showMainMenu();
 	}
 	
-	@FXML
-	private void closeApp() {
-		app.getPrimaryStage().close();
-	}
-	
 	public void setApp(PuzzleLauncher app) {
 		this.app = app;
 	}
