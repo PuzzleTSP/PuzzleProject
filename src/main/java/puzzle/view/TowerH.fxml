@@ -13,12 +13,12 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.TowerHController">
    <children>
       <Rectangle fx:id="tower1" arcHeight="5.0" arcWidth="5.0" fill="#432e24" height="327.0" layoutX="92.0" layoutY="149.0" onMouseClicked="#towerSelect" onMouseEntered="#towerHover" onMouseExited="#towerHoverExit" stroke="BLACK" strokeType="INSIDE" width="38.0" />
-      <Rectangle fx:id="tower2" arcHeight="5.0" arcWidth="5.0" fill="#432e24" height="336.0" layoutX="340.0" layoutY="140.0" onMouseClicked="#towerSelect" onMouseEntered="#towerHover" onMouseExited="#towerHoverExit" stroke="BLACK" strokeType="INSIDE" width="38.0" />
-      <Rectangle fx:id="tower3" arcHeight="5.0" arcWidth="5.0" fill="#432e24" height="336.0" layoutX="588.0" layoutY="141.0" onMouseClicked="#towerSelect" onMouseEntered="#towerHover" onMouseExited="#towerHoverExit" stroke="BLACK" strokeType="INSIDE" width="38.0" />
+      <Rectangle fx:id="tower2" arcHeight="5.0" arcWidth="5.0" fill="#432e24" height="327.0" layoutX="340.0" layoutY="149.0" onMouseClicked="#towerSelect" onMouseEntered="#towerHover" onMouseExited="#towerHoverExit" stroke="BLACK" strokeType="INSIDE" width="38.0" />
+      <Rectangle fx:id="tower3" arcHeight="5.0" arcWidth="5.0" fill="#432e24" height="327.0" layoutX="588.0" layoutY="148.0" onMouseClicked="#towerSelect" onMouseEntered="#towerHover" onMouseExited="#towerHoverExit" stroke="BLACK" strokeType="INSIDE" width="38.0" />
       <Rectangle fx:id="ring5" arcHeight="5.0" arcWidth="5.0" fill="#e56b14" height="38.0" layoutY="438.0" stroke="BLACK" strokeType="INSIDE" width="223.0" />
       <Rectangle fx:id="ring4" arcHeight="5.0" arcWidth="5.0" fill="#ff1f27" height="38.0" layoutX="21.0" layoutY="400.0" stroke="BLACK" strokeType="INSIDE" width="183.0" />
-      <Rectangle fx:id="ring3" arcHeight="5.0" arcWidth="5.0" fill="#09d231" height="38.0" layoutX="34.0" layoutY="363.0" stroke="BLACK" strokeType="INSIDE" width="157.0" />
-      <Rectangle fx:id="ring2" arcHeight="5.0" arcWidth="5.0" fill="#e8ff1f" height="38.0" layoutX="46.0" layoutY="325.0" stroke="BLACK" strokeType="INSIDE" width="134.0" />
-      <Rectangle fx:id="ring1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="38.0" layoutX="60.0" layoutY="287.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
+      <Rectangle fx:id="ring3" arcHeight="5.0" arcWidth="5.0" fill="#09d231" height="38.0" layoutX="34.0" layoutY="362.0" stroke="BLACK" strokeType="INSIDE" width="157.0" />
+      <Rectangle fx:id="ring2" arcHeight="5.0" arcWidth="5.0" fill="#e8ff1f" height="38.0" layoutX="46.0" layoutY="324.0" stroke="BLACK" strokeType="INSIDE" width="134.0" />
+      <Rectangle fx:id="ring1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="38.0" layoutX="60.0" layoutY="286.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
    </children>
 </Pane>

@@ -25,30 +25,16 @@ public class TowerHController {
 	private Rectangle fromTow, toTow;
 	private Stack<Rectangle> tower1Stack, tower2Stack,tower3Stack;
 	
-	private int[] yLoc = {438,400,363,325,287};
+	private int[] yLoc = {438,400,362,324,286};
+	private int[] xLoc = {32, 48, 58, 71, 92};
 	private int[] xTow1 = {0,21,34,46,60};
 	private int[] xTow2 = {245,266,279,291,305};
 	private int[] xTow3 = {496,517,530,542,556};
 	
 	@FXML
 	private void initialize() {	
-		ring1 = new Rectangle();
-		ring1.setId("ring1");
-		ring1.setLayoutX(60);
 		
-		ring2 = new Rectangle();
-		ring2.setId("ring2");
-
-		ring3 = new Rectangle();
-		ring3.setId("ring3");
-
-		ring4 = new Rectangle();
-		ring4.setId("ring4");
-
-		ring5 = new Rectangle();
-		ring5.setId("ring5");
-
-		System.out.println(ring1.getLayoutX());
+		
 		
 		tower1Stack = new Stack<Rectangle>();
 		tower2Stack = new Stack<Rectangle>();
@@ -60,9 +46,11 @@ public class TowerHController {
 		tower1Stack.push(ring2);
 		tower1Stack.push(ring1);
 		
+		
+		
+		
 		fromTow = null;
 		toTow = null;
-		System.out.println("we did init");
 	}
 	
 	/**
@@ -205,49 +193,26 @@ public class TowerHController {
 	}
 	
 	private void updateGraphics() {
-		System.out.println("we update graphics  yo");
-		Rectangle currRect;
-		System.out.println("Start Tower 1: ");
-		for(int i = 0; i < tower1Stack.size(); i++) {
-			currRect = tower1Stack.get(i);
-			
-			System.out.println(currRect.getId() + " "  + "Curr X: " + currRect.getLayoutBounds().getMinX() + " Curr Y: " + currRect.getLayoutBounds().getMinY() + " "+ (currRect.getLayoutX() != xTow1[i] && currRect.getLayoutY() != yLoc[i]));
-			
-			
-//			if(currRect.getLayoutX() != xTow1[i] && currRect.getLayoutY() != yLoc[i]) {
-//				currRect.setLayoutX(xTow1[i]);
-//				currRect.setLayoutY(yLoc[i]);
-//			}
+		for(int i = 0; i< tower1Stack.size(); i++) {
+			if(tower1Stack.get(i).getLayoutX() != xTow1[i] && tower1Stack.get(i).getLayoutX() != yLoc[i]) {
+				tower1Stack.get(i).setLayoutX(tower1.getLayoutX() - xLoc[ringSize(tower1Stack.get(i)) - 1]);
+				tower1Stack.get(i).setLayoutY(yLoc[i]);
+			}
 		}
-		System.out.println("End Tower 1");
-		System.out.println("--------------------------------------------------");
-		System.out.println("Start Tower 2: ");
-		for(int i = 0; i < tower2Stack.size(); i++) {
-			currRect = tower2Stack.get(i);
-			
-			
-			System.out.println(currRect.getLayoutX() != xTow2[i] && currRect.getLayoutY() != yLoc[i]);
-			
-//			if(currRect.getLayoutX() != xTow2[i] && currRect.getLayoutY() != yLoc[i]) {
-//				currRect.setLayoutX(xTow2[i]);
-//				currRect.setLayoutY(yLoc[i]);
-//			}
+		
+		for(int i = 0; i< tower2Stack.size(); i++) {
+			if(tower2Stack.get(i).getLayoutX() != xTow2[i] && tower2Stack.get(i).getLayoutX() != yLoc[i]) {
+				tower2Stack.get(i).setLayoutX(tower2.getLayoutX() - xLoc[ringSize(tower2Stack.get(i)) - 1]);
+				tower2Stack.get(i).setLayoutY(yLoc[i]);
+			}
 		}
-		System.out.println("End Tower 2");
-		System.out.println("--------------------------------------------------");
-		System.out.println("Start Tower 3: ");
-		for(int i = 0; i < tower3Stack.size(); i++) {
-			currRect = tower3Stack.get(i);
-			
-			System.out.println(currRect.getLayoutX() != xTow3[i] && currRect.getLayoutY() != yLoc[i]);
-			
-//			if(currRect.getLayoutX() != xTow3[i] && currRect.getLayoutY() != yLoc[i]) {
-//				currRect.setLayoutX(xTow3[i]);
-//				currRect.setLayoutY(yLoc[i]);
-//			}
+		
+		for(int i = 0; i< tower3Stack.size(); i++) {
+			if(tower3Stack.get(i).getLayoutX() != xTow3[i] && tower3Stack.get(i).getLayoutX() != yLoc[i]) {
+				tower3Stack.get(i).setLayoutX(tower3.getLayoutX() - xLoc[ringSize(tower3Stack.get(i)) - 1]);
+				tower3Stack.get(i).setLayoutY(yLoc[i]);
+			}
 		}
-		System.out.println("End Tower 3");
-		System.out.println("--------------------------------------------------");
 	}
 	
 	private boolean isSelected(Rectangle rect) {
