@@ -5,24 +5,18 @@
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.RootDisplayController">
-   <top>
-      <ToolBar accessibleRole="MENU_BAR" prefHeight="46.0" prefWidth="1000.0" styleClass="w3-black" stylesheets="@w3.css" BorderPane.alignment="CENTER">
-         <items>
-          <Button accessibleRole="MENU_ITEM" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openMainMenu" stylesheets="@w3.css" text="Main Menu" textAlignment="CENTER">
-               <styleClass>
-                  <String fx:value="w3-button" />
-                  <String fx:value="w3-white" />
-                  <String fx:value="w3-text-black" />
-               </styleClass>
-            </Button>
-            <Button alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#closeApp" stylesheets="@w3.css" text="Exit">
-               <styleClass>
-                  <String fx:value="w3-button" />
-                  <String fx:value="w3-red" />
-               </styleClass>
-            </Button>
-         </items>
-      </ToolBar>
-   </top>
+<BorderPane prefHeight="750.0" prefWidth="1000.0" styleClass="w3-black" stylesheets="@w3.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.RootDisplayController">
+	<top>
+		<ToolBar prefHeight="45.0" prefWidth="1000.0" styleClass="w3-black">
+			<items>
+				<Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openMainMenu" text="Main Menu">
+					<styleClass>
+						<String fx:value="w3-button" />
+						<String fx:value="w3-white" />
+						<String fx:value="w3-text-black" />
+					</styleClass>
+				</Button>
+			</items>
+		</ToolBar>
+	</top>
 </BorderPane>
