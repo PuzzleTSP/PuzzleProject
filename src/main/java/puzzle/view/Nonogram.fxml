@@ -715,7 +715,7 @@
                   <String fx:value="w3-text-black" />
                   <String fx:value="w3-border-gray" />
                   <String fx:value="w3-hover-border-white" />
-                  <String fx:value="w3-hover-white" />
+                  <String fx:value="w3-hover-gray" />
                </styleClass></Button>
             <Button mnemonicParsing="false" onAction="#selectNonogram" prefHeight="50.0" prefWidth="150.0" text="Dog">
                <styleClass>
