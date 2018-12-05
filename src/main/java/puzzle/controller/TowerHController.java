@@ -1,5 +1,7 @@
 package puzzle.controller;
 
+import java.util.Stack;
+
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
@@ -20,10 +22,47 @@ public class TowerHController {
 	Rectangle fromTower, toTower;
 	private Rectangle previousSelected;
 	private Rectangle previousHovered;
+	private Rectangle fromTow, toTow;
+	private Stack<Rectangle> tower1Stack, tower2Stack,tower3Stack;
+	
+	private int[] yLoc = {438,400,363,325,287};
+	private int[] xTow1 = {0,21,34,46,60};
+	private int[] xTow2 = {245,266,279,291,305};
+	private int[] xTow3 = {496,517,530,542,556};
 	
 	@FXML
 	private void initialize() {	
-		gameboard = new TowerH();
+		ring1 = new Rectangle();
+		ring1.setId("ring1");
+		ring1.setLayoutX(60);
+		
+		ring2 = new Rectangle();
+		ring2.setId("ring2");
+
+		ring3 = new Rectangle();
+		ring3.setId("ring3");
+
+		ring4 = new Rectangle();
+		ring4.setId("ring4");
+
+		ring5 = new Rectangle();
+		ring5.setId("ring5");
+
+		System.out.println(ring1.getLayoutX());
+		
+		tower1Stack = new Stack<Rectangle>();
+		tower2Stack = new Stack<Rectangle>();
+		tower3Stack = new Stack<Rectangle>();
+		
+		tower1Stack.push(ring5);
+		tower1Stack.push(ring4);
+		tower1Stack.push(ring3);
+		tower1Stack.push(ring2);
+		tower1Stack.push(ring1);
+		
+		fromTow = null;
+		toTow = null;
+		System.out.println("we did init");
 	}
 	
 	/**
@@ -48,50 +87,176 @@ public class TowerHController {
 		this.app = app;
 	}
 	
+	/**
+	 * outlineHovered (MouseEvent event)
+	 * 
+	 * Handle the logic for hovering over a block, and indicating a hover with a yellow border
+	 * 
+	 * @param event
+	 */
 	@FXML
 	private void towerHover(MouseEvent event) {
 		Rectangle pieceHovered = (Rectangle) event.getSource();
-		
-		if (isSelected(pieceHovered)) {
-			deselect(previousHovered);
-		} else {
-			pieceHovered.setStroke(Color.BLUE);
-			deselect(previousHovered);
-			previousHovered = pieceHovered;
-		}
+		if(isSelected(pieceHovered) != true)
+			pieceHovered.setStroke(Color.GOLD);
+
 	}
 	
 	@FXML 
-	private void selectPeg(MouseEvent event) {
+	private void towerHoverExit(MouseEvent event) {
+		Rectangle pieceHovered = (Rectangle) event.getSource();
+		if(isSelected(pieceHovered) != true)
+			pieceHovered.setStroke(Color.BLACK);
+	}
+	
+
+	@FXML
+	private void towerSelect(MouseEvent event) {
 		Rectangle selectedTower = (Rectangle) event.getSource();
 		
-		//add first peg to the move
-		if(fromTower == null) {
-			fromTower = selectedTower;
-			fromTower.setStroke(Color.RED);
-			//get appropriate stack
+		if(fromTow == (null)) {
+			fromTow = selectedTower;
+			fromTow.setStroke(Color.RED);
 		}
 		else {
-			toTower = selectedTower;
+			toTow = selectedTower;
+			if(fromTow.equals(toTow)) {
+				deselect(fromTow);
+				fromTow = null;
+				toTow = null;
+			}else {
+				moveRing(fromTow,toTow);
+				System.out.println("finishedMove");
+				updateGraphics();
+				deselect(fromTow);
+				deselect(toTow);
+				fromTow = null;
+				toTow = null;
+			}
+		}
+	}
+	
+	private void deselect(Rectangle rect) {
+		rect.setStroke(Color.BLACK);
+	}
+	
+	private void moveRing(Rectangle from, Rectangle to) {
+		int towerFromNum = Integer.parseInt(from.getId().substring(5));
+		int towerToNum = Integer.parseInt(to.getId().substring(5));
+		
+		Stack<Rectangle> fromStack, toStack;
+		fromStack = new Stack<Rectangle>();
+		toStack = new Stack<Rectangle>();
+		
+		switch(towerFromNum) {
+		case 1:
+			fromStack = tower1Stack;
+			break;
+		case 2: 
+			fromStack = tower2Stack;
+			break;
+		case 3:
+			fromStack = tower3Stack;
+			break;
+		}
+		
+		switch(towerToNum) {
+		case 1:
+			toStack = tower1Stack;
+			break;
+		case 2: 
+			toStack = tower2Stack;
+			break;
+		case 3:
+			toStack = tower3Stack;
+			break;
+		}
+		
+		
+		
+		
+		if(fromStack.isEmpty() == false) {
+			Rectangle movingRect = fromStack.peek();
 			
-			//check if the move is valid
-			if(true) {
+			Rectangle stackingRect;
+			
+			//tower you are moving to has no rings 
+			if(toStack.isEmpty()) {
+				fromStack.pop();
+				toStack.push(movingRect);
 				
 			}
 			else {
-				//if not a valid move, reset the move
+				stackingRect = toStack.peek();
 				
+				if(ringSize(movingRect) < ringSize(stackingRect)) {
+					fromStack.pop();
+					toStack.push(movingRect);
+				}
 			}
+			
+			
 		}
-	}
-	private void deselect(Rectangle previous) {
-		if (previous == null || previous.getStroke().equals(Color.RED)) return;
-		previous.setStroke(Color.BLACK);
+
 	}
 	
-	private Boolean isSelected(Rectangle c) {
-		if (c.equals(previousSelected) || c.getStroke().equals(Color.RED)) return true;
-		return false;
+	public int ringSize(Rectangle rect) {
+		return Integer.parseInt(rect.getId().substring(4));
+	}
+	
+	private void updateGraphics() {
+		System.out.println("we update graphics  yo");
+		Rectangle currRect;
+		System.out.println("Start Tower 1: ");
+		for(int i = 0; i < tower1Stack.size(); i++) {
+			currRect = tower1Stack.get(i);
+			
+			System.out.println(currRect.getId() + " "  + "Curr X: " + currRect.getLayoutBounds().getMinX() + " Curr Y: " + currRect.getLayoutBounds().getMinY() + " "+ (currRect.getLayoutX() != xTow1[i] && currRect.getLayoutY() != yLoc[i]));
+			
+			
+//			if(currRect.getLayoutX() != xTow1[i] && currRect.getLayoutY() != yLoc[i]) {
+//				currRect.setLayoutX(xTow1[i]);
+//				currRect.setLayoutY(yLoc[i]);
+//			}
+		}
+		System.out.println("End Tower 1");
+		System.out.println("--------------------------------------------------");
+		System.out.println("Start Tower 2: ");
+		for(int i = 0; i < tower2Stack.size(); i++) {
+			currRect = tower2Stack.get(i);
+			
+			
+			System.out.println(currRect.getLayoutX() != xTow2[i] && currRect.getLayoutY() != yLoc[i]);
+			
+//			if(currRect.getLayoutX() != xTow2[i] && currRect.getLayoutY() != yLoc[i]) {
+//				currRect.setLayoutX(xTow2[i]);
+//				currRect.setLayoutY(yLoc[i]);
+//			}
+		}
+		System.out.println("End Tower 2");
+		System.out.println("--------------------------------------------------");
+		System.out.println("Start Tower 3: ");
+		for(int i = 0; i < tower3Stack.size(); i++) {
+			currRect = tower3Stack.get(i);
+			
+			System.out.println(currRect.getLayoutX() != xTow3[i] && currRect.getLayoutY() != yLoc[i]);
+			
+//			if(currRect.getLayoutX() != xTow3[i] && currRect.getLayoutY() != yLoc[i]) {
+//				currRect.setLayoutX(xTow3[i]);
+//				currRect.setLayoutY(yLoc[i]);
+//			}
+		}
+		System.out.println("End Tower 3");
+		System.out.println("--------------------------------------------------");
+	}
+	
+	private boolean isSelected(Rectangle rect) {
+		if(rect.getStroke().equals(Color.RED)) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	
 }

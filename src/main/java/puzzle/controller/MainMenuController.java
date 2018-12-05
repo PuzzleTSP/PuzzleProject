@@ -54,7 +54,7 @@ public class MainMenuController {
 		String location = null;
 		if (selected.equals(SoccerBoxButton)) location = "view/SoccerBoxPuzzle.fxml";
 		else if (selected.equals(PegButton)) location = "view/PegPuzzle.fxml";
-//		else if (selected.equals(HanoiButton)) resource = "view/TowersOfHanoi.fxml";
+		else if (selected.equals(HanoiButton)) location = "view/TowerH.fxml";
 		else if (selected.equals(NonogramButton)) location = "view/Nonogram.fxml";
 		else location = "view/EmptyPuzzle.fxml";
 		
