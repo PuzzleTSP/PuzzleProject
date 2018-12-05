@@ -2,12 +2,16 @@ package puzzle.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Sphere;
+import javafx.stage.Popup;
 import puzzle.PuzzleLauncher;
 import puzzle.model.soccerbox.SoccerBoxGameboard;
 import javafx.scene.layout.*;
@@ -170,7 +174,6 @@ public class SoccerBoxPuzzleController {
 			String ID = piece.getId();
 			boolean goalBlock = (ID.equals("goal"));
 			
-			System.out.println("Moving " + ID);
 			//Handles moves based on the inputted key
 			//Format is more or less the same for each case
 			
@@ -239,7 +242,7 @@ public class SoccerBoxPuzzleController {
 		//After each move, check the position of the goal block for a win
 		
 		if( board.checkWin() ) {
-			app.showMainMenu();
+			winScreen();
 		}
 		
 	}
@@ -255,6 +258,30 @@ public class SoccerBoxPuzzleController {
 	private Boolean isSelected(Rectangle rectangle) {
 		if (rectangle.equals(previousSelected)) return true;
 		return false;
+	}
+	
+	
+	public void winScreen() {
+		
+		Button mainMenu = new Button("Main Menu");
+		TextArea text = new TextArea("You've won! Congratulations! You've won, Impressive!" );
+		text.setEditable(false);
+		text.setMaxHeight(100);
+		text.setMaxWidth(300);
+		Popup pop = new Popup();
+		
+		mainMenu.setOnAction( new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				app.showMainMenu();
+				pop.hide();
+			}
+		} );
+		
+		pop.getContent().add( text );
+		pop.getContent().add( mainMenu );
+		pop.show( app.getPrimaryStage() );
+		
 	}
 	
 }

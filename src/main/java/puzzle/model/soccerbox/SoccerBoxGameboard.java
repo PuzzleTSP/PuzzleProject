@@ -242,7 +242,7 @@ public class SoccerBoxGameboard {
 		boolean result = false;
 		
 		PuzzleBlock goal = getBlock("goal");
-		if( goal.getX() == 1 && goal.getY() == 2) {
+		if( goal.getX() == 1 && goal.getY() == 0) {
 			result = true;
 		}
 		
