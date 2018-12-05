@@ -14,28 +14,22 @@ import puzzle.model.towerH.TowerH;
 public class TowerHController {
 	
 	private PuzzleLauncher app;
-	private TowerH gameboard;
-	
+
 	@FXML Rectangle ring1; @FXML Rectangle ring2; @FXML Rectangle ring3; @FXML Rectangle ring4; @FXML Rectangle ring5;
 	@FXML Rectangle tower1; @FXML Rectangle tower2; @FXML Rectangle tower3;
 	
 	Rectangle fromTower, toTower;
-	private Rectangle previousSelected;
-	private Rectangle previousHovered;
+
 	private Rectangle fromTow, toTow;
 	private Stack<Rectangle> tower1Stack, tower2Stack,tower3Stack;
 	
 	private int[] yLoc = {438,400,362,324,286};
 	private int[] xLoc = {32, 48, 58, 71, 92};
-	private int[] xTow1 = {0,21,34,46,60};
-	private int[] xTow2 = {245,266,279,291,305};
-	private int[] xTow3 = {496,517,530,542,556};
+
 	
 	@FXML
 	private void initialize() {	
-		
-		
-		
+
 		tower1Stack = new Stack<Rectangle>();
 		tower2Stack = new Stack<Rectangle>();
 		tower3Stack = new Stack<Rectangle>();
@@ -45,10 +39,7 @@ public class TowerHController {
 		tower1Stack.push(ring3);
 		tower1Stack.push(ring2);
 		tower1Stack.push(ring1);
-		
-		
-		
-		
+
 		fromTow = null;
 		toTow = null;
 	}
@@ -160,9 +151,7 @@ public class TowerHController {
 			break;
 		}
 		
-		
-		
-		
+
 		if(fromStack.isEmpty() == false) {
 			Rectangle movingRect = fromStack.peek();
 			
@@ -194,22 +183,27 @@ public class TowerHController {
 	
 	private void updateGraphics() {
 		for(int i = 0; i< tower1Stack.size(); i++) {
-			if(tower1Stack.get(i).getLayoutX() != xTow1[i] && tower1Stack.get(i).getLayoutX() != yLoc[i]) {
-				tower1Stack.get(i).setLayoutX(tower1.getLayoutX() - xLoc[ringSize(tower1Stack.get(i)) - 1]);
+			double correctX = tower1.getLayoutX() - xLoc[ringSize(tower1Stack.get(i)) - 1];
+			if(tower1Stack.get(i).getLayoutX() != correctX && tower1Stack.get(i).getLayoutX() != yLoc[i]) {
+				tower1Stack.get(i).setLayoutX(correctX);
 				tower1Stack.get(i).setLayoutY(yLoc[i]);
 			}
 		}
 		
 		for(int i = 0; i< tower2Stack.size(); i++) {
-			if(tower2Stack.get(i).getLayoutX() != xTow2[i] && tower2Stack.get(i).getLayoutX() != yLoc[i]) {
-				tower2Stack.get(i).setLayoutX(tower2.getLayoutX() - xLoc[ringSize(tower2Stack.get(i)) - 1]);
+			double correctX = tower2.getLayoutX() - xLoc[ringSize(tower2Stack.get(i)) - 1];
+
+			if(tower2Stack.get(i).getLayoutX() != correctX && tower2Stack.get(i).getLayoutX() != yLoc[i]) {
+				tower2Stack.get(i).setLayoutX(correctX);
 				tower2Stack.get(i).setLayoutY(yLoc[i]);
 			}
 		}
 		
 		for(int i = 0; i< tower3Stack.size(); i++) {
-			if(tower3Stack.get(i).getLayoutX() != xTow3[i] && tower3Stack.get(i).getLayoutX() != yLoc[i]) {
-				tower3Stack.get(i).setLayoutX(tower3.getLayoutX() - xLoc[ringSize(tower3Stack.get(i)) - 1]);
+			double correctX = tower3.getLayoutX() - xLoc[ringSize(tower3Stack.get(i)) - 1];
+
+			if(tower3Stack.get(i).getLayoutX() != correctX && tower3Stack.get(i).getLayoutX() != yLoc[i]) {
+				tower3Stack.get(i).setLayoutX(correctX);
 				tower3Stack.get(i).setLayoutY(yLoc[i]);
 			}
 		}
