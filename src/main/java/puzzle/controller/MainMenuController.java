@@ -30,6 +30,8 @@ public class MainMenuController {
 	private Button HanoiButton;
 	@FXML
 	private Button NonogramButton;
+	@FXML
+	private Button ExitButton;
 
 	@FXML
 	private void initialize() {
@@ -47,6 +49,11 @@ public class MainMenuController {
 	}
 	
 	@FXML
+	private void closeApp() {
+		app.getPrimaryStage().close();
+	}
+	
+	@FXML
 	private void openPuzzle(ActionEvent event) {
 		
 		// Find view location
@@ -54,7 +61,7 @@ public class MainMenuController {
 		String location = null;
 		if (selected.equals(SoccerBoxButton)) location = "view/SoccerBoxPuzzle.fxml";
 		else if (selected.equals(PegButton)) location = "view/PegPuzzle.fxml";
-//		else if (selected.equals(HanoiButton)) resource = "view/TowersOfHanoi.fxml";
+		else if (selected.equals(HanoiButton)) location = "view/TowerH.fxml";
 		else if (selected.equals(NonogramButton)) location = "view/Nonogram.fxml";
 		else location = "view/EmptyPuzzle.fxml";
 		

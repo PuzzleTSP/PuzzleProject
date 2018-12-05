@@ -1,92 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.Double?>
 <?import java.lang.String?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Polygon?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.PegPuzzleController">
-  <children>
-    <Polygon id="woodBoard" fill="DODGERBLUE" layoutX="425.0" layoutY="253.0" opacity="1.0" scaleX="8.075388386305121" scaleY="4.177001873349183" stroke="BLACK" strokeType="INSIDE" style="">
-      <points>
-        <Double fx:value="-50.0" />
-        <Double fx:value="40.0" />
-        <Double fx:value="50.0" />
-        <Double fx:value="40.0" />
-        <Double fx:value="0.0" />
-        <Double fx:value="-60.0" />
-      </points>
-    </Polygon>
-    <Circle fx:id="peg1" fill="#72cc00" layoutX="425.0" layoutY="106.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg2" layoutX="367.0" layoutY="178.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE">
-      <fill>
-        <Color blue="0.000" green="0.800" red="0.447" fx:id="x1" />
-      </fill>
-    </Circle>
-    <Circle fx:id="peg3" fill="$x1" layoutX="495.0" layoutY="178.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg5" fill="$x1" layoutX="423.0" layoutY="250.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg4" fill="$x1" layoutX="295.0" layoutY="250.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg6" fill="$x1" layoutX="567.0" layoutY="250.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg8" fill="$x1" layoutX="351.0" layoutY="322.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg9" fill="$x1" layoutX="495.0" layoutY="322.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg10" fill="$x1" layoutX="639.0" layoutY="322.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg7" fill="$x1" layoutX="223.0" layoutY="322.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg12" fill="$x1" layoutX="279.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg13" fill="$x1" layoutX="423.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg14" fill="$x1" layoutX="567.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg15" fill="$x1" layoutX="711.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Circle fx:id="peg11" fill="$x1" layoutX="151.0" layoutY="394.0" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-    <Button fx:id="refreshButton" layoutX="60.0" layoutY="72.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
-      <TextArea editable="false" layoutX="634.0" layoutY="12.0" prefHeight="234.0" prefWidth="208.0" text="Welcome to Peg Solitaire!&#10;&#10;The aim of the game is to&#10;leave the board with the &#10;least amount of pegs left. &#10;Leave only one and you're&#10; a genius!&#10;&#10;You can jump the pegs&#10;diagonally or horizontally" />
-    <Button fx:id="undo" layoutX="60.0" layoutY="123.0" mnemonicParsing="false" onAction="#undo" text="Undo Last Move" />
-      <VBox fx:id="winBox" alignment="CENTER" layoutX="132.0" layoutY="44.0" prefHeight="336.0" prefWidth="593.0" style="-fx-border-color: black; -fx-border-width: 5px;" styleClass="w3-green" stylesheets="@w3.css">
-         <children>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-               <children>
-                <Text fx:id="gameOver" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Game Over" textAlignment="CENTER" visible="true" wrappingWidth="208.1748046875">
-                     <font>
-                        <Font size="42.0" />
-                     </font>
-                  </Text>
-               </children>
-            </HBox>
-          <Button id="restart" fx:id="winRestart" mnemonicParsing="false" onAction="#restart" prefHeight="17.0" prefWidth="98.0" stylesheets="@w3.css" text="Restart" visible="true">
-               <styleClass>
-                  <String fx:value="w3-button" />
-                  <String fx:value="w3-white" />
-                  <String fx:value="w3-text-black" />
-               </styleClass>
-            </Button>
-            <HBox alignment="CENTER" prefHeight="56.0" prefWidth="584.0">
-               <children>
-                <Text fx:id="numPegs" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
-                <Text id="" fx:id="otherText1" strokeType="OUTSIDE" strokeWidth="0.0" text=" pegs left on the board">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Text>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="58.0" prefWidth="584.0">
-               <children>
-                <Text fx:id="otherText2" strokeType="OUTSIDE" strokeWidth="0.0" text="That means you are " />
-                <Text fx:id="winMessage" strokeType="OUTSIDE" strokeWidth="0.0" text="stupid" />
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-  </children>
-</Pane>
+<BorderPane id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="858.0" styleClass="w3-black" stylesheets="@w3.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.PegPuzzleController">
+	<center>
+		<Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+			<children>
+				<Polygon id="woodBoard" fill="DODGERBLUE" layoutX="433.0" layoutY="258.0" opacity="1.0" points="-51.03749465942383, 30.157987594604492, 39.394073486328125, 30.08075714111328, -6.249181747436523, -67.91437530517578" scaleX="6.0" scaleY="4.5" stroke="BLACK" strokeType="INSIDE" styleClass="w3-teal" />
+				<VBox alignment="CENTER" layoutX="226.0" layoutY="80.0" prefHeight="200.0" prefWidth="100.0">
+					<children>
+						<HBox fx:id="one" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+							<children>
+								<Circle fx:id="peg1" fill="#72cc00" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+							</children>
+						</HBox>
+						<HBox fx:id="two" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+							<children>
+								<Circle fx:id="peg2" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+								<Circle fx:id="peg3" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+							</children>
+						</HBox>
+						<HBox fx:id="three" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+							<children>
+								<Circle fx:id="peg4" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+								<Circle fx:id="peg5" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+								<Circle fx:id="peg6" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+							</children>
+						</HBox>
+						<HBox fx:id="four" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+							<children>
+								<Circle fx:id="peg7" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+								<Circle fx:id="peg8" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+								<Circle fx:id="peg9" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+								<Circle fx:id="peg10" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+							</children>
+						</HBox>
+						<HBox fx:id="five" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+							<children>
+								<Circle fx:id="peg11" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+								<Circle fx:id="peg12" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+								<Circle fx:id="peg13" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+								<Circle fx:id="peg14" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+								<Circle fx:id="peg15" onMouseClicked="#selectPeg" onMouseEntered="#circleHover" onMouseExited="#circleHover" radius="36.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" />
+							</children>
+						</HBox>
+					</children>
+				</VBox>
+				<VBox fx:id="winBox" alignment="CENTER" layoutX="132.0" layoutY="44.0" prefHeight="336.0" prefWidth="593.0" style="-fx-border-color: black; -fx-border-width: 5px;" styleClass="w3-green" stylesheets="@w3.css">
+					<children>
+						<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+							<children>
+								<Text fx:id="gameOver" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Game Over" textAlignment="CENTER" visible="true" wrappingWidth="208.1748046875">
+                           <font>
+                              <Font size="41.0" />
+                           </font></Text>
+							</children>
+						</HBox>
+						<Button id="restart" fx:id="winRestart" mnemonicParsing="false" onAction="#restart" prefHeight="17.0" prefWidth="98.0" stylesheets="@w3.css" text="Restart" visible="true">
+							<styleClass>
+								<String fx:value="w3-button" />
+								<String fx:value="w3-white" />
+								<String fx:value="w3-text-black" />
+                        <String fx:value="w3-border-teal" />
+                        <String fx:value="w3-hover-teal" />
+                        <String fx:value="w3-hover-text-white" />
+							</styleClass>
+						</Button>
+						<HBox alignment="CENTER" prefHeight="56.0" prefWidth="584.0">
+							<children>
+								<Text fx:id="numPegs" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+								<Text id="" fx:id="otherText1" strokeType="OUTSIDE" strokeWidth="0.0" text=" pegs left on the board" />
+							</children>
+						</HBox>
+						<HBox alignment="CENTER" prefHeight="58.0" prefWidth="584.0">
+							<children>
+								<Text fx:id="otherText2" strokeType="OUTSIDE" strokeWidth="0.0" text="That means you are " />
+								<Text fx:id="winMessage" strokeType="OUTSIDE" strokeWidth="0.0" text="stupid" />
+							</children>
+						</HBox>
+					</children>
+				</VBox>
+			</children>
+		</Pane>
+	</center>
+   <right>
+				<VBox alignment="TOP_CENTER" prefHeight="482.0" prefWidth="146.0" styleClass="w3-container" BorderPane.alignment="CENTER">
+					<children>
+						<Label alignment="TOP_CENTER" contentDisplay="TOP" focusTraversable="false" styleClass="w3-text-white" text="Welcome to Peg Solitaire!" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+						<Label focusTraversable="false" styleClass="w3-text-white" text="The aim of the game is to leave the board with the least amount of pegs left. Leave only one and you're a genius!" textAlignment="CENTER" wrapText="true" />
+            <Label focusTraversable="false" styleClass="w3-text-white" text="You can jump the pegs diagonally or horizontally" textAlignment="CENTER" wrapText="true" />
+					</children>
+				</VBox>
+   </right>
+   <left>
+				<VBox alignment="CENTER" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+					<children>
+						<Button fx:id="refreshButton" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#refresh" text="Refresh" textAlignment="CENTER">
+							<styleClass>
+								<String fx:value="w3-button" />
+								<String fx:value="w3-white" />
+								<String fx:value="w3-text-black" />
+								<String fx:value="w3-border-teal" />
+								<String fx:value="w3-hover-teal" />
+								<String fx:value="w3-hover-text-white" />
+							</styleClass>
+						</Button>
+						<Button fx:id="undo" alignment="CENTER" mnemonicParsing="false" onAction="#undo" text="Undo" textAlignment="CENTER">
+							<styleClass>
+								<String fx:value="w3-button" />
+								<String fx:value="w3-white" />
+								<String fx:value="w3-text-black" />
+								<String fx:value="w3-border-teal" />
+								<String fx:value="w3-hover-teal" />
+								<String fx:value="w3-hover-text-white" />
+							</styleClass>
+						</Button>
+					</children>
+         <BorderPane.margin>
+            <Insets right="-100.0" />
+         </BorderPane.margin>
+				</VBox>
+   </left>
+</BorderPane>

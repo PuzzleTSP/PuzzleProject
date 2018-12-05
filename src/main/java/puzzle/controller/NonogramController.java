@@ -34,11 +34,14 @@ public class NonogramController {
 	@FXML
 	Label titleBox;
 	
+	public NonogramController() {
+		
+	}
 	@FXML
-	private void initialize() {
+	public void initialize() {
+		// Initialize instance variables
 		numberFull = 0;
 		correctNumberFull = 0;
-		
 		gridChildren = grid.getChildren();
 		colLabels = new String[10][5];
 		rowLabels = new String[10][5];
@@ -53,12 +56,11 @@ public class NonogramController {
 		}
 
 		loadNonogram("Cat.txt");
-		
 		assignLabels();
-		
+		titleBox.setText("Cat");
 	}
 	
-	private void assignLabels() {
+	public void assignLabels() {
 		for (int i = 0; i < 10; i++) {
 			VBox vBox = (VBox) gridChildren.get(i+1);
 			ObservableList<Node> vBoxChildren = vBox.getChildren();
@@ -107,7 +109,7 @@ public class NonogramController {
 		titleBox.setText(selection.getText());
 	}
 	
-	private void resetGrid() {
+	public void resetGrid() {
 		for (int i = 0; i < 10; i++) {
 			for (int j = 0; j < 10; j++) {
 				squares[i][j].setState(SquareState.EMPTY);
@@ -122,7 +124,7 @@ public class NonogramController {
 		}
 	}
 	
-	private void loadNonogram(String fileName) {
+	public void loadNonogram(String fileName) {
 		File modelNonogramDir = new File("./src/main/java/puzzle/model/nonogram");
 		try (Scanner in = new Scanner(new File(modelNonogramDir, fileName))) {
 			// Load column labels
@@ -157,7 +159,7 @@ public class NonogramController {
 		}
 	}
 	
-	private String setLabelText(int num) {
+	public String setLabelText(int num) {
 		String labelText = " ";
 		if (num > 0) {
 			labelText = String.valueOf(num);
@@ -165,7 +167,7 @@ public class NonogramController {
 		return labelText;
 	}
 	
-	private void checkAnswer() {		
+	public void checkAnswer() {		
 		Boolean correct = true;
 		for (int i = 0; i < 10; i++) {
 			for (int j = 0; j < 10; j++) {
@@ -180,4 +182,12 @@ public class NonogramController {
 			correctBox.setVisible(true);
 		}
 	}
+	
+	public Square[][] getSquares() { return squares; }
+	public ObservableList<Node> getGridChildren() { return gridChildren; }
+	public String[][] getColLabels() { return colLabels; }
+	public String[][] getRowLabels() { return rowLabels; }
+	public int [][] getSolution() { return solution; }
+	public int getNumberFull() { return numberFull; }
+	public int getCorrectNumberFull() { return correctNumberFull; }
 }

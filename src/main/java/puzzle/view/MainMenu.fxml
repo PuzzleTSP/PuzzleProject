@@ -8,8 +8,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-
-<BorderPane prefHeight="750.0" prefWidth="1000.0" stylesheets="@w3.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.MainMenuController">
+<!-- closeApp -->
+<BorderPane prefHeight="750.0" prefWidth="1000.0" stylesheets="@w3.css" styleClass="w3-black" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.MainMenuController">
   <center>
     <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" stylesheets="@w3.css" BorderPane.alignment="CENTER">
       <children>
@@ -62,21 +62,34 @@
                </VBox.margin>
                <styleClass>
                   <String fx:value="w3-button" />
-                  <String fx:value="w3-red" />
-                  <String fx:value="w3-text-black" />
-                  <String fx:value="w3-hover-pale-red" />
-                  <String fx:value="w3-hover-border-red" />
+                  <String fx:value="w3-purple" />
+                  <String fx:value="w3-text-white" />
+                  <String fx:value="w3-hover-pale-purple" />
+                  <String fx:value="w3-hover-border-purple" />
+                  <String fx:value="w3-hover-text-black" />
                </styleClass>
             </Button>
+        <Button fx:id="ExitButton" font="$x1" mnemonicParsing="false" onAction="#closeApp" onMouseEntered="#outlineHovered" prefHeight="85.0" prefWidth="230.0" text="Exit">
+          <VBox.margin>
+            <Insets top="30.0" />
+          </VBox.margin>
+               <styleClass>
+                  <String fx:value="w3-button" />
+                  <String fx:value="w3-red" />
+                  <String fx:value="w3-text-white" />
+                  <String fx:value="w3-hover-pale-red" />
+                  <String fx:value="w3-hover-border-red" />
+                  <String fx:value="w3-hover-text-black" />
+               </styleClass>
+        </Button>
       </children>
          <styleClass>
-            <String fx:value="w3-black" />
             <String fx:value="w3-panel" />
          </styleClass>
     </VBox>
   </center>
   <top>
-    <Label styleClass="w3-text-white" stylesheets="@w3.css" text="Main Menu" BorderPane.alignment="CENTER">
+    <Label styleClass="w3-text-white" text="Main Menu" BorderPane.alignment="CENTER">
       <font>
         <Font name="Monospaced Regular" size="48.0" />
       </font>
@@ -86,7 +99,6 @@
     </Label>
   </top>
    <styleClass>
-      <String fx:value="w3-black" />
       <String fx:value="w3-text-white" />
    </styleClass>
 </BorderPane>
