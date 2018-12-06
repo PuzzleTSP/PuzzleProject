@@ -11,24 +11,6 @@ import puzzle.model.peg.PegBoard;
 import puzzle.model.peg.PegMove;
 public class TestPegPuzzle {
 	
-	PegPuzzleController testPuzzle;
-
-	//Tests for PegPuzzleController.java
-	
-	@Test
-	public void testRefresh() {
-		
-	}
-	
-	@Test
-	public void testJump() {
-		
-	}
-	
-	@Test
-	public void testUndo() {
-		
-	}
 	
 	//Tests for PegMove.java
 	@Test

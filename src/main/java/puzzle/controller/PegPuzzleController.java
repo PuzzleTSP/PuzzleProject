@@ -209,12 +209,12 @@ public class PegPuzzleController {
 			}
 		}
 	}
-	private void deselect(Circle previous) {
+	public void deselect(Circle previous) {
 		if (previous == null || previous.getStroke().equals(Color.RED)) return;
 		previous.setStroke(Color.BLACK);
 	}
 	
-	private Boolean isSelected(Circle c) {
+	public Boolean isSelected(Circle c) {
 		if (c.equals(previousSelected) || c.getStroke().equals(Color.RED)) return true;
 		return false;
 	}

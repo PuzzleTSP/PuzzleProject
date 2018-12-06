@@ -3,13 +3,14 @@ package puzzle.controller;
 import java.util.Stack;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
+
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 import puzzle.PuzzleLauncher;
-import puzzle.model.peg.PegMove;
-import puzzle.model.towerH.TowerH;
+
 
 public class TowerHController {
 	
@@ -17,6 +18,11 @@ public class TowerHController {
 
 	@FXML Rectangle ring1; @FXML Rectangle ring2; @FXML Rectangle ring3; @FXML Rectangle ring4; @FXML Rectangle ring5;
 	@FXML Rectangle tower1; @FXML Rectangle tower2; @FXML Rectangle tower3;
+	@FXML Rectangle endScreenRect;
+	
+	@FXML Text winText1,numMovesText;
+	
+	@FXML Button restart;
 	
 	Rectangle fromTower, toTower;
 
@@ -27,6 +33,9 @@ public class TowerHController {
 	private int[] xLoc = {32, 48, 58, 71, 92};
 
 	private Color towerColor = Color.rgb(67, 46, 36);
+	
+	int moveCounter;
+	
 	@FXML
 	private void initialize() {	
 
@@ -44,6 +53,13 @@ public class TowerHController {
 
 		fromTow = null;
 		toTow = null;
+		
+		moveCounter = 0;
+		
+		endScreenRect.setVisible(false);
+		restart.setVisible(false);
+		numMovesText.setVisible(false);
+		winText1.setVisible(false);
 	}
 	
 	/**
@@ -111,6 +127,7 @@ public class TowerHController {
 				toTow = null;
 			}else {
 				moveRing(fromTow,toTow);
+				moveCounter++;
 				updateGraphics();
 				deselect(fromTow);
 				deselect(toTow);
@@ -121,6 +138,37 @@ public class TowerHController {
 			}
 		}
 	}
+	
+	@FXML
+	private void restart() {
+		tower1Stack = new Stack<Rectangle>();
+		tower2Stack = new Stack<Rectangle>();
+		tower3Stack = new Stack<Rectangle>();
+		
+		
+		tower1Stack.push(ring5);
+		tower1Stack.push(ring4);
+		tower1Stack.push(ring3);
+		tower1Stack.push(ring2);
+		tower1Stack.push(ring1);
+
+		updateGraphics();
+		
+		fromTow = null;
+		toTow = null;
+		
+		moveCounter = 0;
+		
+		tower1.setDisable(false);
+		tower2.setDisable(false);
+		tower3.setDisable(false);
+		
+		endScreenRect.setVisible(false);
+		restart.setVisible(false);
+		numMovesText.setVisible(false);
+		winText1.setVisible(false);
+	}
+	
 	
 	private void deselect(Rectangle rect) {
 		rect.setStroke(Color.BLACK);
@@ -228,7 +276,17 @@ public class TowerHController {
 	
 	private void checkWin() {
 		if(tower3Stack.size() == 5) {
-			System.out.println("ya won kiddo");
+			
+			numMovesText.setText("You completed the towers in " + moveCounter + " moves");
+			
+			tower1.setDisable(true);
+			tower2.setDisable(true);
+			tower3.setDisable(true);
+			
+			endScreenRect.setVisible(true);
+			restart.setVisible(true);
+			numMovesText.setVisible(true);
+			winText1.setVisible(true);
 		}
 		
 	}

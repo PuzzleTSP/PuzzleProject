@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="719.0" styleClass="w3-black" stylesheets="@w3.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.TowerHController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="719.0" styleClass="w3-black" stylesheets="@w3.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.TowerHController">
 	<center>
 		<Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
 
@@ -17,6 +22,18 @@
 				<Rectangle fx:id="ring3" arcHeight="5.0" arcWidth="5.0" fill="#09d231" height="38.0" layoutX="34.0" layoutY="362.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-green" width="157.0" />
 				<Rectangle fx:id="ring2" arcHeight="5.0" arcWidth="5.0" fill="#e8ff1f" height="38.0" layoutX="46.0" layoutY="324.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-yellow" width="134.0" />
 				<Rectangle fx:id="ring1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="38.0" layoutX="60.0" layoutY="286.0" stroke="BLACK" strokeType="INSIDE" styleClass="w3-blue" width="102.0" />
+            <Rectangle fx:id="endScreenRect" arcHeight="5.0" arcWidth="5.0" fill="#1fffb9" height="333.0" layoutX="91.0" layoutY="55.0" stroke="BLACK" strokeType="INSIDE" width="512.0" />
+            <Button fx:id="restart" layoutX="305.0" layoutY="324.0" mnemonicParsing="false" onAction="#restart" text="Go Again?" />
+            <Text fx:id="winText1" layoutX="207.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You Win!!!" wrappingWidth="304.87890625">
+               <font>
+                  <Font size="64.0" />
+               </font>
+            </Text>
+            <Text fx:id="numMovesText" layoutX="171.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
 			</children>
 		</Pane>
 	</center>
