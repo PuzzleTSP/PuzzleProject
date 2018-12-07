@@ -5,6 +5,7 @@ import java.util.Stack;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 
 import javafx.scene.shape.Rectangle;
@@ -18,7 +19,7 @@ public class TowerHController {
 
 	@FXML Rectangle ring1; @FXML Rectangle ring2; @FXML Rectangle ring3; @FXML Rectangle ring4; @FXML Rectangle ring5;
 	@FXML Rectangle tower1; @FXML Rectangle tower2; @FXML Rectangle tower3;
-	@FXML Rectangle endScreenRect;
+	@FXML VBox endScreenRect;
 	
 	@FXML Text winText1,numMovesText;
 	
