@@ -20,7 +20,7 @@
 <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#initMoves" prefHeight="550.0" prefWidth="450.0" stylesheets="@w3.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puzzle.controller.SoccerBoxPuzzleController">
   <children>
     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eb9d5c" height="550.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="25.0" width="450.0" />
-    <Circle layoutX="225.0" layoutY="325.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle layoutX="225.0" layoutY="425.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
     <Line endX="450.0" layoutY="125.0" />
     <Line endX="450.0" layoutY="225.0" />
     <Line endX="450.0" layoutY="325.0" />
@@ -44,6 +44,7 @@
     <Rectangle fx:id="goal" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" layoutX="125.0" layoutY="25.0" onMouseClicked="#outlineSelected" onMouseEntered="#outlineHovered" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
       <Sphere id="ball" fx:id="ball" layoutX="225.0" layoutY="125.0" radius="25.0" />
       <Button layoutX="-65.0" layoutY="200.0" mnemonicParsing="false" onAction="#initMoves" opacity="0.0" text="Button" />
+      <TextArea editable="false" layoutX="4.0" layoutY="542.0" mouseTransparent="true" prefHeight="70.0" prefWidth="450.0" text="Use the mouse to select a block, and the arrow keys to move it!&#10;&#10;Try and move the ball piece over the hole (on the bottom row)." />
   </children>
    <styleClass>
       <String fx:value="w3-container" />

@@ -76,7 +76,8 @@ public class TestSoccerBox {
 		//testBox.gameBoard[1][2].setOccupied( testBox.getBlock("goal"));
 		testBox.logMove("goal", KeyCode.DOWN);
 		testBox.logMove("goal", KeyCode.DOWN);
-		assertEquals( testBox.gameBoard[1][2].occupiedBy(), testBox.getBlock("goal"));
+		testBox.logMove("goal", KeyCode.DOWN);
+		assertEquals( testBox.gameBoard[1][3].occupiedBy(), testBox.getBlock("goal"));
 		assertEquals( testBox.checkWin(), true );
 	}
 
