@@ -38,7 +38,7 @@ public class TowerHController {
 	int moveCounter;
 	
 	@FXML
-	private void initialize() {	
+	public void initialize() {	
 
 		tower1Stack = new Stack<Rectangle>();
 		tower2Stack = new Stack<Rectangle>();
@@ -176,7 +176,7 @@ public class TowerHController {
 		rect.setFill(towerColor);
 	}
 	
-	private void moveRing(Rectangle from, Rectangle to) {
+	public void moveRing(Rectangle from, Rectangle to) {
 		int towerFromNum = Integer.parseInt(from.getId().substring(5));
 		int towerToNum = Integer.parseInt(to.getId().substring(5));
 		
